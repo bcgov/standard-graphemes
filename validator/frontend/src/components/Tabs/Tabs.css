@@ -1,0 +1,35 @@
+/* Container for horizontal row of tabs */
+.react-aria-TabList {
+  margin-bottom: var(--bcds-layout-margin-small);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--bcds-layout-padding-small);
+}
+
+/* Individual tab element */
+.react-aria-Tab {
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: var(--bcds-layout-border-width-medium);
+  color: var(--bcds-typography-color-secondary);
+  font: var(--bcds-typography-regular-body);
+  padding: var(--bcds-layout-padding-small);
+}
+.react-aria-Tab[data-disabled="true"] {
+  color: var(--bcds-typography-color-disabled);
+}
+.react-aria-Tab[data-focused="true"] {
+  outline: var(--bcds-layout-border-width-small) solid
+    var(--bcds-surface-color-border-active);
+}
+.react-aria-Tab[data-hovered="true"] {
+  background-color: var(--bcds-surface-color-secondary-button-hover);
+  cursor: pointer;
+}
+.react-aria-Tab[data-pressed="true"] {
+  background-color: var(--bcds-surface-color-secondary-button-hover);
+}
+.react-aria-Tab[data-selected="true"] {
+  border-bottom-color: var(--bcds-theme-primary-blue);
+}

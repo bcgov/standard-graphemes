@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf dist && tsc -b",
+    "convert-csv-data": "node data-conversion/convert.mjs",
+    "dev": "tsx watch src/index.ts",
+    "format": "npx prettier . --write",
+    "lint": "eslint .",
+    "start": "node dist/index.js",
+    "test": "npx vitest"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.13.7",
+    "@hono/swagger-ui": "0.4.1",
+    "@hono/zod-openapi": "0.18.0",
+    "hono": "4.6.11",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.15.0",
+    "@types/node": "22.9.1",
+    "csv-parser": "3.0.0",
+    "eslint": "9.15.0",
+    "globals": "15.12.0",
+    "prettier": "3.3.3",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.15.0",
+    "vitest": "2.1.5"
+  }
+}

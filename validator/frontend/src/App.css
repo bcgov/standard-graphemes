@@ -1,0 +1,26 @@
+main {
+  justify-content: space-around;
+  flex-grow: 1;
+  padding: var(--bcds-layout-padding-large) var(--bcds-layout-padding-medium);
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Shrink line-height for Header page title since it wraps on mobile */
+.bcds-header > .bcds-header--container > .bcds-header--title {
+  line-height: 1em;
+}
+
+a {
+  color: var(--bcds-typography-color-link);
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font: var(--bcds-typography-regular-body);
+  margin: var(--bcds-layout-margin-small) var(--bcds-layout-margin-none);
+  text-wrap: wrap;
+}

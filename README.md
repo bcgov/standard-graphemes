@@ -15,7 +15,7 @@ For more information, please see:
 
 See [CONTRIBUTING.md](/CONTRIBUTING.md). To submit a question, please [create a GitHub issue](https://github.com/bcgov/standard-graphemes/issues/new?template=Blank+issue) or use the [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1).
 
-# Code of conduct
+## Code of conduct
 
 See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 

@@ -1,0 +1,45 @@
+---
+name: Test validator frontend
+
+on:
+  pull_request:
+    paths:
+      - validator/frontend/**
+  workflow_dispatch:
+
+# Cancel any currently running builds to save GitHub Actions hours.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-suite:
+    name: Test suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read .nvmrc
+        run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+        working-directory: ./validator/frontend
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.GITHUB_NVMRC_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./validator/frontend
+
+      # Lint errors cause this job to fail
+      - name: Run lint script
+        run: npm run lint
+        working-directory: ./validator/frontend
+
+      # Test failures cause this job to fail
+      - name: Run test script
+        run: npm run test
+        working-directory: ./validator/frontend

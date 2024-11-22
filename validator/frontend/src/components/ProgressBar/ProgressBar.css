@@ -1,0 +1,40 @@
+/* Container for progress bar elements */
+.react-aria-ProgressBar {
+  margin: var(--bcds-layout-margin-small) var(--bcds-layout-margin-none);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Label */
+.react-aria-ProgressBar > .react-aria-Label {
+  font: var(--bcds-typography-regular-body);
+}
+
+/* Bar */
+.react-aria-ProgressBar > .bar {
+  background-color: var(--theme-gray-40);
+}
+.react-aria-ProgressBar > .bar > .fill {
+  background-color: var(--bcds-theme-primary-blue);
+  height: var(--bcds-layout-padding-xsmall);
+}
+
+/* Animation for indeterminate state */
+.react-aria-ProgressBar:not([aria-valuenow]) > .bar > .fill {
+  width: 50%;
+  border-radius: inherit;
+  animation: indeterminate 1.5s infinite linear;
+  will-change: transform;
+}
+
+@keyframes indeterminate {
+  0% {
+    transform: translateX(-100%);
+    width: 0%;
+  }
+
+  100% {
+    transform: translateX(100%);
+    width: 100%;
+  }
+}

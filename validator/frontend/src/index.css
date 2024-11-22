@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  /* Use BC Sans on top of the Sans-serif System Font Stack for fallback */
+  font-family:
+    "BC Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Cantarell,
+    Ubuntu,
+    roboto,
+    noto,
+    arial,
+    sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
