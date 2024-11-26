@@ -12,21 +12,21 @@
   },
   "dependencies": {
     "@hono/node-server": "1.13.7",
-    "@hono/swagger-ui": "0.4.1",
+    "@hono/swagger-ui": "0.5.0",
     "@hono/zod-openapi": "0.18.0",
-    "hono": "4.6.11",
+    "hono": "4.6.12",
     "zod": "3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "9.15.0",
-    "@types/node": "22.9.1",
+    "@types/node": "22.10.0",
     "csv-parser": "3.0.0",
     "eslint": "9.15.0",
     "globals": "15.12.0",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "tsx": "4.19.2",
     "typescript": "5.7.2",
-    "typescript-eslint": "8.15.0",
-    "vitest": "2.1.5"
+    "typescript-eslint": "8.16.0",
+    "vitest": "2.1.6"
   }
 }
