@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
 
 # Serve stage
-# ----------------
+# -----------
 FROM base AS serve
 WORKDIR /app
 COPY --from=build /app/dist /app/dist
