@@ -40,6 +40,7 @@ jobs:
           else
             echo "Unknown branch. Exiting..."
             exit 1
+          fi
         shell: bash
 
       - name: Build image with docker build
