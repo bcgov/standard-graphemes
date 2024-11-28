@@ -35,10 +35,13 @@ jobs:
           echo "Evaluating branch: ${{ github.ref }}";
           if [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
             echo "tag=dev" >> $GITHUB_ENV;
+            echo "VITE_API_BASE_URL=https://validator-backend-${{ secrets.OPENSHIFT_SILVER_LICENSE_PLATE}}-dev.apps.silver.devops.gov.bc.ca" >> $GITHUB_ENV;
           elif [[ "${{ github.ref }}" == "refs/heads/test" ]]; then
             echo "tag=test" >> $GITHUB_ENV;
+            echo "VITE_API_BASE_URL=https://validator-backend-${{ secrets.OPENSHIFT_SILVER_LICENSE_PLATE}}-test.apps.silver.devops.gov.bc.ca" >> $GITHUB_ENV;
           elif [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "tag=prod" >> $GITHUB_ENV;
+            echo "VITE_API_BASE_URL=https://validator-backend-${{ secrets.OPENSHIFT_SILVER_LICENSE_PLATE}}-prod.apps.silver.devops.gov.bc.ca" >> $GITHUB_ENV;
           else
             echo "Unknown branch: ${{ github.ref }}. Exiting...";
             exit 1;
@@ -46,7 +49,7 @@ jobs:
         shell: bash
 
       - name: Build image with docker build
-        run: docker build ./validator/frontend/ -f ./validator/frontend/Dockerfile -t validator-frontend:latest --build-arg GITHUB_SHA=${{ github.sha }}
+        run: docker build ./validator/frontend/ -f ./validator/frontend/Dockerfile -t validator-frontend:latest --build-arg VITE_API_BASE_URL=${{ env.VITE_API_BASE_URL }}
 
       - name: Login to OpenShift Silver image registry
         uses: docker/login-action@v3
