@@ -32,17 +32,17 @@ jobs:
       - name: Determine environment tag
         id: env-tag
         run: |
-          echo "Evaluating branch: ${{ github.ref }}"
+          echo "Evaluating branch: ${{ github.ref }}";
           if [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-            echo "tag=dev" >> $GITHUB_ENV
+            echo "tag=dev" >> $GITHUB_ENV;
           elif [[ "${{ github.ref }}" == "refs/heads/test" ]]; then
-            echo "tag=test" >> $GITHUB_ENV
+            echo "tag=test" >> $GITHUB_ENV;
           elif [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "tag=prod" >> $GITHUB_ENV
+            echo "tag=prod" >> $GITHUB_ENV;
           else
-            echo "Unknown branch: ${{ github.ref }}. Exiting..."
-            exit 1
-          fi
+            echo "Unknown branch: ${{ github.ref }}. Exiting...";
+            exit 1;
+          fi;
         shell: bash
 
       - name: Build image with docker build
