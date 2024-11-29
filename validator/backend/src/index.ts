@@ -1,5 +1,6 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 
 import { api } from "./routes/confusable.mjs";
 
@@ -10,6 +11,7 @@ app.get("/", (c) => {
 });
 
 // Mount Confusable API and OpenAPI docs at /api/v1/
+app.use("/api/*", cors());
 app.route("/api/v1", api);
 
 const port = process.env?.PORT ? parseInt(process.env.PORT) : 3000;
