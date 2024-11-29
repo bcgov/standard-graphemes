@@ -1,10 +1,17 @@
 import type { Confusable } from "../types";
 
+// In local development, proxying is handled by the configuration defined in
+// vite.config.ts. In production, we need a full base URL.
+const API_BASE_URL =
+  import.meta.env.MODE === "development"
+    ? ""
+    : import.meta.env.VITE_API_BASE_URL;
+
 /**
  * Get an array of all Confusable objects.
  */
 export async function getAllConfusables(): Promise<Confusable[]> {
-  const response = await fetch("/api/v1/confusable", {
+  const response = await fetch(`${API_BASE_URL}/api/v1/confusable`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -24,12 +31,15 @@ export async function getAllConfusables(): Promise<Confusable[]> {
 export async function getOneConfusableByLabel(
   label: string
 ): Promise<Confusable> {
-  const response = await fetch(`/api/v1/confusable/label/${label}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(
+    `${API_BASE_URL}/api/v1/confusable/label/${label}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
   if (!response.ok) {
     throw new Error(`Failed to fetch data: ${response.statusText}`);
@@ -44,12 +54,15 @@ export async function getOneConfusableByLabel(
 export async function getConfusablesByCharacter(
   confusableChar: string
 ): Promise<Confusable[]> {
-  const response = await fetch(`/api/v1/confusable/char/${confusableChar}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(
+    `${API_BASE_URL}/api/v1/confusable/char/${confusableChar}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
   if (!response.ok) {
     throw new Error(`Failed to fetch data: ${response.statusText}`);
@@ -73,12 +86,15 @@ interface SearchStringResponse {
 export async function getSuggestedStringsFromSearchString(
   search: string
 ): Promise<SearchStringResponse> {
-  const response = await fetch(`api/v1/confusable/search/${search}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(
+    `${API_BASE_URL}/api/v1/confusable/search/${search}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
   if (!response.ok) {
     throw new Error(`Failed to fetch data: ${response.statusText}`);
