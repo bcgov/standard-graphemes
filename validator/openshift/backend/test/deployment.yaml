@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: f343b4-test
+  name: validator-backend
+  annotations:
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"validator-backend:test","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","pause":"false"}]
+spec:
+  selector:
+    matchLabels:
+      app: validator-backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: validator-backend
+    spec:
+      containers:
+        - name: container
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/f343b4-tools/validator-backend@sha256:6f3a71b07c3c54f5611314c1b3ea752795ca4cfa849dacd02209dbed6868b30f
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env: []
+      imagePullSecrets: []
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+  paused: false
