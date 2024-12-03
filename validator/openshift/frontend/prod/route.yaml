@@ -1,0 +1,19 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: validator-frontend
+  namespace: f343b4-prod
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: validator-frontend
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ""
+  path: /
+  port:
+    targetPort: 5173
+  alternateBackends: []
