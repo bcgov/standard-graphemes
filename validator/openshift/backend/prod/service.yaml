@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: validator-backend
+  namespace: f343b4-prod
+spec:
+  selector:
+    app: validator-backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 3000
