@@ -1,5 +1,6 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import { OpenAPIHono, createRoute } from "@hono/zod-openapi";
+import { createWorker } from "tesseract.js";
 import { z } from "zod";
 
 import untypedConfusables from "../data/all_characters_confusables.json" with { type: "json" };
@@ -214,6 +215,59 @@ api.openapi(getSuggestedStringsFromSearchString, (c) => {
     return c.json(response, 200);
   } else {
     return c.json({ error: "No confusable matches for the given string" }, 404);
+  }
+});
+
+const OcrData = z.object({
+  /** The text returned by the OCR engine */
+  text: z.string(),
+});
+
+const getTextFromUserImage = createRoute({
+  method: "post",
+  path: "/confusable/ocr",
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: OcrData,
+        },
+      },
+      description: "OCR text data from user image",
+    },
+    400: {
+      description: "No image file provided",
+    },
+    500: {
+      description: "Failed to process OCR",
+    },
+  },
+});
+
+api.openapi(getTextFromUserImage, async (c) => {
+  const formData = await c.req.formData();
+  const file = formData.get("image") as File | null;
+
+  if (!file) {
+    return c.json({ error: "No image file provided" }, 400);
+  }
+
+  // Convert the file to an ArrayBuffer and then to a Buffer for Tesseract
+  const arrayBuffer = await file.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+
+  try {
+    // Run OCR with Tesseract.js
+    const worker = await createWorker(["eng", "iku"]);
+    const {
+      data: { text },
+    } = await worker.recognize(buffer);
+
+    // Respond with the extracted text
+    return c.json({ text }, 200);
+  } catch (error) {
+    console.error("OCR error:", error);
+    return c.json({ error: "Failed to process OCR" }, 500);
   }
 });
 
