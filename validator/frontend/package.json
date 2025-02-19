@@ -17,12 +17,15 @@
     "@bcgov/design-system-react-components": "0.4.0",
     "@bcgov/design-tokens": "3.1.1",
     "@tanstack/react-query": "5.61.0",
+    "@tanstack/react-router": "1.106.0",
     "react": "18.3.1",
     "react-aria-components": "1.5.0",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "9.15.0",
+    "@tanstack/router-devtools": "1.106.0",
+    "@tanstack/router-plugin": "1.106.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
     "@testing-library/user-event": "14.5.2",
