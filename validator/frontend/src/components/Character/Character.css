@@ -1,0 +1,74 @@
+div.character-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-padding-small);
+  margin: var(--layout-padding-small) var(--layout-padding-none);
+}
+
+div.character-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--layout-padding-small);
+  width: 100%;
+}
+
+div.character-display {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0px;
+  align-items: center;
+  justify-content: baseline;
+  background-color: var(--surface-color-background-light-gray);
+  border: 1px solid var(--surface-color-border-dark);
+  border-radius: var(--layout-border-radius-medium);
+  font-size: 10rem;
+  padding: var(--layout-padding-small) var(--layout-padding-small) var(--layout-padding-xlarge) var(--layout-padding-small);
+}
+div.character-display:hover {
+  box-shadow: var(--surface-shadow-small);
+}
+div.character-display.sans {
+  font-family: var(--font-sans);
+}
+div.character-display.serif {
+  font-family: var(--font-serif);
+}
+div.character-display.mono {
+  font-family: var(--font-mono);
+}
+div.character-display.bc-sans {
+  font-family: "BC Sans";
+  font-weight: 400;
+}
+div.character-display.noto-sans {
+  font-family: "Noto Sans";
+  font-weight: 400;
+}
+div.character-display.normal {
+  font-style: normal;
+}
+div.character-display.italic {
+  font-style: italic;
+}
+div.character-display.light {
+  font-weight: 300;
+}
+div.character-display.bold {
+  font-weight: 700;
+}
+div.character-display > span.font-name {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+div.character-display > div.character-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
