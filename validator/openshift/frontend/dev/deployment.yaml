@@ -25,6 +25,10 @@ spec:
             - containerPort: 8080
               protocol: TCP
           env: []
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "20m"
       imagePullSecrets: []
   strategy:
     type: RollingUpdate
