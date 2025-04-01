@@ -7,6 +7,7 @@ import AllConfusables from "./layout/Confusables/AllConfusables";
 import ByCharacter from "./layout/Confusables/ByCharacter/ByCharacter";
 import ByLabel from "./layout/Confusables/ByLabel/ByLabel";
 import TextSearch from "./layout/Confusables/TextSearch/TextSearch";
+import OcrUpload from "./layout/Confusables/OpticalCharacterRecognition/OcrUpload";
 
 import "./App.css";
 
@@ -47,6 +48,7 @@ function App() {
             { id: "label", label: "Search by label" },
             { id: "character", label: "Search by character" },
             { id: "all", label: "All confusables " },
+            { id: "ocr", label: "OCR" },
           ]}
           tabPanels={[
             {
@@ -64,6 +66,10 @@ function App() {
             {
               id: "all",
               children: <AllConfusables />,
+            },
+            {
+              id: "ocr",
+              children: <OcrUpload />,
             },
           ]}
         />

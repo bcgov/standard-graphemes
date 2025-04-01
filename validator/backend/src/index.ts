@@ -6,6 +6,13 @@ import { api } from "./routes/confusable.mjs";
 
 const app = new Hono();
 
+// Log requests to all routes
+app.use(async (c, next) => {
+  console.log("Request:", c.req.method, c.req.url);
+  console.log("Headers:", c.req.header());
+  await next();
+});
+
 app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
