@@ -25,8 +25,15 @@ export default function OcrUpload() {
       setLoading(true);
       setError(null);
 
+      // In local development, proxying is handled by the configuration defined
+      // in vite.config.ts. In production, we need a full base URL.
+      const API_BASE_URL =
+        import.meta.env.MODE === "development"
+          ? ""
+          : import.meta.env.VITE_API_BASE_URL;
+
       // Send the image to the /ocr endpoint
-      const response = await fetch("/api/v1/confusable/ocr", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/confusable/ocr`, {
         method: "POST",
         body: formData,
       });
