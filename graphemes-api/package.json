@@ -8,6 +8,7 @@
     "start:dev": "nodemon --env-file=.env --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
     "start": "node --env-file=.env dist/index.js",
     "build": "tsc",
+    "format": "npx prettier . --write",
     "test": "npx vitest"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "@types/node": "^22.14.1",
     "@types/supertest": "^6.0.3",
     "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
     "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
