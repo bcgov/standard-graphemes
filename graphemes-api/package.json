@@ -7,7 +7,8 @@
   "scripts": {
     "start:dev": "nodemon --env-file=.env --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
     "start": "node --env-file=.env dist/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "npx vitest"
   },
   "dependencies": {
     "express": "^5.1.0"
@@ -15,8 +16,11 @@
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
+    "@types/supertest": "^6.0.3",
     "nodemon": "^3.1.9",
+    "supertest": "^7.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
   }
 }
