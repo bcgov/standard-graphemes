@@ -1,0 +1,22 @@
+{
+  "name": "graphemes-api",
+  "version": "0.0.1",
+  "description": "API for graphemes register",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "nodemon --env-file=.env --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
+    "start": "node --env-file=.env dist/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

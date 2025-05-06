@@ -1,0 +1,16 @@
+{
+  "name": "graphemes-set",
+  "version": "0.0.1",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "license": "Apache-2.0",
+  "description": "This script fetches the latest graphemes sets by language from the First-Peoples-Cultural-Council/unicode-resources repository and formats them into a single CSV file.",
+  "dependencies": {
+    "any-ascii": "0.3.2",
+    "@octokit/rest": "21.1.1",
+    "csv-parse": "5.6.0"
+  }
+}
