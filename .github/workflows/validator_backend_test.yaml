@@ -1,6 +1,10 @@
 ---
 name: Test validator backend
 
+# Limit GITHUB_TOKEN permissions to only read repo contents.
+permissions:
+  contents: read
+
 on:
   pull_request:
     paths:
