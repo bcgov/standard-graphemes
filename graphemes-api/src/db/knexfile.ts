@@ -5,7 +5,7 @@ import type { Knex } from "knex";
 const DATABASE_URL = process.env.DATABASE_URL;
 
 if (!DATABASE_URL) {
-  throw new Error("DATABASE_URL environment variable is undefined.");
+  console.warn("DATABASE_URL environment variable is undefined.");
 }
 
 const config: { [key: string]: Knex.Config } = {
