@@ -18,6 +18,15 @@ const config: { [key: string]: Knex.Config } = {
     },
   },
 
+  // Test and CI
+  test: {
+    client: "postgresql",
+    connection: {
+      connectionString: DATABASE_URL,
+      ssl: false,
+    },
+  },
+
   // OpenShift deployment
   production: {
     client: "postgresql",
