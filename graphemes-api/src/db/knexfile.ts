@@ -2,18 +2,36 @@ import dotenv from "dotenv";
 dotenv.config();
 import type { Knex } from "knex";
 
-const DATABASE_URL = process.env.DATABASE_URL;
+const DB_HOST = process.env.DB_HOST;
+const DB_NAME = process.env.DB_NAME;
+const DB_PASS = process.env.DB_PASS;
+const DB_PORT = process.env.DB_PORT;
+const DB_USER = process.env.DB_USER;
 
-if (!DATABASE_URL) {
-  console.warn("DATABASE_URL environment variable is undefined.");
+if (!DB_HOST) {
+  console.warn("Missing database configuration DB_HOST");
 }
+if (!DB_NAME) {
+  console.warn("Missing database configuration DB_NAME");
+}
+if (!DB_PASS) {
+  console.warn("Missing database configuration DB_PASS");
+}
+if (!DB_PORT) {
+  console.warn("Missing database configuration DB_PORT");
+}
+if (!DB_USER) {
+  console.warn("Missing database configuration DB_USER");
+}
+
+const connectionString = `postgresql://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
 
 const config: { [key: string]: Knex.Config } = {
   // Local development
   development: {
     client: "postgresql",
     connection: {
-      connectionString: DATABASE_URL,
+      connectionString,
       ssl: false,
     },
   },
@@ -22,7 +40,7 @@ const config: { [key: string]: Knex.Config } = {
   test: {
     client: "postgresql",
     connection: {
-      connectionString: DATABASE_URL,
+      connectionString,
       ssl: false,
     },
   },
@@ -31,7 +49,7 @@ const config: { [key: string]: Knex.Config } = {
   production: {
     client: "postgresql",
     connection: {
-      connectionString: DATABASE_URL,
+      connectionString,
       ssl: true,
     },
     pool: {
