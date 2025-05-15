@@ -5,15 +5,19 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "start:dev": "nodemon --env-file=.env --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
-    "start": "node --env-file=.env dist/index.js",
+    "start:dev": "nodemon --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
+    "start": "node dist/index.js",
     "build": "tsc",
     "format": "npx prettier . --write",
     "lint": "npx eslint .",
     "test": "npx vitest"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.0",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
@@ -24,7 +28,7 @@
     "globals": "^16.1.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.3",
-    "supertest": "^7.1.0",
+    "supertest": "^7.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.0",
