@@ -46,7 +46,7 @@ languagesRouter.get("/:id", async (req, res) => {
     res.json(language);
   } catch (error) {
     console.error(
-      "Error fetching language with language_guid '%s': ",
+      "Error fetching language with language_guid '%s': %o",
       id,
       error
     );
