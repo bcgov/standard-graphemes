@@ -7,6 +7,9 @@ describe("splitCommaSeparatedString()", () => {
     const emptyStringOutput = splitCommaSeparatedString("");
     expect(emptyStringOutput.length).toBe(0);
 
+    const whitespaceOnlyOutput = splitCommaSeparatedString("   ");
+    expect(whitespaceOnlyOutput.length).toBe(0);
+
     const extraCommasOutput = splitCommaSeparatedString(
       "shíshálh, , Sechelt , "
     );
