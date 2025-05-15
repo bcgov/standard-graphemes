@@ -27,7 +27,16 @@ languagesRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
-    const row = await db("language").where({ id }).first();
+    const row = await db("language")
+      .select(
+        "language_guid as id",
+        "language_name as name",
+        "alternate_names as alternateNames",
+        "community_keywords as communityKeywords",
+        "bcp47_language_codes as bcp47LanguageCodes"
+      )
+      .where({ language_guid: id })
+      .first();
     if (!row) {
       res.status(404).json({ error: "Language not found" });
       return;
@@ -36,7 +45,7 @@ languagesRouter.get("/:id", async (req, res) => {
     const language = LanguageSchema.parse(row); // Transformation happens here
     res.json(language);
   } catch (error) {
-    console.error(`Error fetching language with id ${id}:`, error);
+    console.error(`Error fetching language with language_guid ${id}:`, error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
