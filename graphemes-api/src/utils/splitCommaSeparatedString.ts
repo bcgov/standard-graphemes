@@ -7,6 +7,10 @@
  * @returns Array of filtered strings
  */
 export default function splitCommaSeparatedString(str: string): string[] {
+  if (!str.trim()) {
+    return [];
+  }
+
   return str
     .split(",")
     .map((s) => s.trim())
