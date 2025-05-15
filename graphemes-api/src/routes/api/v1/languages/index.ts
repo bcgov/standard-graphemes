@@ -45,7 +45,11 @@ languagesRouter.get("/:id", async (req, res) => {
     const language = LanguageSchema.parse(row); // Transformation happens here
     res.json(language);
   } catch (error) {
-    console.error(`Error fetching language with language_guid ${id}:`, error);
+    console.error(
+      "Error fetching language with language_guid '%s': %o",
+      id,
+      error
+    );
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
