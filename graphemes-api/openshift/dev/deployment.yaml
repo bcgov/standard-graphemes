@@ -55,7 +55,7 @@ spec:
                 secretKeyRef:
                   name: crunchy-postgres-pguser-graphemes-api-user
                   key: user
-            - name: DB_PASSWORD
+            - name: DB_PASS
               valueFrom:
                 secretKeyRef:
                   name: crunchy-postgres-pguser-graphemes-api-user
