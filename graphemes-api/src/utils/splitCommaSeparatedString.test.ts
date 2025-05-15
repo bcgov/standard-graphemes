@@ -13,6 +13,10 @@ describe("splitCommaSeparatedString()", () => {
     expect(extraCommasOutput.length).toBe(2);
     expect(extraCommasOutput[0]).toBe("shíshálh");
     expect(extraCommasOutput[1]).toBe("Sechelt");
+
+    const singleResultOutput = splitCommaSeparatedString(", ᑕᗸᒡ   , ");
+    expect(singleResultOutput.length).toBe(1);
+    expect(singleResultOutput[0]).toBe("ᑕᗸᒡ");
   });
 
   it("maintains graphemes equivalency", () => {
