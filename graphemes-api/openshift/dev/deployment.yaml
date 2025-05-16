@@ -24,6 +24,16 @@ spec:
   selector:
     matchLabels:
       app: graphemes-api
+  triggers:
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - graphemes-api
+        from:
+          kind: ImageStreamTag
+          name: graphemes-api:dev
+          namespace: f343b4-tools
   template:
     metadata:
       creationTimestamp: null
