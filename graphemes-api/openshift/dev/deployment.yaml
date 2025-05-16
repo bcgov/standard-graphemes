@@ -1,0 +1,83 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: graphemes-api
+  namespace: f343b4-dev
+  labels:
+    app: graphemes-api
+    app.kubernetes.io/component: graphemes-api
+    app.kubernetes.io/instance: graphemes-api
+    app.kubernetes.io/name: graphemes-api
+    app.kubernetes.io/part-of: graphemes-api
+    app.openshift.io/runtime: nodejs
+    app.openshift.io/runtime-namespace: f343b4-tools
+    app.openshift.io/runtime-version: dev
+  annotations:
+    alpha.image.policy.openshift.io/resolve-names: "*"
+    app.openshift.io/route-disabled: "false"
+    deployment.kubernetes.io/revision: "1"
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"graphemes-api:dev","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"graphemes-api\")].image","paused":"false"}]'
+    openshift.io/generated-by: OpenShiftWebConsole
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: graphemes-api
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: graphemes-api
+        deployment: graphemes-api
+      annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
+    spec:
+      containers:
+        - name: graphemes-api
+          image: "image-registry.openshift-image-registry.svc:5000/f343b4-tools/graphemes-api:dev"
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: pgbouncer-host
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: pgbouncer-port
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: user
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: password
+            - name: DB_NAME
+              # This is a literal value because `crunchy-postgres`
+              # is the default database name in the PostgresCluster.
+              # This database name does not appear in the Secret.
+              value: grapheme_v2
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
