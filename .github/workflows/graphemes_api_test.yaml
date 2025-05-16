@@ -38,12 +38,19 @@ jobs:
         run: npm install
         working-directory: ./graphemes-api
 
-      # Lint errors cause this job to fail
+      # Lint errors cause this job to fail.
       - name: Run lint script
         run: npm run lint
         working-directory: ./graphemes-api
 
-      # Test failures cause this job to fail
+      # Test failures cause this job to fail.
       - name: Run test script
         run: npm run test
+        working-directory: ./graphemes-api
+
+      # Build failures cause this job to fail.
+      # We don't care about keeping the artifact of this build,
+      # just that it can complete.
+      - name: Run build script
+        run: npm run build
         working-directory: ./graphemes-api
