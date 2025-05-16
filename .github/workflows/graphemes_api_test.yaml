@@ -21,13 +21,16 @@ jobs:
     name: Test suite
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./graphemes-api
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Read .nvmrc
         run: echo "GITHUB_NVMRC_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
-        working-directory: ./graphemes-api
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,21 +39,17 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./graphemes-api
 
       # Lint errors cause this job to fail.
       - name: Run lint script
         run: npm run lint
-        working-directory: ./graphemes-api
 
       # Test failures cause this job to fail.
       - name: Run test script
         run: npm run test
-        working-directory: ./graphemes-api
 
       # Build failures cause this job to fail.
       # We don't care about keeping the artifact of this build,
       # just that it can complete.
       - name: Run build script
         run: npm run build
-        working-directory: ./graphemes-api
