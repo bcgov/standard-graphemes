@@ -8,7 +8,7 @@ import router from "./routes/index.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Limit a single IP address to 20 requests/minute per API server pod.
+// Limit a single IP address to `max` requests/minute per API server pod.
 const limiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
   max: 100,
