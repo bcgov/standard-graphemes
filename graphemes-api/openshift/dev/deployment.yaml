@@ -16,36 +16,20 @@ metadata:
   annotations:
     alpha.image.policy.openshift.io/resolve-names: "*"
     app.openshift.io/route-disabled: "false"
-    deployment.kubernetes.io/revision: "1"
-    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"graphemes-api:dev","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"graphemes-api\")].image","paused":"false"}]'
-    openshift.io/generated-by: OpenShiftWebConsole
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: graphemes-api
-  triggers:
-    - type: ImageChange
-      imageChangeParams:
-        automatic: true
-        containerNames:
-          - graphemes-api
-        from:
-          kind: ImageStreamTag
-          name: graphemes-api:dev
-          namespace: f343b4-tools
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: graphemes-api
         deployment: graphemes-api
-      annotations:
-        openshift.io/generated-by: OpenShiftWebConsole
     spec:
       containers:
         - name: graphemes-api
-          image: "image-registry.openshift-image-registry.svc:5000/f343b4-tools/graphemes-api:dev"
+          image: ghcr.io/bcgov/standard-graphemes/graphemes-api:dev
           ports:
             - containerPort: 3000
               protocol: TCP
