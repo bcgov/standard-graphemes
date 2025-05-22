@@ -1,0 +1,28 @@
+---
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: graphemes-api
+  namespace: f343b4-tools
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - name: dev
+      from:
+        kind: DockerImage
+        name: ghcr.io/bcgov/standard-graphemes/graphemes-api:dev
+      importPolicy:
+        scheduled: true
+    - name: test
+      from:
+        kind: DockerImage
+        name: ghcr.io/bcgov/standard-graphemes/graphemes-api:test
+      importPolicy:
+        scheduled: true
+    - name: prod
+      from:
+        kind: DockerImage
+        name: ghcr.io/bcgov/standard-graphemes/graphemes-api:prod
+      importPolicy:
+        scheduled: true
