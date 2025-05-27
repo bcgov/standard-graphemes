@@ -3,7 +3,7 @@ import * as tokens from "@bcgov/design-tokens/js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import Tabs from "./components/Tabs/Tabs";
-import AllConfusables from "./layout/Confusables/AllConfusables";
+import AllConfusables from "./layout/Confusables/AllConfusables/AllConfusables";
 import ByCharacter from "./layout/Confusables/ByCharacter/ByCharacter";
 import ByLabel from "./layout/Confusables/ByLabel/ByLabel";
 import TextSearch from "./layout/Confusables/TextSearch/TextSearch";
