@@ -8,11 +8,11 @@ describe("compareValues()", () => {
   it("returns an object with the expected keys", () => {
     const keys = Object.keys(resultWithDefaultThreshold);
     expect(keys.length).toBe(5);
-    expect(keys.includes("comparisonValue1"));
-    expect(keys.includes("comparisonValue2"));
-    expect(keys.includes("threshold"));
-    expect(keys.includes("ratio"));
-    expect(keys.includes("isMatch"));
+    expect(keys.includes("comparisonValue1")).toBeTruthy();
+    expect(keys.includes("comparisonValue2")).toBeTruthy();
+    expect(keys.includes("threshold")).toBeTruthy();
+    expect(keys.includes("ratio")).toBeTruthy();
+    expect(keys.includes("isMatch")).toBeTruthy();
   });
   it("reports the default threshold value used when one isn't passed", () => {
     expect(resultWithDefaultThreshold.threshold).toBe(0.9);
