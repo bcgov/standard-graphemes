@@ -18,8 +18,8 @@ interface ComparisonDetails {
 
 /**
  * Given two strings to compare and an optional Levenshtein threshold (which
- * defaults to `0.9`), returns an object containing a `score` number and
- * `match` boolean indicating whether the strings are considered to be a match.
+ * defaults to `0.9`), returns an object containing a `ratio` number and
+ * `isMatch` boolean indicating whether the strings are considered to be a match.
  */
 export default function compareValues(
   value1: string,
