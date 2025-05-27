@@ -26,7 +26,13 @@ matchRouter.post("/", async (req, res) => {
 
   const { value1, value2, threshold } = req.body;
 
-  const comparison = compareValues(value1, value2, threshold ?? 0.9);
+  // Check for numeric threshold value and default to 0.9 if one isn't present.
+  const numericThreshold = parseFloat(threshold);
+  const comparison = compareValues(
+    value1,
+    value2,
+    !isNaN(numericThreshold) ? numericThreshold : 0.9
+  );
 
   res.status(200).json({
     value1: comparison.comparisonValue1,
