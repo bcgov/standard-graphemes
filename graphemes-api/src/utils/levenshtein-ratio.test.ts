@@ -16,9 +16,7 @@ describe("levenshteinRatio()", () => {
     const str1 = "cat";
     const str2 = "";
     const distance = levenshteinDistance(str1, str2);
-    console.log("distance: ", distance);
     const ratio = levenshteinRatio(str1, str2, distance);
-    console.log("ratio: ", ratio);
     expect(ratio).toBe(0);
   });
 
