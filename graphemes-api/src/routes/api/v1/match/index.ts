@@ -28,15 +28,6 @@ matchRouter.post("/", async (req, res) => {
 
   const comparison = compareValues(value1, value2, threshold ?? 0.9);
 
-  if (!comparison) {
-    res.status(500).json({
-      error: "Internal Server Error",
-      message: "Something went wrong while processing your request",
-      statusCode: 500,
-    });
-    return;
-  }
-
   res.status(200).json({
     value1: comparison.comparisonValue1,
     value2: comparison.comparisonValue2,
