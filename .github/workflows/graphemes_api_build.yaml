@@ -55,10 +55,10 @@ jobs:
 
       # Use the GHCR builder action
       - name: Build and push Docker image to GHCR
-        uses: bcgov-nr/action-builder-ghcr@ace71f7a527ca6fc43c15c7806314be5a4579d2c # v.2.3.0
+        uses: bcgov-nr/action-builder-ghcr@fd17bc1cbb16a60514e0df3966d42dff9fc232bc # v4.0.0
         with:
           package: graphemes-api
-          tag: ${{ env.tag }}
+          tags: ${{ env.tag }}
           triggers: graphemes-api/**
           build_context: ./graphemes-api
           build_file: ./graphemes-api/Dockerfile

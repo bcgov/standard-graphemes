@@ -3,11 +3,12 @@ import * as tokens from "@bcgov/design-tokens/js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import Tabs from "./components/Tabs/Tabs";
-import AllConfusables from "./layout/Confusables/AllConfusables";
+import AllConfusables from "./layout/Confusables/AllConfusables/AllConfusables";
 import ByCharacter from "./layout/Confusables/ByCharacter/ByCharacter";
 import ByLabel from "./layout/Confusables/ByLabel/ByLabel";
 import TextSearch from "./layout/Confusables/TextSearch/TextSearch";
 import OcrUpload from "./layout/Confusables/OpticalCharacterRecognition/OcrUpload";
+import TextComparison from "./layout/Confusables/TextComparison/TextComparison";
 
 import "./App.css";
 
@@ -49,6 +50,7 @@ function App() {
             { id: "character", label: "Search by character" },
             { id: "all", label: "All confusables " },
             { id: "ocr", label: "OCR" },
+            { id: "text-comparison", label: "Text comparison" },
           ]}
           tabPanels={[
             {
@@ -70,6 +72,10 @@ function App() {
             {
               id: "ocr",
               children: <OcrUpload />,
+            },
+            {
+              id: "text-comparison",
+              children: <TextComparison />,
             },
           ]}
         />
