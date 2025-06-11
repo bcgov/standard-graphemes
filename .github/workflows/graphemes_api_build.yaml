@@ -58,7 +58,7 @@ jobs:
         uses: bcgov-nr/action-builder-ghcr@fd17bc1cbb16a60514e0df3966d42dff9fc232bc # v4.0.0
         with:
           package: graphemes-api
-          tag: ${{ env.tag }}
+          tags: ${{ env.tag }}
           triggers: graphemes-api/**
           build_context: ./graphemes-api
           build_file: ./graphemes-api/Dockerfile
