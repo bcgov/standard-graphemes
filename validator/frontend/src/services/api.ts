@@ -119,7 +119,7 @@ interface LevenshteinTextComparisonResult {
   /** Levenshtein ratio to compare to the threshold. */
   ratio: number;
   /** Whether the strings match based on the given threshold. */
-  isMatch: number;
+  isMatch: boolean;
 }
 
 /**
