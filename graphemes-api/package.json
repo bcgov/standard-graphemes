@@ -21,7 +21,7 @@
     "js-levenshtein-esm": "^2.0.0",
     "knex": "^3.1.0",
     "pg": "^8.16.3",
-    "zod": "^3.25.28"
+    "zod": "^4.0.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
