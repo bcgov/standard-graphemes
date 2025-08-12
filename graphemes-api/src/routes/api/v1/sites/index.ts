@@ -22,7 +22,7 @@ sitesRouter.get("/", async (req, res) => {
   }
 });
 
-// GET /api/v1/sites/:id - Fetch a single language by ID
+// GET /api/v1/sites/:id - Fetch a single site by ID
 sitesRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
 
