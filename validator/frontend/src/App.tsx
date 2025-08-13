@@ -39,7 +39,7 @@ function App() {
           id="navigation"
           style={{ width: "100%" }}
           label="Choose a search method"
-          defaultSelectedKey={pathFragment}
+          defaultSelectedKey={pathFragment ?? "text-search"}
           items={[
             {
               id: "text-search",
