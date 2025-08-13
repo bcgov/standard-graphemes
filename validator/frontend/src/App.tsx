@@ -38,7 +38,7 @@ function App() {
         <Select
           id="navigation"
           style={{ width: "100%" }}
-          description="Choose a search method"
+          label="Choose a search method"
           defaultSelectedKey={pathFragment}
           items={[
             {
