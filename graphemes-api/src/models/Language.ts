@@ -3,7 +3,7 @@ import { z } from "zod";
 import splitCommaSeparatedString from "../utils/splitCommaSeparatedString.js";
 
 export const LanguageSchema = z.object({
-  id: z.string().describe("Globally unique GUID for the language"),
+  id: z.uuid().describe("Globally unique GUID for the language"),
   name: z.string().describe("The name of the language, e.g., Danez?gé?"),
   alternateNames: z
     .string()
