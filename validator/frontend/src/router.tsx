@@ -75,6 +75,9 @@ const routeTree = rootRoute.addChildren([
 // Create the router
 export const router = createRouter({ routeTree });
 
+// Export the route tree for testing
+export { routeTree };
+
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
   interface Register {
