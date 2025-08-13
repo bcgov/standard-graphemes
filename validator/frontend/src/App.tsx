@@ -1,20 +1,21 @@
-import { Footer, Header } from "@bcgov/design-system-react-components";
+import { Footer, Header, Select } from "@bcgov/design-system-react-components";
 import * as tokens from "@bcgov/design-tokens/js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 
-import Tabs from "./components/Tabs/Tabs";
-import AllConfusables from "./layout/Confusables/AllConfusables/AllConfusables";
-import ByCharacter from "./layout/Confusables/ByCharacter/ByCharacter";
-import ByLabel from "./layout/Confusables/ByLabel/ByLabel";
-import TextSearch from "./layout/Confusables/TextSearch/TextSearch";
-import OcrUpload from "./layout/Confusables/OpticalCharacterRecognition/OcrUpload";
-import TextComparison from "./layout/Confusables/TextComparison/TextComparison";
+import { routePaths } from "./router";
 
 import "./App.css";
 
 const queryClient = new QueryClient();
 
 function App() {
+  const location = useLocation();
+  const pathFragment = location.pathname
+    .split("/")
+    .filter((s) => s !== "")?.[0];
+  const navigate = useNavigate();
+
   return (
     <QueryClientProvider client={queryClient}>
       <Header title="Confusables Validator" />
@@ -32,9 +33,57 @@ function App() {
           .
         </p>
         <p style={{ marginBottom: tokens.layoutMarginMedium }}>
-          Use the tabs below to select a search option or see a list of all
-          confusable characters.
+          Use the dropdown menu below to select a search option.
         </p>
+        <Select
+          id="navigation"
+          style={{ width: "100%" }}
+          description="Choose a search method"
+          defaultSelectedKey={pathFragment}
+          items={[
+            {
+              id: "text-search",
+              label: "Search text for confusables",
+            },
+            { id: "by-label", label: "Search by label" },
+            {
+              id: "by-character",
+              label: "Search by character",
+            },
+            {
+              id: "all-confusables",
+              label: "All confusables ",
+            },
+            { id: "ocr", label: "Optical Character Recognition (OCR)" },
+            {
+              id: "text-comparison",
+              label: "Text comparison",
+            },
+          ]}
+          onSelectionChange={(key) => {
+            switch (key) {
+              case "by-label":
+                navigate({ to: routePaths.byLabel });
+                break;
+              case "by-character":
+                navigate({ to: routePaths.byCharacter });
+                break;
+              case "all-confusables":
+                navigate({ to: routePaths.allConfusables });
+                break;
+              case "ocr":
+                navigate({ to: routePaths.opticalCharacterRecognition });
+                break;
+              case "text-comparison":
+                navigate({ to: routePaths.textComparison });
+                break;
+              case "text-search":
+              default:
+                navigate({ to: routePaths.textSearch });
+                break;
+            }
+          }}
+        />
         <hr
           style={{
             borderColor: tokens.surfaceColorBorderDefault,
@@ -43,42 +92,9 @@ function App() {
             borderLeft: 0,
           }}
         />
-        <Tabs
-          tabList={[
-            { id: "text", label: "Search text for confusables" },
-            { id: "label", label: "Search by label" },
-            { id: "character", label: "Search by character" },
-            { id: "all", label: "All confusables " },
-            { id: "ocr", label: "OCR" },
-            { id: "text-comparison", label: "Text comparison" },
-          ]}
-          tabPanels={[
-            {
-              id: "text",
-              children: <TextSearch />,
-            },
-            {
-              id: "label",
-              children: <ByLabel />,
-            },
-            {
-              id: "character",
-              children: <ByCharacter />,
-            },
-            {
-              id: "all",
-              children: <AllConfusables />,
-            },
-            {
-              id: "ocr",
-              children: <OcrUpload />,
-            },
-            {
-              id: "text-comparison",
-              children: <TextComparison />,
-            },
-          ]}
-        />
+        <div style={{ marginTop: tokens.layoutMarginMedium }}>
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </QueryClientProvider>
