@@ -5,12 +5,12 @@ import {
 } from "@tanstack/react-router";
 
 import App from "./App";
-import TextSearch from "./layout/Confusables/TextSearch/TextSearch";
-import ByLabel from "./layout/Confusables/ByLabel/ByLabel";
-import ByCharacter from "./layout/Confusables/ByCharacter/ByCharacter";
-import AllConfusables from "./layout/Confusables/AllConfusables/AllConfusables";
-import OcrUpload from "./layout/Confusables/OpticalCharacterRecognition/OcrUpload";
-import TextComparison from "./layout/Confusables/TextComparison/TextComparison";
+import TextSearch from "./layout/TextSearch/TextSearch";
+import ByLabel from "./layout/ByLabel/ByLabel";
+import ByCharacter from "./layout/ByCharacter/ByCharacter";
+import AllConfusables from "./layout/AllConfusables/AllConfusables";
+import OcrUpload from "./layout/OpticalCharacterRecognition/OcrUpload";
+import TextComparison from "./layout/TextComparison/TextComparison";
 
 // Create a root route
 const rootRoute = createRootRoute({

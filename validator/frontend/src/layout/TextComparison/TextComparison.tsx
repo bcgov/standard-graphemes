@@ -7,8 +7,8 @@ import * as tokens from "@bcgov/design-tokens/js";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
-import ProgressBar from "../../../components/ProgressBar/ProgressBar";
-import { getLevenshteinTextComparison } from "../../../services/api";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import { getLevenshteinTextComparison } from "../../services/api";
 
 export default function TextComparison() {
   const [value1, setValue1] = useState("");

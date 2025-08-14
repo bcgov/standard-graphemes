@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as tokens from "@bcgov/design-tokens/js";
 
-import SearchBar from "../../../components/SearchBar/SearchBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import SearchResults from "./SearchResults";
 
 export default function TextSearch() {
