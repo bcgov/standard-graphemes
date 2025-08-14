@@ -30,3 +30,11 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+
+#navigation {
+  width: 100%;
+}
+#navigation > button {
+  width: 100%;
+}
