@@ -61,8 +61,8 @@ const textComparisonRoute = createRoute({
   component: () => <TextComparison />,
 });
 
-// Create the route tree
-const routeTree = rootRoute.addChildren([
+// Create the route tree, export for testing.
+export const routeTree = rootRoute.addChildren([
   indexRoute,
   textSearchRoute,
   byLabelRoute,
@@ -74,9 +74,6 @@ const routeTree = rootRoute.addChildren([
 
 // Create the router
 export const router = createRouter({ routeTree });
-
-// Export the route tree for testing
-export { routeTree };
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
