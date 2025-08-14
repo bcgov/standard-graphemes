@@ -1,10 +1,12 @@
 import { Router } from "express";
 
+import graphemesRouter from "./graphemes/index.js";
 import languagesRouter from "./languages/index.js";
 import matchRouter from "./match/index.js";
 import sitesRouter from "./sites/index.js";
 
 const v1Router = Router();
+v1Router.use("/graphemes", graphemesRouter);
 v1Router.use("/languages", languagesRouter);
 v1Router.use("/match", matchRouter);
 v1Router.use("/sites", sitesRouter);
