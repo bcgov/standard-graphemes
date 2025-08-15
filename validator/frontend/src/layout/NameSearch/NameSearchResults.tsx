@@ -1,18 +1,19 @@
 import { InlineAlert } from "@bcgov/design-system-react-components";
+import * as tokens from "@bcgov/design-tokens/js";
 import { useQuery } from "@tanstack/react-query";
 
-import { getConfusablesByCharacter } from "../../../services/api";
-import ConfusableDisplay from "../../../components/ConfusableDisplay/ConfusableDisplay";
-import ProgressBar from "../../../components/ProgressBar/ProgressBar";
+import { getNameSearchResult } from "../../services/api";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
-interface SearchResultsProps {
+interface NameSearchResultsProp {
+  /** The name string being searched */
   search: string;
 }
 
-export default function SearchResults({ search }: SearchResultsProps) {
+export default function NameSearchResults({ search }: NameSearchResultsProp) {
   const query = useQuery({
     queryKey: ["confusable", search],
-    queryFn: ({ queryKey }) => getConfusablesByCharacter(queryKey[1]),
+    queryFn: ({ queryKey }) => getNameSearchResult(queryKey[1]),
   });
 
   if (!search) return null;
@@ -39,18 +40,14 @@ export default function SearchResults({ search }: SearchResultsProps) {
     <div>
       <InlineAlert variant="info">
         <p>
-          Found <strong>{query.data.length}</strong> confusables for: {search}
+          Search results for: <strong>{search}</strong>
         </p>
       </InlineAlert>
-      {query.data.map((confusable) => {
-        return (
-          <ConfusableDisplay
-            key={confusable.id}
-            confusable={confusable}
-            highlights={[{ value: search }]}
-          />
-        );
-      })}
+      {query.data && (
+        <div style={{ marginTop: tokens.layoutMarginMedium }}>
+          <code>{JSON.stringify(query.data)}</code>
+        </div>
+      )}
     </div>
   );
 }

@@ -52,24 +52,31 @@ function App() {
             },
             {
               id: "all-confusables",
-              label: "All confusables ",
+              label: "All confusables",
             },
             { id: "ocr", label: "Optical Character Recognition (OCR)" },
             {
               id: "text-comparison",
               label: "Text comparison",
             },
+            {
+              id: "name-search",
+              label: "Name search",
+            },
           ]}
           onSelectionChange={(key) => {
             switch (key) {
+              case "all-confusables":
+                navigate({ to: routePaths.allConfusables });
+                break;
               case "by-label":
                 navigate({ to: routePaths.byLabel });
                 break;
               case "by-character":
                 navigate({ to: routePaths.byCharacter });
                 break;
-              case "all-confusables":
-                navigate({ to: routePaths.allConfusables });
+              case "name-search":
+                navigate({ to: routePaths.nameSearch });
                 break;
               case "ocr":
                 navigate({ to: routePaths.opticalCharacterRecognition });

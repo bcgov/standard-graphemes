@@ -150,3 +150,24 @@ export async function getLevenshteinTextComparison(
 
   return await response.json();
 }
+
+/**
+ * Search for a person name.
+ */
+export async function getNameSearchResult(name: string) {
+  const response = await fetch(
+    `${GRAPHEMES_API_BASE_URL}/api/v1/name/${name}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data: ${response.statusText}`);
+  }
+
+  return await response.json();
+}
