@@ -2,10 +2,10 @@ import { Button, InlineAlert } from "@bcgov/design-system-react-components";
 import * as tokens from "@bcgov/design-tokens/js";
 import { useQuery } from "@tanstack/react-query";
 
-import { getSuggestedStringsFromSearchString } from "../../../services/api";
-import ConfusableDisplay from "../../../components/ConfusableDisplay/ConfusableDisplay";
-import iconClipboard from "../../../assets/fa-clipboard.svg";
-import ProgressBar from "../../../components/ProgressBar/ProgressBar";
+import { getSuggestedStringsFromSearchString } from "../../services/api";
+import ConfusableDisplay from "../../components/ConfusableDisplay/ConfusableDisplay";
+import iconClipboard from "../../assets/fa-clipboard.svg";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 interface SearchResultsProps {
   search: string;

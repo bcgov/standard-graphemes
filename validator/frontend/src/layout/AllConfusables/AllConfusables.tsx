@@ -1,9 +1,9 @@
 import { InlineAlert } from "@bcgov/design-system-react-components";
 import { useQuery } from "@tanstack/react-query";
 
-import ConfusableDisplay from "../../../components/ConfusableDisplay/ConfusableDisplay";
-import ProgressBar from "../../../components/ProgressBar/ProgressBar";
-import { getAllConfusables } from "../../../services/api";
+import ConfusableDisplay from "../../components/ConfusableDisplay/ConfusableDisplay";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import { getAllConfusables } from "../../services/api";
 
 export default function AllConfusables() {
   const query = useQuery({
