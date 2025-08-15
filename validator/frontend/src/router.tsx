@@ -11,57 +11,65 @@ import ByCharacter from "./layout/ByCharacter/ByCharacter";
 import AllConfusables from "./layout/AllConfusables/AllConfusables";
 import OcrUpload from "./layout/OpticalCharacterRecognition/OcrUpload";
 import TextComparison from "./layout/TextComparison/TextComparison";
+import NameSearch from "./layout/NameSearch/NameSearch";
 
-// Create a root route
+export const routePaths = {
+  textSearch: "/text-search",
+  byLabel: "/by-label",
+  byCharacter: "/by-character",
+  allConfusables: "/all-confusables",
+  opticalCharacterRecognition: "/ocr",
+  textComparison: "/text-comparison",
+  nameSearch: "/name-search",
+};
+
 const rootRoute = createRootRoute({
   component: App,
 });
 
-// Create index route that redirects to text-search
+// Index route displays the same thing as `/text-search`.
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
   component: () => <TextSearch />,
 });
-
-// Create routes for each tab
 const textSearchRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/text-search",
+  path: routePaths.textSearch,
   component: () => <TextSearch />,
 });
-
 const byLabelRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/by-label",
+  path: routePaths.byLabel,
   component: () => <ByLabel />,
 });
-
 const byCharacterRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/by-character",
+  path: routePaths.byCharacter,
   component: () => <ByCharacter />,
 });
-
 const allConfusablesRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/all-confusables",
+  path: routePaths.allConfusables,
   component: () => <AllConfusables />,
 });
-
 const ocrRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/ocr",
+  path: routePaths.opticalCharacterRecognition,
   component: () => <OcrUpload />,
 });
-
 const textComparisonRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/text-comparison",
+  path: routePaths.textComparison,
   component: () => <TextComparison />,
 });
+const nameSearchRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: routePaths.nameSearch,
+  component: () => <NameSearch />,
+});
 
-// Create the route tree, export for testing.
+// Export the route tree for testing purposes.
 export const routeTree = rootRoute.addChildren([
   indexRoute,
   textSearchRoute,
@@ -70,24 +78,14 @@ export const routeTree = rootRoute.addChildren([
   allConfusablesRoute,
   ocrRoute,
   textComparisonRoute,
+  nameSearchRoute,
 ]);
 
-// Create the router
 export const router = createRouter({ routeTree });
 
-// Register the router instance for type safety
+// Register the router instance for type safety.
 declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router;
   }
 }
-
-// Export route paths for easy reference
-export const routePaths = {
-  textSearch: "/text-search",
-  byLabel: "/by-label",
-  byCharacter: "/by-character",
-  allConfusables: "/all-confusables",
-  opticalCharacterRecognition: "/ocr",
-  textComparison: "/text-comparison",
-};
