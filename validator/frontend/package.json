@@ -7,7 +7,7 @@
     "dev": "vite",
     "format": "npx prettier . --write",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "npx eslint .",
     "preview": "vite preview",
     "start": "npx http-server ./dist --port $PORT --proxy $PROXY",
     "test": "npx vitest"
