@@ -31,25 +31,9 @@ export default function ConfusableDisplay({
 }: ConfusableDisplayProps) {
   const bg = tokens.themeBlue100;
   const c = tokens.typographyColorPrimaryInvert;
-
-  function Label() {
-    if (highlights.some((highlight) => highlight.value === confusable.label)) {
-      return (
-        <p>
-          <strong>label:</strong>{" "}
-          <CharSpan backgroundColor={bg} color={c}>
-            {confusable.label}
-          </CharSpan>
-        </p>
-      );
-    }
-
-    return (
-      <p>
-        <strong>label:</strong> <CharSpan>{confusable.label}</CharSpan>
-      </p>
-    );
-  }
+  const isHighlighted = highlights.some(
+    (highlight) => highlight.value === confusable.label
+  );
 
   function ConfusableCharacters() {
     return (
@@ -95,7 +79,15 @@ export default function ConfusableDisplay({
     >
       <div>
         {/* Label (alphabet character) */}
-        <Label />
+        <p>
+          <strong>label:</strong>{" "}
+          <CharSpan
+            backgroundColor={isHighlighted ? bg : undefined}
+            color={isHighlighted ? c : undefined}
+          >
+            {confusable.label}
+          </CharSpan>
+        </p>
 
         {/* ID (Unicode character) */}
         <p>
