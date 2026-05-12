@@ -15,6 +15,41 @@ interface Highlight {
   color?: string;
 }
 
+interface ConfusableCharactersProps {
+  /** The Confusable object for display */
+  confusable: Confusable;
+  /** Optional characters to highlight */
+  highlights?: Highlight[];
+}
+
+function ConfusableCharacters({
+  confusable,
+  highlights = [],
+}: ConfusableCharactersProps) {
+  const bg = tokens.themeBlue100;
+  const c = tokens.typographyColorPrimaryInvert;
+
+  return (
+    <>
+      {confusable.confusableChar.map((char, index) => {
+        if (highlights.some((highlight) => highlight.value === char)) {
+          return (
+            <CharSpan
+              key={`${confusable.id}-${index}`}
+              backgroundColor={bg}
+              color={c}
+            >
+              {char}
+            </CharSpan>
+          );
+        } else {
+          return <CharSpan key={`${confusable.id}-${index}`}>{char}</CharSpan>;
+        }
+      })}
+    </>
+  );
+}
+
 interface ConfusableDisplayProps {
   /** The Confusable object for display */
   confusable: Confusable;
@@ -34,30 +69,6 @@ export default function ConfusableDisplay({
   const isHighlighted = highlights.some(
     (highlight) => highlight.value === confusable.label
   );
-
-  function ConfusableCharacters() {
-    return (
-      <>
-        {confusable.confusableChar.map((char, index) => {
-          if (highlights.some((highlight) => highlight.value === char)) {
-            return (
-              <CharSpan
-                key={`${confusable.id}-${index}`}
-                backgroundColor={bg}
-                color={c}
-              >
-                {char}
-              </CharSpan>
-            );
-          } else {
-            return (
-              <CharSpan key={`${confusable.id}-${index}`}>{char}</CharSpan>
-            );
-          }
-        })}
-      </>
-    );
-  }
 
   return (
     <div
@@ -103,7 +114,10 @@ export default function ConfusableDisplay({
           }}
         >
           <strong>confusableChar ({confusable.confusableChar.length}):</strong>{" "}
-          <ConfusableCharacters />
+          <ConfusableCharacters
+            confusable={confusable}
+            highlights={highlights}
+          />
         </p>
 
         {/* Confusable Unicode sequences */}
