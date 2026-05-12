@@ -6,7 +6,7 @@
     "convert-csv-data": "node data-conversion/convert.mjs",
     "dev": "tsx watch src/index.ts",
     "format": "npx prettier . --write",
-    "lint": "eslint .",
+    "lint": "npx eslint .",
     "start": "node dist/index.js",
     "test": "npx vitest"
   },
