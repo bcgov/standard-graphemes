@@ -1,11 +1,14 @@
-import { Button, InlineAlert } from "@bcgov/design-system-react-components";
+import {
+  Button,
+  InlineAlert,
+  ProgressBar,
+} from "@bcgov/design-system-react-components";
 import * as tokens from "@bcgov/design-tokens/js";
 import { useQuery } from "@tanstack/react-query";
 
 import { getSuggestedStringsFromSearchString } from "../../services/api";
 import ConfusableDisplay from "../../components/ConfusableDisplay/ConfusableDisplay";
 import iconClipboard from "../../assets/fa-clipboard.svg";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 interface SearchResultsProps {
   search: string;
@@ -22,7 +25,7 @@ export default function SearchResults({ search }: SearchResultsProps) {
   if (query.isPending || query.isFetching) {
     return (
       <div>
-        <ProgressBar isIndeterminate label="Searching..." />
+        <ProgressBar isIndeterminate valueLabel="Searching..." />
       </div>
     );
   }
@@ -48,6 +51,7 @@ export default function SearchResults({ search }: SearchResultsProps) {
       {query.data.suggestions.map((suggestion, index) => {
         return (
           <div
+            key={index}
             style={{
               backgroundColor: tokens.themeGold30,
               border: `${tokens.layoutBorderWidthSmall} solid ${tokens.themeGray60}`,

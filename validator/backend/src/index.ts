@@ -2,7 +2,7 @@ import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 
-import { api } from "./routes/confusable.mjs";
+import { api } from "./routes/api.mjs";
 
 const app = new Hono();
 
