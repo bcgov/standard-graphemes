@@ -3,7 +3,7 @@ import { OpenAPIHono, createRoute } from "@hono/zod-openapi";
 import { createWorker } from "tesseract.js";
 import { z } from "zod";
 
-import compareValues, { type ComparisonDetails } from "../lib/compareValues";
+import compareValues from "../lib/compareValues.js";
 import untypedConfusables from "../data/all_characters_confusables.json" with { type: "json" };
 
 export const api = new OpenAPIHono();
