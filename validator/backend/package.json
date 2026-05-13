@@ -14,7 +14,9 @@
     "@hono/node-server": "2.0.2",
     "@hono/swagger-ui": "0.6.1",
     "@hono/zod-openapi": "1.4.0",
+    "any-ascii": "0.3.3",
     "hono": "4.12.18",
+    "js-levenshtein-esm": "2.0.0",
     "tesseract.js": "7.0.0",
     "zod": "4.4.3"
   },
