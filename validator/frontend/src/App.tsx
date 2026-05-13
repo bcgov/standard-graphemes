@@ -59,10 +59,6 @@ function App() {
               id: "text-comparison",
               label: "Text comparison",
             },
-            {
-              id: "name-search",
-              label: "Name search",
-            },
           ]}
           onSelectionChange={(key) => {
             switch (key) {
@@ -74,9 +70,6 @@ function App() {
                 break;
               case "by-character":
                 navigate({ to: routePaths.byCharacter });
-                break;
-              case "name-search":
-                navigate({ to: routePaths.nameSearch });
                 break;
               case "ocr":
                 navigate({ to: routePaths.opticalCharacterRecognition });

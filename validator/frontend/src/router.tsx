@@ -11,7 +11,6 @@ import ByCharacter from "./layout/ByCharacter/ByCharacter";
 import AllConfusables from "./layout/AllConfusables/AllConfusables";
 import OcrUpload from "./layout/OpticalCharacterRecognition/OcrUpload";
 import TextComparison from "./layout/TextComparison/TextComparison";
-import NameSearch from "./layout/NameSearch/NameSearch";
 
 export const routePaths = {
   textSearch: "/text-search",
@@ -63,11 +62,6 @@ const textComparisonRoute = createRoute({
   path: routePaths.textComparison,
   component: () => <TextComparison />,
 });
-const nameSearchRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: routePaths.nameSearch,
-  component: () => <NameSearch />,
-});
 
 // Export the route tree for testing purposes.
 export const routeTree = rootRoute.addChildren([
@@ -78,7 +72,6 @@ export const routeTree = rootRoute.addChildren([
   allConfusablesRoute,
   ocrRoute,
   textComparisonRoute,
-  nameSearchRoute,
 ]);
 
 export const router = createRouter({ routeTree });
