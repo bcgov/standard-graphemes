@@ -51,6 +51,7 @@ export default function SearchResults({ search }: SearchResultsProps) {
       {query.data.suggestions.map((suggestion, index) => {
         return (
           <div
+            key={index}
             style={{
               backgroundColor: tokens.themeGold30,
               border: `${tokens.layoutBorderWidthSmall} solid ${tokens.themeGray60}`,
