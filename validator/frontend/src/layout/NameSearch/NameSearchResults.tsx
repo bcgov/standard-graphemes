@@ -1,9 +1,11 @@
-import { InlineAlert } from "@bcgov/design-system-react-components";
+import {
+  InlineAlert,
+  ProgressBar,
+} from "@bcgov/design-system-react-components";
 import * as tokens from "@bcgov/design-tokens/js";
 import { useQuery } from "@tanstack/react-query";
 
 import { getNameSearchResult } from "../../services/api";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 interface NameSearchResultsProp {
   /** The name string being searched */
@@ -21,7 +23,7 @@ export default function NameSearchResults({ search }: NameSearchResultsProp) {
   if (query.isPending || query.isFetching) {
     return (
       <div>
-        <ProgressBar isIndeterminate label="Searching..." />
+        <ProgressBar isIndeterminate valueLabel="Searching..." />
       </div>
     );
   }
