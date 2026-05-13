@@ -7,12 +7,6 @@ const API_BASE_URL =
     ? ""
     : import.meta.env.VITE_API_BASE_URL;
 
-// Graphemes API
-const GRAPHEMES_API_BASE_URL =
-  import.meta.env.MODE === "development"
-    ? ""
-    : import.meta.env.GRAPHEMES_API_BASE_URL;
-
 /**
  * Get an array of all Confusable objects.
  */
@@ -136,7 +130,7 @@ export async function getLevenshteinTextComparison(
     threshold,
   });
 
-  const response = await fetch(`${GRAPHEMES_API_BASE_URL}/api/v1/match`, {
+  const response = await fetch(`${API_BASE_URL}/api/v1/match`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
