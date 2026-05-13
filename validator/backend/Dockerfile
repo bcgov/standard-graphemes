@@ -13,8 +13,8 @@ RUN npm run build
 # -----------
 FROM base AS serve
 WORKDIR /app
-COPY --from=build /app/dist /app/dist
+COPY --from=build /app/dist/src /app/dist/src
 COPY package.json package-lock.json ./
 RUN npm install --omit=dev
 EXPOSE 3000
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/src/index.js"]
