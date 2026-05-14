@@ -1,13 +1,13 @@
 import {
   Button,
   InlineAlert,
+  ProgressBar,
   TextField,
 } from "@bcgov/design-system-react-components";
 import * as tokens from "@bcgov/design-tokens/js";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { getLevenshteinTextComparison } from "../../services/api";
 
 export default function TextComparison() {
@@ -107,7 +107,7 @@ export default function TextComparison() {
 
       {mutation.isPending && (
         <div style={{ marginTop: tokens.layoutMarginMedium }}>
-          <ProgressBar isIndeterminate />
+          <ProgressBar isIndeterminate valueLabel="Loading..." />
         </div>
       )}
 

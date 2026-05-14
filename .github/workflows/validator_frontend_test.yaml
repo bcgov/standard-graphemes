@@ -47,3 +47,9 @@ jobs:
       - name: Run test script
         run: npm run test
         working-directory: ./validator/frontend
+
+      # Build failure causes this job to fail.
+      # We don't need to keep the artifact of this build in this test run.
+      - name: Run build script
+        run: npm run build
+        working-directory: ./validator/frontend

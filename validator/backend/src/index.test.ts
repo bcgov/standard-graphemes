@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { Hono } from "hono";
-import { api } from "./routes/confusable.mts";
+import { api } from "./routes/api.mts";
 
 const app = new Hono();
 app.get("/", (c) => c.text("Hello Hono!"));
