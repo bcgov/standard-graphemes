@@ -1,8 +1,10 @@
-import { InlineAlert } from "@bcgov/design-system-react-components";
+import {
+  InlineAlert,
+  ProgressBar,
+} from "@bcgov/design-system-react-components";
 import { useQuery } from "@tanstack/react-query";
 
 import ConfusableDisplay from "../../components/ConfusableDisplay/ConfusableDisplay";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { getAllConfusables } from "../../services/api";
 
 export default function AllConfusables() {
@@ -12,11 +14,7 @@ export default function AllConfusables() {
   });
 
   if (query.isPending || query.isFetching) {
-    return (
-      <div>
-        <ProgressBar isIndeterminate />
-      </div>
-    );
+    return <ProgressBar isIndeterminate valueLabel="Loading..." />;
   }
 
   if (query.isError) {

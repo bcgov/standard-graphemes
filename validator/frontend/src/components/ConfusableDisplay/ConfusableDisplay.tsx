@@ -15,6 +15,41 @@ interface Highlight {
   color?: string;
 }
 
+interface ConfusableCharactersProps {
+  /** The Confusable object for display */
+  confusable: Confusable;
+  /** Optional characters to highlight */
+  highlights?: Highlight[];
+}
+
+function ConfusableCharacters({
+  confusable,
+  highlights = [],
+}: ConfusableCharactersProps) {
+  const bg = tokens.themeBlue100;
+  const c = tokens.typographyColorPrimaryInvert;
+
+  return (
+    <>
+      {confusable.confusableChar.map((char, index) => {
+        if (highlights.some((highlight) => highlight.value === char)) {
+          return (
+            <CharSpan
+              key={`${confusable.id}-${index}`}
+              backgroundColor={bg}
+              color={c}
+            >
+              {char}
+            </CharSpan>
+          );
+        } else {
+          return <CharSpan key={`${confusable.id}-${index}`}>{char}</CharSpan>;
+        }
+      })}
+    </>
+  );
+}
+
 interface ConfusableDisplayProps {
   /** The Confusable object for display */
   confusable: Confusable;
@@ -31,49 +66,9 @@ export default function ConfusableDisplay({
 }: ConfusableDisplayProps) {
   const bg = tokens.themeBlue100;
   const c = tokens.typographyColorPrimaryInvert;
-
-  function Label() {
-    if (highlights.some((highlight) => highlight.value === confusable.label)) {
-      return (
-        <p>
-          <strong>label:</strong>{" "}
-          <CharSpan backgroundColor={bg} color={c}>
-            {confusable.label}
-          </CharSpan>
-        </p>
-      );
-    }
-
-    return (
-      <p>
-        <strong>label:</strong> <CharSpan>{confusable.label}</CharSpan>
-      </p>
-    );
-  }
-
-  function ConfusableCharacters() {
-    return (
-      <>
-        {confusable.confusableChar.map((char, index) => {
-          if (highlights.some((highlight) => highlight.value === char)) {
-            return (
-              <CharSpan
-                key={`${confusable.id}-${index}`}
-                backgroundColor={bg}
-                color={c}
-              >
-                {char}
-              </CharSpan>
-            );
-          } else {
-            return (
-              <CharSpan key={`${confusable.id}-${index}`}>{char}</CharSpan>
-            );
-          }
-        })}
-      </>
-    );
-  }
+  const isHighlighted = highlights.some(
+    (highlight) => highlight.value === confusable.label
+  );
 
   return (
     <div
@@ -95,7 +90,15 @@ export default function ConfusableDisplay({
     >
       <div>
         {/* Label (alphabet character) */}
-        <Label />
+        <p>
+          <strong>label:</strong>{" "}
+          <CharSpan
+            backgroundColor={isHighlighted ? bg : undefined}
+            color={isHighlighted ? c : undefined}
+          >
+            {confusable.label}
+          </CharSpan>
+        </p>
 
         {/* ID (Unicode character) */}
         <p>
@@ -111,7 +114,10 @@ export default function ConfusableDisplay({
           }}
         >
           <strong>confusableChar ({confusable.confusableChar.length}):</strong>{" "}
-          <ConfusableCharacters />
+          <ConfusableCharacters
+            confusable={confusable}
+            highlights={highlights}
+          />
         </p>
 
         {/* Confusable Unicode sequences */}

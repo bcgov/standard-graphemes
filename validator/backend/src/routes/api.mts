@@ -3,6 +3,7 @@ import { OpenAPIHono, createRoute } from "@hono/zod-openapi";
 import { createWorker } from "tesseract.js";
 import { z } from "zod";
 
+import compareValues from "../lib/compareValues.js";
 import untypedConfusables from "../data/all_characters_confusables.json" with { type: "json" };
 
 export const api = new OpenAPIHono();
@@ -269,6 +270,65 @@ api.openapi(getTextFromUserImage, async (c) => {
     console.error("OCR error:", error);
     return c.json({ error: "Failed to process OCR" }, 500);
   }
+});
+
+const textComparisonData = z.object({
+  value1: z.string(),
+  value2: z.string(),
+  threshold: z.number(),
+});
+
+// Text comparison
+const postTextComparison = createRoute({
+  method: "post",
+  path: "/match",
+  request: {
+    body: {
+      content: {
+        "application/json": {
+          schema: textComparisonData,
+        },
+      },
+    },
+  },
+  responses: {
+    200: {
+      content: {
+        "application/json": {
+          schema: {
+            /** First string value for comparison. */
+            comparisonValue1: "string",
+            /** Second string value for comparison. */
+            comparisonValue2: "string",
+            /** Levenshtein ratio threshold to check for a match. */
+            threshold: "number",
+            /** Levenshtein ratio to compare to the threshold. */
+            ratio: "number",
+            /** Whether the strings match based on the given threshold. */
+            isMatch: "boolean",
+          },
+        },
+      },
+      description: "Comparison object",
+    },
+    400: {
+      description: "Failed to match text",
+    },
+    500: {
+      description: "Failed to match text",
+    },
+  },
+});
+
+api.openapi(postTextComparison, async (c) => {
+  const { value1, value2, threshold } = await c.req.json();
+
+  if (!value1 || !value2 || !threshold)
+    return c.json({ error: "Unable to compare text" }, 500);
+
+  const res = compareValues(value1, value2, threshold);
+
+  return c.json(res, 200);
 });
 
 // OpenAPI JSON definition served from /api/v1/docs
