@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: f343b4-dev
+  name: graphemes-api
+  annotations:
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"graphemes-api:test","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","paused":false}]
+spec:
+  selector:
+    matchLabels:
+      app: graphemes-api
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: graphemes-api
+    spec:
+      containers:
+        - name: container
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/f343b4-tools/graphemes-api@sha256:63ad0800e3d228f60d7ccf4d6fef93e5e4804e0984259e22606a8359359f8e95
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env: []
+      imagePullSecrets: []
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 50%
+  paused: false
