@@ -6,12 +6,12 @@ metadata:
   name: graphemes-api
   annotations:
     image.openshift.io/triggers: >-
-      [{"from":{"kind":"ImageStreamTag","name":"graphemes-api:dev","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","paused":false}]
+      [{"from":{"kind":"ImageStreamTag","name":"graphemes-api:test","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","paused":false}]
 spec:
   selector:
     matchLabels:
       app: graphemes-api
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
