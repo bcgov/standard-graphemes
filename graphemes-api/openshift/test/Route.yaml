@@ -1,0 +1,19 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: graphemes-api
+  namespace: f343b4-test
+spec:
+  path: /
+  to:
+    name: graphemes-api
+    weight: 100
+    kind: Service
+  host: ""
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  port:
+    targetPort: 3000-tcp
+  alternateBackends: []

@@ -1,37 +1,28 @@
 ---
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: graphemes-api
   namespace: f343b4-dev
-  labels:
-    app: graphemes-api
-    app.kubernetes.io/component: graphemes-api
-    app.kubernetes.io/instance: graphemes-api
-    app.kubernetes.io/name: graphemes-api
-    app.kubernetes.io/part-of: graphemes-api
-    app.openshift.io/runtime: nodejs
-    app.openshift.io/runtime-namespace: f343b4-tools
-    app.openshift.io/runtime-version: dev
+  name: graphemes-api
   annotations:
-    alpha.image.policy.openshift.io/resolve-names: "*"
-    app.openshift.io/route-disabled: "false"
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"graphemes-api:dev","namespace":"f343b4-tools"},"fieldPath":"spec.template.spec.containers[?(@.name==\"container\")].image","paused":false}]
 spec:
-  replicas: 2
   selector:
     matchLabels:
       app: graphemes-api
+  replicas: 1
   template:
     metadata:
       labels:
         app: graphemes-api
-        deployment: graphemes-api
     spec:
       containers:
-        - name: graphemes-api
-          image: ghcr.io/bcgov/standard-graphemes/graphemes-api:dev
+        - name: container
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/f343b4-tools/graphemes-api@sha256:63ad0800e3d228f60d7ccf4d6fef93e5e4804e0984259e22606a8359359f8e95
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
               protocol: TCP
           env:
             - name: DB_HOST
@@ -59,19 +50,10 @@ spec:
               # is the default database name in the PostgresCluster.
               # This database name does not appear in the Secret.
               value: grapheme_v2
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-          imagePullPolicy: IfNotPresent
-      restartPolicy: Always
-      terminationGracePeriodSeconds: 30
-      dnsPolicy: ClusterFirst
-      securityContext: {}
-      schedulerName: default-scheduler
+      imagePullSecrets: []
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 25%
-      maxSurge: 25%
-  revisionHistoryLimit: 10
-  progressDeadlineSeconds: 600
+      maxSurge: 1
+      maxUnavailable: 50%
+  paused: false
