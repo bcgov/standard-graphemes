@@ -24,7 +24,32 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
-          env: []
+          env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: pgbouncer-host
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: pgbouncer-port
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: user
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: crunchy-postgres-pguser-graphemes-api-user
+                  key: password
+            - name: DB_NAME
+              # This is a literal value because `crunchy-postgres`
+              # is the default database name in the PostgresCluster.
+              # This database name does not appear in the Secret.
+              value: grapheme_v2
       imagePullSecrets: []
   strategy:
     type: RollingUpdate
