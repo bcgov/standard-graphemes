@@ -4,9 +4,9 @@
 
 ## Project description
 
-This repo holds exploratory code with the goal of establish a standard set of graphemes to help Indigenous language text work in government systems. It is owned by the [Data Systems & Services branch of the BC Data Service](https://dir.gov.bc.ca/gtds.cgi?show=Branch&organizationCode=CITZ&organizationalUnitCode=BCDS%2dDSS).
+This repo holds exploratory code related to Indigenous language names in government systems. For questions, please contact: Ministry of Citizens' Services > Connected Services BC > Policy Direction > Data Governance and Data Sovereignty > Data Equity Services team
 
-For more information, please see:
+For more information on the topic of Indigenous languages in government systems, please see:
 
 - [Including Indigenous languages in government records, systems and services](https://www2.gov.bc.ca/gov/content/data/initiatives/including-indigenous-languages) on gov.bc.ca
 - [Techniques for Supporting Indigenous Language Text in Computer Systems](https://developer.gov.bc.ca/docs/default/component/indigenous-languages-in-systems) on DevHub
