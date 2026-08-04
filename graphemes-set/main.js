@@ -1,9 +1,17 @@
-import fs from "fs";
+import fs from "node:fs";
 import { Octokit } from "@octokit/rest";
 import { parse } from "csv-parse/sync";
 import anyAscii from "any-ascii";
 
-const octokit = new Octokit();
+const githubToken = process.env.GITHUB_TOKEN?.trim();
+
+const octokit = new Octokit(
+  githubToken
+    ? {
+        auth: githubToken,
+      }
+    : undefined,
+);
 const REPO_OWNER = "First-Peoples-Cultural-Council";
 const REPO_NAME = "unicode-resources";
 const BASE_PATH = "orthography-resources";
@@ -31,7 +39,7 @@ async function getSubdirectories() {
   console.log("Fetching subdirectories in orthography-resources directory...");
   console.log(
     "Count of language directories found: ",
-    languageDirectories.length
+    languageDirectories.length,
   );
   console.log("Language directories: ", languageDirectories);
   console.log("---");
@@ -179,6 +187,12 @@ function escapeCsvValue(value) {
 }
 
 async function main() {
+  if (!githubToken) {
+    console.warn(
+      "No GITHUB_TOKEN found. Requests are unauthenticated and more likely to hit rate limits.",
+    );
+  }
+
   const subdirs = await getSubdirectories();
   const languageMappings = await fetchLanguageMappings();
   const characterMap = new Map();
@@ -267,7 +281,7 @@ async function main() {
         escapeCsvValue(anyAscii(Character)),
         escapeCsvValue(Array.from(Languages).join(",")),
       ]);
-    }
+    },
   );
 
   fs.writeFileSync(OUTPUT_FILE, results.map((row) => row.join(",")).join("\n"));
