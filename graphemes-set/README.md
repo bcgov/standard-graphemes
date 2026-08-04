@@ -7,6 +7,11 @@ The script in this directory is used to pull data from the [First-Peoples-Cultur
 - Use the Node.js version specified in `.nvmrc`
 - `npm i` to install the script dependencies from `package.json`
 
+## Environment variables
+
+- Make a copy of `.env.sample` called `.env` - this will be used by the `start` script in `package.json`
+- In `.env`, add a GitHub Personal Access Token that has permissions to read public repositories
+
 ## Run
 
 - `npm run start` to run the script
