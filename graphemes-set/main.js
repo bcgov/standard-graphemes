@@ -142,6 +142,10 @@ async function main() {
       "NFC Code Points": NFCCodePoints,
       Languages,
     }) => {
+      const sortedLanguages = Array.from(Languages).sort((a, b) =>
+        a.localeCompare(b),
+      );
+
       const row = isCompact
         ? [
             escapeCsvValue(Character),
@@ -157,7 +161,7 @@ async function main() {
             escapeCsvValue(NFDCodePoints),
             escapeCsvValue(NFCCodePoints),
             escapeCsvValue(anyAscii(Character)),
-            escapeCsvValue(Array.from(Languages).join(",")),
+            escapeCsvValue(sortedLanguages.join(",")),
           ];
 
       results.push(row);
