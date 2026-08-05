@@ -9,7 +9,7 @@ The script in this directory is used to pull data from the [First-Peoples-Cultur
 
 ## Environment variables
 
-- Make a copy of `.env.sample` called `.env` - this will be used by the `start` script in `package.json`
+- Make a copy of `.env.sample` called `.env` - this will be used by the `start:full` and `start:compact` scripts in `package.json`
 - In `.env`, add a GitHub Personal Access Token that has permissions to read public repositories
 
 ## Run
