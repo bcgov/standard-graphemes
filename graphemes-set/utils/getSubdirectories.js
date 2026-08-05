@@ -14,6 +14,12 @@ export async function getSubdirectories(githubSourceConfig) {
     path: githubSourceConfig.repo.basePath,
   });
 
+  if (!Array.isArray(data)) {
+    throw new Error(
+      `Expected ${githubSourceConfig.repo.basePath} to be a directory (got a file response).`,
+    );
+  }
+
   const languageDirectories = data
     .filter((item) => item.type === "dir")
     .map((dir) => dir.name);
