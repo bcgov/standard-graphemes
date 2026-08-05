@@ -4,13 +4,15 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "node main.js"
+    "start:full": "node --env-file=.env main.js --format=full",
+    "start:compact": "node --env-file=.env main.js --format=compact"
   },
   "license": "Apache-2.0",
   "description": "This script fetches the latest graphemes sets by language from the First-Peoples-Cultural-Council/unicode-resources repository and formats them into a single CSV file.",
   "dependencies": {
-    "any-ascii": "0.3.2",
-    "@octokit/rest": "21.1.1",
-    "csv-parse": "5.6.0"
+    "@octokit/rest": "22.0.1",
+    "any-ascii": "0.3.3",
+    "csv-parse": "7.0.2",
+    "yargs": "18.1.0"
   }
 }
