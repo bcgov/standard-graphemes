@@ -24,7 +24,7 @@ export async function fetchCsv(subdir, fileName, githubSourceConfig) {
 
     return csvContent;
   } catch (error) {
-    console.error(`Error fetching ${fileName} from ${subdir}:`, error.message);
-    return "";
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`Error fetching ${fileName} from ${subdir}:`, message);
   }
 }
