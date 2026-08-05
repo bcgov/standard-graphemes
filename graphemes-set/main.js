@@ -107,12 +107,31 @@ async function main() {
         "Languages",
       ];
 
+  // Compare two strings by lexicographic order of their Unicode code points.
+  const compareByUnicodeOrder = (a, b) => {
+    const aPoints = Array.from(a, (char) => char.codePointAt(0));
+    const bPoints = Array.from(b, (char) => char.codePointAt(0));
+    const minLength = Math.min(aPoints.length, bPoints.length);
+
+    for (let i = 0; i < minLength; i += 1) {
+      if (aPoints[i] !== bPoints[i]) {
+        return aPoints[i] - bPoints[i];
+      }
+    }
+
+    return aPoints.length - bPoints.length;
+  };
+
+  const sortedCharacters = Array.from(characterMap.values()).sort((a, b) =>
+    compareByUnicodeOrder(a.Character, b.Character),
+  );
+
   // This is the header row for the CSV.
   const results = [columns];
 
   // For each character in the map, we will add a row to the CSV, and each
   // column will be escaped by `escapeCsvValue()`.
-  characterMap.forEach(
+  sortedCharacters.forEach(
     ({
       Character,
       NFD,
