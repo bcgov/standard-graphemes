@@ -12,7 +12,11 @@ import { fetchCsv } from "./fetchCsv.js";
  * @returns {string[]} List of characters from the `Characters` column of the CSV.
  */
 export async function fetchCharacters(subdir, githubSourceConfig) {
-  const csvData = await fetchCsv(subdir, githubSourceConfig);
+  const csvData = await fetchCsv(
+    subdir,
+    "alphabet_ordering.csv",
+    githubSourceConfig,
+  );
   if (!csvData) return [];
 
   console.log("---");

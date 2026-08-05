@@ -1,21 +1,21 @@
 /** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
 
 /**
- * Fetch the CSV content from the `alphabet_ordering.csv` file in the specified
- * sub-directory.
+ * Fetch CSV content from a specific file in the specified sub-directory.
  * @param {string} subdir Target language site represented by the sub-directory.
+ * @param {string} fileName CSV file name to fetch.
  * @param {GithubSourceConfig} githubSourceConfig
- * @returns {Promise<string>} CSV content from the `alphabet_ordering.csv` file.
+ * @returns {Promise<string>} CSV content from the target file.
  */
-export async function fetchCsv(subdir, githubSourceConfig) {
+export async function fetchCsv(subdir, fileName, githubSourceConfig) {
   try {
     console.log("---");
-    console.log(`Fetching CSV from ${subdir}...`);
+    console.log(`Fetching ${fileName} from ${subdir}...`);
 
     const { data } = await githubSourceConfig.octokit.repos.getContent({
       owner: githubSourceConfig.repo.owner,
       repo: githubSourceConfig.repo.name,
-      path: `${githubSourceConfig.repo.basePath}/${subdir}/alphabet_ordering.csv`,
+      path: `${githubSourceConfig.repo.basePath}/${subdir}/${fileName}`,
     });
     const csvContent = Buffer.from(data.content, "base64").toString("utf-8");
 
@@ -24,7 +24,7 @@ export async function fetchCsv(subdir, githubSourceConfig) {
 
     return csvContent;
   } catch (error) {
-    console.error(`Error fetching CSV from ${subdir}:`, error.message);
+    console.error(`Error fetching ${fileName} from ${subdir}:`, error.message);
     return "";
   }
 }

@@ -6,6 +6,7 @@ import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
+import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js";
 import { fetchLanguageMappings } from "./utils/fetchLanguageMappings.js";
 import { getSubdirectories } from "./utils/getSubdirectories.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
@@ -16,7 +17,13 @@ import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 const argv = yargs(hideBin(process.argv)).parse();
 const format = argv.format ?? "full";
 const isCompact = format === "compact";
-const OUTPUT_FILE = isCompact ? "output-compact.csv" : "output-full.csv";
+const OUTPUT_DIR = "output";
+const ALPHABET_OUTPUT_FILE = isCompact
+  ? "alphabet-output-compact.csv"
+  : "alphabet-output-full.csv";
+const ALPHABET_OUTPUT_PATH = `${OUTPUT_DIR}/${ALPHABET_OUTPUT_FILE}`;
+const CONFUSABLES_OUTPUT_FILE = "confusables-output.csv";
+const CONFUSABLES_OUTPUT_PATH = `${OUTPUT_DIR}/${CONFUSABLES_OUTPUT_FILE}`;
 const githubToken = process.env.GITHUB_TOKEN?.trim();
 
 /** @type {GithubSourceConfig} */
@@ -47,10 +54,31 @@ async function main() {
   const subdirs = await getSubdirectories(githubSourceConfig);
   const languageMappings = await fetchLanguageMappings(githubSourceConfig);
   const characterMap = new Map();
+  const confusableMap = new Map();
+
+  // Compare two strings by lexicographic order of their Unicode code points.
+  const compareByUnicodeOrder = (a, b) => {
+    const aPoints = Array.from(a, (char) => char.codePointAt(0));
+    const bPoints = Array.from(b, (char) => char.codePointAt(0));
+    const minLength = Math.min(aPoints.length, bPoints.length);
+
+    for (let i = 0; i < minLength; i += 1) {
+      if (aPoints[i] !== bPoints[i]) {
+        return aPoints[i] - bPoints[i];
+      }
+    }
+
+    return aPoints.length - bPoints.length;
+  };
 
   for (const subdir of subdirs) {
     const languageName = languageMappings[subdir] || subdir;
     const characters = await fetchCharacters(subdir, githubSourceConfig);
+    const confusableCharacters = await fetchConfusableCharacters(
+      subdir,
+      githubSourceConfig,
+    );
+
     characters.forEach((char) => {
       /**
        * @type {string} Normalized form D (NFD) of the character.
@@ -91,9 +119,23 @@ async function main() {
       // duplicates won't be added.
       characterMap.get(key).Languages.add(languageName);
     });
+
+    confusableCharacters.forEach(({ confusable, canonicalCharacter }) => {
+      const key = `${confusable}\u0000${canonicalCharacter}`;
+
+      if (!confusableMap.has(key)) {
+        confusableMap.set(key, {
+          Confusable: confusable,
+          "Canonical Character": canonicalCharacter,
+          Languages: new Set(),
+        });
+      }
+
+      confusableMap.get(key).Languages.add(languageName);
+    });
   }
 
-  const columns = isCompact
+  const alphabetColumns = isCompact
     ? ["Character", "NFD Code Points", "NFC Code Points"]
     : [
         "Character",
@@ -107,27 +149,12 @@ async function main() {
         "Languages",
       ];
 
-  // Compare two strings by lexicographic order of their Unicode code points.
-  const compareByUnicodeOrder = (a, b) => {
-    const aPoints = Array.from(a, (char) => char.codePointAt(0));
-    const bPoints = Array.from(b, (char) => char.codePointAt(0));
-    const minLength = Math.min(aPoints.length, bPoints.length);
-
-    for (let i = 0; i < minLength; i += 1) {
-      if (aPoints[i] !== bPoints[i]) {
-        return aPoints[i] - bPoints[i];
-      }
-    }
-
-    return aPoints.length - bPoints.length;
-  };
-
   const sortedCharacters = Array.from(characterMap.values()).sort((a, b) =>
     compareByUnicodeOrder(a.Character, b.Character),
   );
 
-  // This is the header row for the CSV.
-  const results = [columns];
+  // This is the header row for the alphabet CSV.
+  const alphabetResults = [alphabetColumns];
 
   // For each character in the map, we will add a row to the CSV, and each
   // column will be escaped by `escapeCsvValue()`.
@@ -164,12 +191,55 @@ async function main() {
             escapeCsvValue(sortedLanguages.join(",")),
           ];
 
-      results.push(row);
+      alphabetResults.push(row);
     },
   );
 
-  fs.writeFileSync(OUTPUT_FILE, results.map((row) => row.join(",")).join("\n"));
-  console.log(`CSV output written to ${OUTPUT_FILE}`);
+  const confusablesColumns = ["Confusable", "Canonical Character", "Languages"];
+  const sortedConfusables = Array.from(confusableMap.values()).sort((a, b) => {
+    const confusableCompare = compareByUnicodeOrder(a.Confusable, b.Confusable);
+
+    if (confusableCompare !== 0) {
+      return confusableCompare;
+    }
+
+    return compareByUnicodeOrder(
+      a["Canonical Character"],
+      b["Canonical Character"],
+    );
+  });
+
+  const confusablesResults = [confusablesColumns];
+
+  sortedConfusables.forEach(
+    ({ Confusable, "Canonical Character": CanonicalCharacter, Languages }) => {
+      const sortedLanguages = Array.from(Languages).sort((a, b) =>
+        a.localeCompare(b),
+      );
+
+      const row = [
+        escapeCsvValue(Confusable),
+        escapeCsvValue(CanonicalCharacter),
+        escapeCsvValue(sortedLanguages.join(",")),
+      ];
+
+      confusablesResults.push(row);
+    },
+  );
+
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+  fs.writeFileSync(
+    ALPHABET_OUTPUT_PATH,
+    alphabetResults.map((row) => row.join(",")).join("\n"),
+  );
+  fs.writeFileSync(
+    CONFUSABLES_OUTPUT_PATH,
+    confusablesResults.map((row) => row.join(",")).join("\n"),
+  );
+
+  console.log(`Alphabet CSV output written to ${ALPHABET_OUTPUT_PATH}`);
+  console.log(`Confusables CSV output written to ${CONFUSABLES_OUTPUT_PATH}`);
 }
 
 main().catch(console.error);
