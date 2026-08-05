@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import { Octokit } from "@octokit/rest";
 import anyAscii from "any-ascii";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
@@ -11,7 +13,10 @@ import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 
 /** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
 
-const OUTPUT_FILE = "output.csv";
+const argv = yargs(hideBin(process.argv)).parse();
+const format = argv.format ?? "full";
+const isCompact = format === "compact";
+const OUTPUT_FILE = isCompact ? "output-compact.csv" : "output-full.csv";
 const githubToken = process.env.GITHUB_TOKEN?.trim();
 
 /** @type {GithubSourceConfig} */
@@ -88,20 +93,22 @@ async function main() {
     });
   }
 
+  const columns = isCompact
+    ? ["Character", "NFD Code Points", "NFC Code Points"]
+    : [
+        "Character",
+        "NFD",
+        "NFC",
+        "NFD Escaped",
+        "NFC Escaped",
+        "NFD Code Points",
+        "NFC Code Points",
+        "AnyAscii",
+        "Languages",
+      ];
+
   // This is the header row for the CSV.
-  const results = [
-    [
-      "Character",
-      "NFD",
-      "NFC",
-      "NFD Escaped",
-      "NFC Escaped",
-      "NFD Code Points",
-      "NFC Code Points",
-      "AnyAscii",
-      "Languages",
-    ],
-  ];
+  const results = [columns];
 
   // For each character in the map, we will add a row to the CSV, and each
   // column will be escaped by `escapeCsvValue()`.
@@ -116,17 +123,25 @@ async function main() {
       "NFC Code Points": NFCCodePoints,
       Languages,
     }) => {
-      results.push([
-        escapeCsvValue(Character),
-        escapeCsvValue(NFD),
-        escapeCsvValue(NFC),
-        escapeCsvValue(NFDUnicode),
-        escapeCsvValue(NFCUnicode),
-        escapeCsvValue(NFDCodePoints),
-        escapeCsvValue(NFCCodePoints),
-        escapeCsvValue(anyAscii(Character)),
-        escapeCsvValue(Array.from(Languages).join(",")),
-      ]);
+      const row = isCompact
+        ? [
+            escapeCsvValue(Character),
+            escapeCsvValue(NFDCodePoints),
+            escapeCsvValue(NFCCodePoints),
+          ]
+        : [
+            escapeCsvValue(Character),
+            escapeCsvValue(NFD),
+            escapeCsvValue(NFC),
+            escapeCsvValue(NFDUnicode),
+            escapeCsvValue(NFCUnicode),
+            escapeCsvValue(NFDCodePoints),
+            escapeCsvValue(NFCCodePoints),
+            escapeCsvValue(anyAscii(Character)),
+            escapeCsvValue(Array.from(Languages).join(",")),
+          ];
+
+      results.push(row);
     },
   );
 
