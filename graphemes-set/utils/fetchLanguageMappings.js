@@ -12,7 +12,7 @@ import { parse } from "csv-parse/sync";
  * Fetch the language sites metadata file and return an object mapping that
  * maps each language site slug to a language name.
  * @param {GithubSourceConfig} githubSourceConfig
- * @returns {LanguageMap} Mapping of language site slugs to language names.
+ * @returns {Promise<LanguageMap>} Mapping of language site slugs to language names.
  */
 export async function fetchLanguageMappings(githubSourceConfig) {
   console.log("---");
