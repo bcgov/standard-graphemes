@@ -38,8 +38,10 @@ export async function fetchLanguageMappings(githubSourceConfig) {
   const mapping = {};
 
   records.forEach((row) => {
-    if (row.Slug && row.Language) {
-      mapping[row.Slug] = row.Language;
+    const languageName = row["Language Name"];
+
+    if (row.Slug && languageName) {
+      mapping[row.Slug] = languageName;
     }
   });
 
