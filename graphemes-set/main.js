@@ -1,190 +1,36 @@
 import fs from "node:fs";
 import { Octokit } from "@octokit/rest";
-import { parse } from "csv-parse/sync";
 import anyAscii from "any-ascii";
 
+import { escapeCsvValue } from "./utils/escapeCsvValue.js";
+import { fetchCharacters } from "./utils/fetchCharacters.js";
+import { fetchLanguageMappings } from "./utils/fetchLanguageMappings.js";
+import { getSubdirectories } from "./utils/getSubdirectories.js";
+import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
+import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
+
+/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+
+const OUTPUT_FILE = "output.csv";
 const githubToken = process.env.GITHUB_TOKEN?.trim();
 
-const octokit = new Octokit(
-  githubToken
-    ? {
-        auth: githubToken,
-      }
-    : undefined,
-);
-const REPO_OWNER = "First-Peoples-Cultural-Council";
-const REPO_NAME = "unicode-resources";
-const BASE_PATH = "orthography-resources";
-const LANGUAGES_METADATA_FILE = "firstvoices_sites_metadata_2025.csv";
-const OUTPUT_FILE = "output.csv";
-
-/**
- * Fetch the list of sub-directories in the `orthography-resources`
- * directory. Each subdirectory represents one language site.
- * @returns {Promise<string[]>} List of sub-directories in the
- * `orthography-resources` directory.
- */
-async function getSubdirectories() {
-  const { data } = await octokit.repos.getContent({
-    owner: REPO_OWNER,
-    repo: REPO_NAME,
-    path: BASE_PATH,
-  });
-
-  const languageDirectories = data
-    .filter((item) => item.type === "dir")
-    .map((dir) => dir.name);
-
-  console.log("---");
-  console.log("Fetching subdirectories in orthography-resources directory...");
-  console.log(
-    "Count of language directories found: ",
-    languageDirectories.length,
-  );
-  console.log("Language directories: ", languageDirectories);
-  console.log("---");
-
-  return languageDirectories;
-}
-
-/**
- * Fetch the CSV content from the `alphabet_ordering.csv` file in the specified
- * sub-directory.
- * @param {string} subdir Target language site represented by the sub-directory.
- * @returns {Promise<string>} CSV content from the `alphabet_ordering.csv` file.
- */
-async function fetchCSV(subdir) {
-  try {
-    console.log("---");
-    console.log(`Fetching CSV from ${subdir}...`);
-
-    const { data } = await octokit.repos.getContent({
-      owner: REPO_OWNER,
-      repo: REPO_NAME,
-      path: `${BASE_PATH}/${subdir}/alphabet_ordering.csv`,
-    });
-    const csvContent = Buffer.from(data.content, "base64").toString("utf-8");
-
-    console.log("Example content: ", csvContent.split("\n").slice(0, 3));
-    console.log("---");
-
-    return csvContent;
-  } catch (error) {
-    console.error(`Error fetching CSV from ${subdir}:`, error.message);
-    return "";
-  }
-}
-
-/**
- * Given a language site sub-directory, returns the list of characters from the
- * `Character` column of the CSV.
- * @param {string} subdir Target language site represented by the sub-directory.
- * @returns {string[]} List of characters from the `Characters` column of the CSV.
- */
-async function fetchCharacters(subdir) {
-  const csvData = await fetchCSV(subdir);
-  if (!csvData) return [];
-
-  console.log("---");
-  console.log(`Parsing CSV from ${subdir}...`);
-
-  const records = parse(csvData, {
-    columns: true,
-    skip_empty_lines: true,
-    trim: true,
-  });
-
-  console.log("Example parsed records: ", records[0], records[1], records[2]);
-
-  const filteredRecords = records.map((row) => row.Character).filter(Boolean);
-  console.log("filteredRecords: ", filteredRecords);
-  console.log("---");
-
-  return filteredRecords;
-}
-
-/**
- * @typedef {Object.<string, string>} LanguageMap
- * Keys are language site sub-directory names, ex: `gigeenix-gitxsanimx`.
- * Values are language names, ex: `Gitsenimx̱`.
- */
-
-/**
- * Fetch the language sites metadata file and return an object mapping that
- * maps each language site slug to a language name.
- * @returns {LanguageMap} Mapping of language site slugs to language names.
- */
-async function fetchLanguageMappings() {
-  console.log("---");
-  console.log("Fetching language mappings...");
-
-  const { data } = await octokit.repos.getContent({
-    owner: REPO_OWNER,
-    repo: REPO_NAME,
-    path: `${BASE_PATH}/${LANGUAGES_METADATA_FILE}`,
-  });
-
-  const csvData = Buffer.from(data.content, "base64").toString("utf-8");
-
-  if (!csvData) return {};
-
-  const records = parse(csvData, {
-    columns: true,
-    skip_empty_lines: true,
-    trim: true,
-  });
-
-  /** @type {LanguageMap} */
-  const mapping = {};
-
-  records.forEach((row) => {
-    if (row.Slug && row.Language) {
-      mapping[row.Slug] = row.Language;
-    }
-  });
-
-  console.log("Language mapping object: ", mapping);
-  console.log("---");
-
-  return mapping;
-}
-
-/**
- * For a given string, return the Unicode escape sequences for each character.
- * @param {string} str
- * @returns {string} Ex: `\u0041\u0042\u0043`
- */
-function getUnicodeEscapes(str) {
-  return [...str]
-    .map((char) => {
-      const code = char.codePointAt(0).toString(16).toUpperCase();
-      return `\\u${code.padStart(4, "0")}`;
-    })
-    .join("");
-}
-
-/**
- * For a given string, return the Unicode code points for each character.
- * @param {string} str
- * @returns {string} Ex: `U+0041 U+0042 U+0043`
- */
-function getUnicodeCodePoints(str) {
-  return [...str]
-    .map((char) => {
-      const code = char.codePointAt(0).toString(16).toUpperCase();
-      return `U+${code.padStart(4, "0")}`;
-    })
-    .join(" ");
-}
-
-/**
- * For a given value, return a string escaped for use in a CSV file.
- * @param {*} value Ex: `a`
- * @returns {string} Ex: `"a"`
- */
-function escapeCsvValue(value) {
-  return `"${String(value).replace(/"/g, '""')}"`;
-}
+/** @type {GithubSourceConfig} */
+const githubSourceConfig = {
+  githubToken,
+  octokit: new Octokit(
+    githubToken
+      ? {
+          auth: githubToken,
+        }
+      : undefined,
+  ),
+  repo: {
+    owner: "First-Peoples-Cultural-Council",
+    name: "unicode-resources",
+    basePath: "orthography-resources",
+    languagesMetadataFile: "firstvoices_sites_metadata_2025.csv",
+  },
+};
 
 async function main() {
   if (!githubToken) {
@@ -193,13 +39,13 @@ async function main() {
     );
   }
 
-  const subdirs = await getSubdirectories();
-  const languageMappings = await fetchLanguageMappings();
+  const subdirs = await getSubdirectories(githubSourceConfig);
+  const languageMappings = await fetchLanguageMappings(githubSourceConfig);
   const characterMap = new Map();
 
   for (const subdir of subdirs) {
     const languageName = languageMappings[subdir] || subdir;
-    const characters = await fetchCharacters(subdir);
+    const characters = await fetchCharacters(subdir, githubSourceConfig);
     characters.forEach((char) => {
       /**
        * @type {string} Normalized form D (NFD) of the character.
