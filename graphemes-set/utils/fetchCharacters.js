@@ -8,8 +8,8 @@ import { fetchCsv } from "./fetchCsv.js";
  * Given a language site sub-directory, returns the list of characters from the
  * `Character` column of the CSV.
  * @param {string} subdir Target language site represented by the sub-directory.
- * @param {githubSourceConfig} GithubSourceConfig
- * @returns {string[]} List of characters from the `Characters` column of the CSV.
+ * @param {GithubSourceConfig} githubSourceConfig
+ * @returns {Promise<string[]>} List of characters from the `Character` column of the CSV.
  */
 export async function fetchCharacters(subdir, githubSourceConfig) {
   const csvData = await fetchCsv(
