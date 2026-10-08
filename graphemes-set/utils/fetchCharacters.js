@@ -30,7 +30,9 @@ export async function fetchCharacters(subdir, githubSourceConfig) {
 
   console.log("Example parsed records: ", records[0], records[1], records[2]);
 
-  const filteredRecords = records.map((row) => row.Character).filter(Boolean);
+  const filteredRecords = records
+    .map((row) => row.Character ?? row.CHAR)
+    .filter(Boolean);
   console.log("filteredRecords: ", filteredRecords);
   console.log("---");
 

@@ -6,8 +6,10 @@ import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
+import { fetchCharacterVariants } from "./utils/fetchCharacterVariants.js";
 import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js";
 import { fetchLanguageMappings } from "./utils/fetchLanguageMappings.js";
+import { getCompactAlphabetRows } from "./utils/getCompactAlphabetRows.js";
 import { getSubdirectories } from "./utils/getSubdirectories.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
 import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
@@ -55,6 +57,8 @@ async function main() {
   const languageMappings = await fetchLanguageMappings(githubSourceConfig);
   const characterMap = new Map();
   const confusableMap = new Map();
+  const compactAlphabetRows = [];
+  const compactRowKeys = new Set();
 
   // Compare two strings by lexicographic order of their Unicode code points.
   const compareByUnicodeOrder = (a, b) => {
@@ -71,8 +75,18 @@ async function main() {
     return aPoints.length - bPoints.length;
   };
 
-  for (const subdir of subdirs) {
-    const languageName = languageMappings[subdir] || subdir;
+  const languageDirectories = subdirs
+    .map((subdir) => ({
+      subdir,
+      languageName: languageMappings[subdir] || subdir,
+    }))
+    .sort(
+      (a, b) =>
+        a.languageName.localeCompare(b.languageName) ||
+        a.subdir.localeCompare(b.subdir),
+    );
+
+  for (const { subdir, languageName } of languageDirectories) {
     const characters = await fetchCharacters(subdir, githubSourceConfig);
     const confusableCharacters = await fetchConfusableCharacters(
       subdir,
@@ -133,10 +147,38 @@ async function main() {
 
       confusableMap.get(key).Languages.add(languageName);
     });
+
+    if (isCompact) {
+      const variantsByCharacter = await fetchCharacterVariants(
+        subdir,
+        githubSourceConfig,
+      );
+      const rows = getCompactAlphabetRows(
+        languageName,
+        characters,
+        variantsByCharacter,
+      );
+
+      rows.forEach((values) => {
+        const key = JSON.stringify(values);
+        if (compactRowKeys.has(key)) return;
+
+        compactRowKeys.add(key);
+        compactAlphabetRows.push(values.map(escapeCsvValue));
+      });
+
+      continue;
+    }
   }
 
   const alphabetColumns = isCompact
-    ? ["Character", "NFD Code Points", "NFC Code Points"]
+    ? [
+        "Language Name",
+        "Character",
+        "Unicode Hex",
+        "Character Variant",
+        "Character Variant Unicode Hex",
+      ]
     : [
         "Character",
         "NFD",
@@ -156,44 +198,42 @@ async function main() {
   // This is the header row for the alphabet CSV.
   const alphabetResults = [alphabetColumns];
 
-  // For each character in the map, we will add a row to the CSV, and each
-  // column will be escaped by `escapeCsvValue()`.
-  sortedCharacters.forEach(
-    ({
-      Character,
-      NFD,
-      NFC,
-      "NFD Escaped": NFDUnicode,
-      "NFC Escaped": NFCUnicode,
-      "NFD Code Points": NFDCodePoints,
-      "NFC Code Points": NFCCodePoints,
-      Languages,
-    }) => {
-      const sortedLanguages = Array.from(Languages).sort((a, b) =>
-        a.localeCompare(b),
-      );
+  if (isCompact) {
+    alphabetResults.push(...compactAlphabetRows);
+  } else {
+    // For each character in the map, we will add a row to the CSV, and each
+    // column will be escaped by `escapeCsvValue()`.
+    sortedCharacters.forEach(
+      ({
+        Character,
+        NFD,
+        NFC,
+        "NFD Escaped": NFDUnicode,
+        "NFC Escaped": NFCUnicode,
+        "NFD Code Points": NFDCodePoints,
+        "NFC Code Points": NFCCodePoints,
+        Languages,
+      }) => {
+        const sortedLanguages = Array.from(Languages).sort((a, b) =>
+          a.localeCompare(b),
+        );
 
-      const row = isCompact
-        ? [
-            escapeCsvValue(Character),
-            escapeCsvValue(NFDCodePoints),
-            escapeCsvValue(NFCCodePoints),
-          ]
-        : [
-            escapeCsvValue(Character),
-            escapeCsvValue(NFD),
-            escapeCsvValue(NFC),
-            escapeCsvValue(NFDUnicode),
-            escapeCsvValue(NFCUnicode),
-            escapeCsvValue(NFDCodePoints),
-            escapeCsvValue(NFCCodePoints),
-            escapeCsvValue(anyAscii(Character)),
-            escapeCsvValue(sortedLanguages.join(",")),
-          ];
+        const row = [
+          escapeCsvValue(Character),
+          escapeCsvValue(NFD),
+          escapeCsvValue(NFC),
+          escapeCsvValue(NFDUnicode),
+          escapeCsvValue(NFCUnicode),
+          escapeCsvValue(NFDCodePoints),
+          escapeCsvValue(NFCCodePoints),
+          escapeCsvValue(anyAscii(Character)),
+          escapeCsvValue(sortedLanguages.join(",")),
+        ];
 
-      alphabetResults.push(row);
-    },
-  );
+        alphabetResults.push(row);
+      },
+    );
+  }
 
   const confusablesColumns = ["Confusable", "Canonical Character", "Languages"];
   const sortedConfusables = Array.from(confusableMap.values()).sort((a, b) => {

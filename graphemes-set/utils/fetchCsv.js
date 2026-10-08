@@ -5,7 +5,7 @@
  * @param {string} subdir Target language site represented by the sub-directory.
  * @param {string} fileName CSV file name to fetch.
  * @param {GithubSourceConfig} githubSourceConfig
- * @returns {Promise<string>} CSV content from the target file.
+ * @returns {Promise<string | undefined>} CSV content, or undefined when unavailable.
  */
 export async function fetchCsv(subdir, fileName, githubSourceConfig) {
   try {
