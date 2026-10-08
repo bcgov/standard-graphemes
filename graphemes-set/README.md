@@ -35,9 +35,13 @@ Both commands also generate `output/confusables-output.csv`.
 
 ### `output/alphabet-output-compact.csv`
 
-- `Character`
-- `NFD Code Points`
-- `NFC Code Points`
+- `Language Name`: language name mapped from the FirstVoices site metadata
+- `Character`: alphabet character in the order listed by that language's `alphabet_ordering.csv`
+- `Unicode Hex`: Unicode code points for the character, formatted as space-separated `U+XXXX` values
+- `Character Variant`: an equivalent variant from `character_variants.csv`, when available
+- `Character Variant Unicode Hex`: Unicode code points for the variant, when available
+
+Each row represents a language, character, and variant combination. Characters without variants have empty variant columns; characters with multiple variants have one row per variant. Rows are grouped by language name. The compact output is intended to support language-specific character testing, including BC Sans font coverage.
 
 ### `output/confusables-output.csv`
 
