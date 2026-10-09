@@ -6,6 +6,7 @@
   "scripts": {
     "start:full": "node --env-file=.env main.js --format=full",
     "start:compact": "node --env-file=.env main.js --format=compact",
+    "start:unique": "node --env-file=.env main.js --format=unique",
     "test": "node --test"
   },
   "license": "Apache-2.0",

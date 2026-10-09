@@ -16,8 +16,10 @@ The script in this directory is used to pull data from the [First-Peoples-Cultur
 
 - `npm run start:full` to run the script with all alphabet columns generated, writing `output/alphabet-output-full.csv`
 - `npm run start:compact` for minimal alphabet columns, writing `output/alphabet-output-compact.csv`
+- `npm run start:unique` to write `output/unique-characters-output.csv` with one row per distinct source character
 
-Both commands also generate `output/confusables-output.csv`.
+The `start:full` and `start:compact` commands also generate `output/confusables-output.csv`.
+The unique-character command does not generate the confusables output.
 
 ## Output CSVs columns
 
@@ -42,6 +44,13 @@ Both commands also generate `output/confusables-output.csv`.
 - `Character Variant Unicode Hex`: Unicode code points for the variant, when available
 
 Each row represents a language, character, and variant combination. Characters without variants have empty variant columns; characters with multiple variants have one row per variant. Rows are grouped by language name. The compact output is intended to support language-specific character testing, including BC Sans font coverage.
+
+### `output/unique-characters-output.csv`
+
+- `Character`: a distinct character sequence from the First Voices data; canonically equivalent Unicode sequences remain separate
+- `Unicode hex`: Unicode code points for the character, formatted as space-separated `U+XXXX` values
+
+Characters are sorted by Unicode code point order. This output supports reviewing the complete set of characters for BC Sans font coverage.
 
 ### `output/confusables-output.csv`
 
