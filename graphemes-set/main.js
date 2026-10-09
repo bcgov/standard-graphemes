@@ -11,6 +11,7 @@ import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js"
 import { fetchLanguageMappings } from "./utils/fetchLanguageMappings.js";
 import { getCompactAlphabetRows } from "./utils/getCompactAlphabetRows.js";
 import { getSubdirectories } from "./utils/getSubdirectories.js";
+import { getUniqueCharacterRows } from "./utils/getUniqueCharacterRows.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
 import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 
@@ -19,10 +20,13 @@ import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 const argv = yargs(hideBin(process.argv)).parse();
 const format = argv.format ?? "full";
 const isCompact = format === "compact";
+const isUnique = format === "unique";
 const OUTPUT_DIR = "output";
 const ALPHABET_OUTPUT_FILE = isCompact
   ? "alphabet-output-compact.csv"
-  : "alphabet-output-full.csv";
+  : isUnique
+    ? "unique-characters-output.csv"
+    : "alphabet-output-full.csv";
 const ALPHABET_OUTPUT_PATH = `${OUTPUT_DIR}/${ALPHABET_OUTPUT_FILE}`;
 const CONFUSABLES_OUTPUT_FILE = "confusables-output.csv";
 const CONFUSABLES_OUTPUT_PATH = `${OUTPUT_DIR}/${CONFUSABLES_OUTPUT_FILE}`;
@@ -88,10 +92,9 @@ async function main() {
 
   for (const { subdir, languageName } of languageDirectories) {
     const characters = await fetchCharacters(subdir, githubSourceConfig);
-    const confusableCharacters = await fetchConfusableCharacters(
-      subdir,
-      githubSourceConfig,
-    );
+    const confusableCharacters = isUnique
+      ? []
+      : await fetchConfusableCharacters(subdir, githubSourceConfig);
 
     characters.forEach((char) => {
       /**
@@ -179,17 +182,19 @@ async function main() {
         "Character Variant",
         "Character Variant Unicode Hex",
       ]
-    : [
-        "Character",
-        "NFD",
-        "NFC",
-        "NFD Escaped",
-        "NFC Escaped",
-        "NFD Code Points",
-        "NFC Code Points",
-        "AnyAscii",
-        "Languages",
-      ];
+    : isUnique
+        ? ["Character", "Unicode hex"]
+      : [
+          "Character",
+          "NFD",
+          "NFC",
+          "NFD Escaped",
+          "NFC Escaped",
+          "NFD Code Points",
+          "NFC Code Points",
+          "AnyAscii",
+          "Languages",
+        ];
 
   const sortedCharacters = Array.from(characterMap.values()).sort((a, b) =>
     compareByUnicodeOrder(a.Character, b.Character),
@@ -200,6 +205,8 @@ async function main() {
 
   if (isCompact) {
     alphabetResults.push(...compactAlphabetRows);
+  } else if (isUnique) {
+    alphabetResults.push(...getUniqueCharacterRows(sortedCharacters));
   } else {
     // For each character in the map, we will add a row to the CSV, and each
     // column will be escaped by `escapeCsvValue()`.
@@ -273,13 +280,19 @@ async function main() {
     ALPHABET_OUTPUT_PATH,
     alphabetResults.map((row) => row.join(",")).join("\n"),
   );
-  fs.writeFileSync(
-    CONFUSABLES_OUTPUT_PATH,
-    confusablesResults.map((row) => row.join(",")).join("\n"),
-  );
+  if (!isUnique) {
+    fs.writeFileSync(
+      CONFUSABLES_OUTPUT_PATH,
+      confusablesResults.map((row) => row.join(",")).join("\n"),
+    );
+  }
 
-  console.log(`Alphabet CSV output written to ${ALPHABET_OUTPUT_PATH}`);
-  console.log(`Confusables CSV output written to ${CONFUSABLES_OUTPUT_PATH}`);
+  console.log(
+    `${isUnique ? "Unique character" : "Alphabet"} CSV output written to ${ALPHABET_OUTPUT_PATH}`,
+  );
+  if (!isUnique) {
+    console.log(`Confusables CSV output written to ${CONFUSABLES_OUTPUT_PATH}`);
+  }
 }
 
 main().catch(console.error);
