@@ -3,13 +3,21 @@ import test from "node:test";
 
 import { getUniqueCharacterRows } from "./getUniqueCharacterRows.js";
 
-test("builds two-column escaped rows with Unicode code points", () => {
+test("splits composite characters into unique one-code-point rows", () => {
   assert.deepEqual(
     getUniqueCharacterRows([
       {
-        Character: "k\u0332",
+        Character: "K\u0332w",
+      },
+      {
+        Character: "w\u{1f600}",
       },
     ]),
-    [['"k̲"', '"U+006B U+0332"']],
+    [
+      ['"K"', '"U+004B"'],
+      ['"w"', '"U+0077"'],
+      ['"̲"', '"U+0332"'],
+      ['"😀"', '"U+1F600"'],
+    ],
   );
 });
