@@ -5,6 +5,7 @@ import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
 import { getGithubSourceConfig } from "./utils/getGithubSourceConfig.js";
+import { getLocalSourceConfig } from "./utils/getLocalSourceConfig.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
 import { fetchCharacterVariants } from "./utils/fetchCharacterVariants.js";
 import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js";
@@ -15,11 +16,22 @@ import { getUniqueCharacterRows } from "./utils/getUniqueCharacterRows.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
 import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 
-const argv = yargs(hideBin(process.argv)).parse();
+const argv = yargs(hideBin(process.argv))
+  .option("source", {
+    choices: ["live-github", "local-copy"],
+    default: "live-github",
+    describe: "Where to read the FirstVoices dataset from",
+    type: "string",
+  })
+  .parse();
 const format = argv.format ?? "full";
 const isCompact = format === "compact";
 const isUnique = format === "unique";
-const OUTPUT_DIR = "output";
+const sourceConfig =
+  argv.source === "local-copy"
+    ? getLocalSourceConfig()
+    : getGithubSourceConfig();
+const OUTPUT_DIR = `output/${sourceConfig.source}`;
 const ALPHABET_OUTPUT_FILE = isCompact
   ? "alphabet-output-compact.csv"
   : isUnique
@@ -28,18 +40,17 @@ const ALPHABET_OUTPUT_FILE = isCompact
 const ALPHABET_OUTPUT_PATH = `${OUTPUT_DIR}/${ALPHABET_OUTPUT_FILE}`;
 const CONFUSABLES_OUTPUT_FILE = "confusables-output.csv";
 const CONFUSABLES_OUTPUT_PATH = `${OUTPUT_DIR}/${CONFUSABLES_OUTPUT_FILE}`;
-const githubSourceConfig = getGithubSourceConfig();
-const githubToken = githubSourceConfig.githubToken;
+const githubToken = sourceConfig.githubToken;
 
 async function main() {
-  if (!githubToken) {
+  if (sourceConfig.source === "live-github" && !githubToken) {
     console.warn(
       "No GITHUB_TOKEN found. Requests are unauthenticated and more likely to hit rate limits.",
     );
   }
 
-  const subdirs = await getSubdirectories(githubSourceConfig);
-  const languageMappings = await fetchLanguageMappings(githubSourceConfig);
+  const subdirs = await getSubdirectories(sourceConfig);
+  const languageMappings = await fetchLanguageMappings(sourceConfig);
   const characterMap = new Map();
   const confusableMap = new Map();
   const compactAlphabetRows = [];
@@ -72,10 +83,10 @@ async function main() {
     );
 
   for (const { subdir, languageName } of languageDirectories) {
-    const characters = await fetchCharacters(subdir, githubSourceConfig);
+    const characters = await fetchCharacters(subdir, sourceConfig);
     const confusableCharacters = isUnique
       ? []
-      : await fetchConfusableCharacters(subdir, githubSourceConfig);
+      : await fetchConfusableCharacters(subdir, sourceConfig);
 
     characters.forEach((char) => {
       /**
@@ -135,7 +146,7 @@ async function main() {
     if (isCompact) {
       const variantsByCharacter = await fetchCharacterVariants(
         subdir,
-        githubSourceConfig,
+        sourceConfig,
       );
       const rows = getCompactAlphabetRows(
         languageName,
@@ -259,12 +270,12 @@ async function main() {
 
   fs.writeFileSync(
     ALPHABET_OUTPUT_PATH,
-    alphabetResults.map((row) => row.join(",")).join("\n"),
+    `${alphabetResults.map((row) => row.join(",")).join("\n")}\n`,
   );
   if (!isUnique) {
     fs.writeFileSync(
       CONFUSABLES_OUTPUT_PATH,
-      confusablesResults.map((row) => row.join(",")).join("\n"),
+      `${confusablesResults.map((row) => row.join(",")).join("\n")}\n`,
     );
   }
 
@@ -276,4 +287,7 @@ async function main() {
   }
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -1,31 +1,40 @@
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+import { readdir } from "node:fs/promises";
+
+/** @typedef {import("./types.js").SourceConfig} SourceConfig */
 
 /**
- * Fetch the list of sub-directories in the `orthography-resources`
- * directory. Each subdirectory represents one language site.
+ * List language-site subdirectories from the selected data source.
  * @returns {Promise<string[]>} List of sub-directories in the
  * `orthography-resources` directory.
- * @param {GithubSourceConfig} githubSourceConfig
+ * @param {SourceConfig} sourceConfig
  */
-export async function getSubdirectories(githubSourceConfig) {
-  const { data } = await githubSourceConfig.octokit.repos.getContent({
-    owner: githubSourceConfig.repo.owner,
-    repo: githubSourceConfig.repo.name,
-    path: githubSourceConfig.repo.basePath,
-  });
+export async function getSubdirectories(sourceConfig) {
+  let languageDirectories;
+  if (sourceConfig.source === "local-copy") {
+    const entries = await readdir(sourceConfig.localRoot, { withFileTypes: true });
+    languageDirectories = entries
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+  } else {
+    const { data } = await sourceConfig.octokit.repos.getContent({
+      owner: sourceConfig.repo.owner,
+      repo: sourceConfig.repo.name,
+      path: sourceConfig.repo.basePath,
+    });
 
-  if (!Array.isArray(data)) {
-    throw new Error(
-      `Expected ${githubSourceConfig.repo.basePath} to be a directory (got a file response).`,
-    );
+    if (!Array.isArray(data)) {
+      throw new Error(
+        `Expected ${sourceConfig.repo.basePath} to be a directory (got a file response).`,
+      );
+    }
+
+    languageDirectories = data
+      .filter((item) => item.type === "dir")
+      .map((dir) => dir.name);
   }
 
-  const languageDirectories = data
-    .filter((item) => item.type === "dir")
-    .map((dir) => dir.name);
-
   console.log("---");
-  console.log("Fetching subdirectories in orthography-resources directory...");
+  console.log(`Reading language subdirectories (${sourceConfig.source})...`);
   console.log(
     "Count of language directories found: ",
     languageDirectories.length,

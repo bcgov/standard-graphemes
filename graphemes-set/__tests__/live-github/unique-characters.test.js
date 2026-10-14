@@ -3,15 +3,15 @@ import { readFile } from "node:fs/promises";
 import { parse } from "csv-parse/sync";
 import test from "node:test";
 
-import { fetchCharacters } from "./utils/fetchCharacters.js";
-import { getGithubSourceConfig } from "./utils/getGithubSourceConfig.js";
-import { getMissingCharacters } from "./utils/getMissingCharacters.js";
-import { getSubdirectories } from "./utils/getSubdirectories.js";
+import { fetchCharacters } from "../../utils/fetchCharacters.js";
+import { getGithubSourceConfig } from "../../utils/getGithubSourceConfig.js";
+import { getMissingCharacters } from "../../utils/getMissingCharacters.js";
+import { getSubdirectories } from "../../utils/getSubdirectories.js";
 
-test("unique-character output covers every FirstVoices alphabet character", async () => {
-  const githubSourceConfig = getGithubSourceConfig();
+test("live GitHub unique-character output covers every FirstVoices alphabet character", async () => {
+  const sourceConfig = getGithubSourceConfig();
   const uniqueCsv = await readFile(
-    new URL("./output/unique-characters-output.csv", import.meta.url),
+    new URL("../../output/live-github/unique-characters-output.csv", import.meta.url),
     "utf8",
   );
   const uniqueRecords = parse(uniqueCsv, {
@@ -22,13 +22,13 @@ test("unique-character output covers every FirstVoices alphabet character", asyn
   const uniqueCharacters = new Set(
     uniqueRecords.map(({ Character }) => Character).filter(Boolean),
   );
-  const subdirectories = await getSubdirectories(githubSourceConfig);
+  const subdirectories = await getSubdirectories(sourceConfig);
   const sourceFiles = [];
 
   for (const subdir of subdirectories) {
     sourceFiles.push({
-      sourceFile: `${githubSourceConfig.repo.basePath}/${subdir}/alphabet_ordering.csv`,
-      characters: await fetchCharacters(subdir, githubSourceConfig),
+      sourceFile: `${sourceConfig.repo.basePath}/${subdir}/alphabet_ordering.csv`,
+      characters: await fetchCharacters(subdir, sourceConfig),
     });
   }
 
@@ -44,7 +44,7 @@ test("unique-character output covers every FirstVoices alphabet character", asyn
     missingCharacters.length,
     0,
     missingCharacters.length
-      ? `Characters missing from unique-characters-output.csv:\n${report}`
+      ? `Characters missing from live-github unique-characters-output.csv:\n${report}`
       : undefined,
   );
 });

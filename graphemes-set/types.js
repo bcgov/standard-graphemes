@@ -1,6 +1,6 @@
 /**
  * @export
- * @typedef {object} GithubSourceConfigRepo
+ * @typedef {object} SourceConfigRepo
  * @property {string} owner
  * @property {string} name
  * @property {string} basePath
@@ -9,8 +9,10 @@
 
 /**
  * @export
- * @typedef {object} GithubSourceConfig
+ * @typedef {object} SourceConfig
+ * @property {"live-github" | "local-copy"} source
  * @property {string | undefined} githubToken
  * @property {unknown | undefined} octokit
- * @property {GithubSourceConfigRepo} repo
+ * @property {string} localRoot
+ * @property {SourceConfigRepo} repo
  */
