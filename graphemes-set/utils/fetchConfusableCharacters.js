@@ -2,7 +2,7 @@ import { parse } from "csv-parse/sync";
 
 import { fetchCsv } from "./fetchCsv.js";
 
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+/** @typedef {import("./types.js").SourceConfig} SourceConfig */
 
 /**
  * @typedef {object} ConfusableRecord
@@ -14,14 +14,14 @@ import { fetchCsv } from "./fetchCsv.js";
  * Given a language site sub-directory, return confusable/canonical pairs from
  * `confusable_characters.csv`.
  * @param {string} subdir Target language site represented by the sub-directory.
- * @param {GithubSourceConfig} githubSourceConfig
+ * @param {SourceConfig} sourceConfig
  * @returns {Promise<ConfusableRecord[]>} Parsed confusable records.
  */
-export async function fetchConfusableCharacters(subdir, githubSourceConfig) {
+export async function fetchConfusableCharacters(subdir, sourceConfig) {
   const csvData = await fetchCsv(
     subdir,
     "confusable_characters.csv",
-    githubSourceConfig,
+    sourceConfig,
   );
 
   if (!csvData) return [];

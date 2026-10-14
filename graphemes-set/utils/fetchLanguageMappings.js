@@ -1,6 +1,7 @@
 import { parse } from "csv-parse/sync";
+import { fetchCsv } from "./fetchCsv.js";
 
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+/** @typedef {import("./types.js").SourceConfig} SourceConfig */
 
 /**
  * @typedef {Object.<string, string>} LanguageMap
@@ -11,20 +12,18 @@ import { parse } from "csv-parse/sync";
 /**
  * Fetch the language sites metadata file and return an object mapping that
  * maps each language site slug to a language name.
- * @param {GithubSourceConfig} githubSourceConfig
+ * @param {SourceConfig} sourceConfig
  * @returns {Promise<LanguageMap>} Mapping of language site slugs to language names.
  */
-export async function fetchLanguageMappings(githubSourceConfig) {
+export async function fetchLanguageMappings(sourceConfig) {
   console.log("---");
   console.log("Fetching language mappings...");
 
-  const { data } = await githubSourceConfig.octokit.repos.getContent({
-    owner: githubSourceConfig.repo.owner,
-    repo: githubSourceConfig.repo.name,
-    path: `${githubSourceConfig.repo.basePath}/${githubSourceConfig.repo.languagesMetadataFile}`,
-  });
-
-  const csvData = Buffer.from(data.content, "base64").toString("utf-8");
+  const csvData = await fetchCsv(
+    "",
+    sourceConfig.repo.languagesMetadataFile,
+    sourceConfig,
+  );
 
   if (!csvData) return {};
 

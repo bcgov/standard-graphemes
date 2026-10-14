@@ -2,20 +2,20 @@ import { parse } from "csv-parse/sync";
 
 import { fetchCsv } from "./fetchCsv.js";
 
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+/** @typedef {import("./types.js").SourceConfig} SourceConfig */
 
 /**
  * Given a language site sub-directory, returns the list of characters from the
  * `Character` column of the CSV.
  * @param {string} subdir Target language site represented by the sub-directory.
- * @param {GithubSourceConfig} githubSourceConfig
+ * @param {SourceConfig} sourceConfig
  * @returns {Promise<string[]>} List of characters from the `Character` column of the CSV.
  */
-export async function fetchCharacters(subdir, githubSourceConfig) {
+export async function fetchCharacters(subdir, sourceConfig) {
   const csvData = await fetchCsv(
     subdir,
     "alphabet_ordering.csv",
-    githubSourceConfig,
+    sourceConfig,
   );
   if (!csvData) {
     throw new Error(

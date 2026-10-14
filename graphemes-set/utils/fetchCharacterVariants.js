@@ -2,19 +2,19 @@ import { parse } from "csv-parse/sync";
 
 import { fetchCsv } from "./fetchCsv.js";
 
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
+/** @typedef {import("./types.js").SourceConfig} SourceConfig */
 
 /**
  * Fetch variants keyed by their base alphabet character.
  * @param {string} subdir Target language site represented by the sub-directory.
- * @param {GithubSourceConfig} githubSourceConfig
+ * @param {SourceConfig} sourceConfig
  * @returns {Promise<Map<string, string[]>>}
  */
-export async function fetchCharacterVariants(subdir, githubSourceConfig) {
+export async function fetchCharacterVariants(subdir, sourceConfig) {
   const csvData = await fetchCsv(
     subdir,
     "character_variants.csv",
-    githubSourceConfig,
+    sourceConfig,
   );
   if (!csvData) return new Map();
 
