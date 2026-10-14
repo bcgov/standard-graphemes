@@ -1,0 +1,3 @@
+To run the local-copy grapheme scripts without using the GitHub API, populate this `input` directory with data from [First-Peoples-Cultural-Council/unicode-resources](https://github.com/First-Peoples-Cultural-Council/unicode-resources). Copy the entire `orthography-resources` directory into this directory so its path is `input/orthography-resources`. The scripts expect `firstvoices_sites_metadata_2025.csv` at the root of that directory, alongside the language-site directories.
+
+The copied data is intentionally ignored by Git and must not be checked into this repository. Run the `start:*:local-copy` scripts from the `graphemes-set` directory to use it.
