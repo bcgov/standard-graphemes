@@ -17,7 +17,11 @@ export async function fetchCharacters(subdir, githubSourceConfig) {
     "alphabet_ordering.csv",
     githubSourceConfig,
   );
-  if (!csvData) return [];
+  if (!csvData) {
+    throw new Error(
+      `Could not fetch alphabet_ordering.csv from ${subdir}; character coverage cannot be verified.`,
+    );
+  }
 
   console.log("---");
   console.log(`Parsing CSV from ${subdir}...`);
