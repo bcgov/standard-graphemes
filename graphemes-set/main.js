@@ -1,10 +1,10 @@
 import fs from "node:fs";
-import { Octokit } from "@octokit/rest";
 import anyAscii from "any-ascii";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
+import { getGithubSourceConfig } from "./utils/getGithubSourceConfig.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
 import { fetchCharacterVariants } from "./utils/fetchCharacterVariants.js";
 import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js";
@@ -14,8 +14,6 @@ import { getSubdirectories } from "./utils/getSubdirectories.js";
 import { getUniqueCharacterRows } from "./utils/getUniqueCharacterRows.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
 import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
-
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
 
 const argv = yargs(hideBin(process.argv)).parse();
 const format = argv.format ?? "full";
@@ -30,25 +28,8 @@ const ALPHABET_OUTPUT_FILE = isCompact
 const ALPHABET_OUTPUT_PATH = `${OUTPUT_DIR}/${ALPHABET_OUTPUT_FILE}`;
 const CONFUSABLES_OUTPUT_FILE = "confusables-output.csv";
 const CONFUSABLES_OUTPUT_PATH = `${OUTPUT_DIR}/${CONFUSABLES_OUTPUT_FILE}`;
-const githubToken = process.env.GITHUB_TOKEN?.trim();
-
-/** @type {GithubSourceConfig} */
-const githubSourceConfig = {
-  githubToken,
-  octokit: new Octokit(
-    githubToken
-      ? {
-          auth: githubToken,
-        }
-      : undefined,
-  ),
-  repo: {
-    owner: "First-Peoples-Cultural-Council",
-    name: "unicode-resources",
-    basePath: "orthography-resources",
-    languagesMetadataFile: "firstvoices_sites_metadata_2025.csv",
-  },
-};
+const githubSourceConfig = getGithubSourceConfig();
+const githubToken = githubSourceConfig.githubToken;
 
 async function main() {
   if (!githubToken) {
