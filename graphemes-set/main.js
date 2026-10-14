@@ -270,12 +270,12 @@ async function main() {
 
   fs.writeFileSync(
     ALPHABET_OUTPUT_PATH,
-    alphabetResults.map((row) => row.join(",")).join("\n"),
+    `${alphabetResults.map((row) => row.join(",")).join("\n")}\n`,
   );
   if (!isUnique) {
     fs.writeFileSync(
       CONFUSABLES_OUTPUT_PATH,
-      confusablesResults.map((row) => row.join(",")).join("\n"),
+      `${confusablesResults.map((row) => row.join(",")).join("\n")}\n`,
     );
   }
 
