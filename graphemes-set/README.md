@@ -67,3 +67,16 @@ Characters are sorted by Unicode code point order. This output supports reviewin
 - `Confusable`: the alternate grapheme observed in `confusable_characters.csv`
 - `Canonical Character`: the canonical grapheme linked to the confusable
 - `Languages`: Indigenous language(s) where that exact confusable/canonical pair appears (comma-separated)
+
+## Compare generated data
+
+If the CSV output files from the `local-copy` and `live-github` paths are identical, the `diff` commands below should give no output:
+
+```sh
+diff output/live-github/alphabet-output-compact.csv output/local-copy/alphabet-output-compact.csv
+diff output/live-github/alphabet-output-full.csv output/local-copy/alphabet-output-full.csv
+diff output/live-github/confusables-output.csv output/local-copy/confusables-output.csv
+diff output/live-github/unique-characters-output.csv output/local-copy/unique-characters-output.csv
+```
+
+If differences are found, it could be due to stale local data for `local-copy` or rate limiting from GitHub for `live-github`.
