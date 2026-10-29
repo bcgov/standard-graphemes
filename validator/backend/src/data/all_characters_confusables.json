@@ -8,30 +8,13 @@
   {
     "label": "·",
     "id": "\\u00b7",
-    "confusableChar": [
-      "ᐧ",
-      "・",
-      "･"
-    ],
-    "confusableUnicode": [
-      "\\u1427",
-      "\\u30fb",
-      "\\uff65"
-    ]
+    "confusableChar": ["ᐧ", "・", "･"],
+    "confusableUnicode": ["\\u1427", "\\u30fb", "\\uff65"]
   },
   {
     "label": "’",
     "id": "\\u2019",
-    "confusableChar": [
-      " ̒",
-      "̓ ̕",
-      " ̔",
-      "'",
-      "＇",
-      "ˈ",
-      "՚",
-      "ʼ"
-    ],
+    "confusableChar": [" ̒", "̓ ̕", " ̔", "'", "＇", "ˈ", "՚", "ʼ"],
     "confusableUnicode": [
       "\\u0312",
       "\\u0313\\u0315",
@@ -46,16 +29,7 @@
   {
     "label": "’a",
     "id": "\\u2019\\u0061",
-    "confusableChar": [
-      "＇a",
-      " ʼa",
-      " ՚a",
-      " ˈa",
-      "'a",
-      " ̕a",
-      " ̔a",
-      " ̒a"
-    ],
+    "confusableChar": ["＇a", " ʼa", " ՚a", " ˈa", "'a", " ̕a", " ̔a", " ̒a"],
     "confusableUnicode": [
       "\\uff07\\u0061",
       "\\u02bc\\u0061",
@@ -70,15 +44,7 @@
   {
     "label": "’a’",
     "id": "\\u2019\\u0061\\u2019",
-    "confusableChar": [
-      " ̒a ̒",
-      " ̔a ̔",
-      "ʼaʼ",
-      "ˈaˈ",
-      "՚a՚",
-      "＇a＇",
-      "'a'"
-    ],
+    "confusableChar": [" ̒a ̒", " ̔a ̔", "ʼaʼ", "ˈaˈ", "՚a՚", "＇a＇", "'a'"],
     "confusableUnicode": [
       "\\u0312\\u0061\\u0312",
       "\\u0314\\u0061\\u0314",
@@ -92,16 +58,7 @@
   {
     "label": "’ai",
     "id": "\\u2019\\u0061\\u0069",
-    "confusableChar": [
-      " ̕ai",
-      " ̒ai",
-      " ̔ai",
-      "ʼai",
-      "ˈai",
-      "՚ai",
-      "＇ai",
-      "'ai"
-    ],
+    "confusableChar": [" ̕ai", " ̒ai", " ̔ai", "ʼai", "ˈai", "՚ai", "＇ai", "'ai"],
     "confusableUnicode": [
       "\\u0315\\u0061\\u0069",
       "\\u0312\\u0061\\u0069",
@@ -138,16 +95,7 @@
   {
     "label": "’e",
     "id": "\\u2019\\u0065",
-    "confusableChar": [
-      "＇e",
-      " ̔e",
-      " ̒e",
-      "ʼe",
-      "̓ ̕e",
-      "՚e",
-      "ˈe",
-      "'e"
-    ],
+    "confusableChar": ["＇e", " ̔e", " ̒e", "ʼe", "̓ ̕e", "՚e", "ˈe", "'e"],
     "confusableUnicode": [
       "\\uff07\\u0065",
       "\\u0314\\u0065",
@@ -162,15 +110,7 @@
   {
     "label": "’e’",
     "id": "\\u2019\\u0065\\u2019",
-    "confusableChar": [
-      " ̒e ̒",
-      " ̔e ̔",
-      "ʼeʼ",
-      "ˈeˈ",
-      "՚e՚",
-      "＇e＇",
-      "'e'"
-    ],
+    "confusableChar": [" ̒e ̒", " ̔e ̔", "ʼeʼ", "ˈeˈ", "՚e՚", "＇e＇", "'e'"],
     "confusableUnicode": [
       "\\u0312\\u0065\\u0312",
       "\\u0314\\u0065\\u0314",
@@ -184,16 +124,7 @@
   {
     "label": "’i",
     "id": "\\u2019\\u0069",
-    "confusableChar": [
-      "ˈi",
-      "'i",
-      " ̕i",
-      " ̔i",
-      " ̒i",
-      "＇i",
-      "ʼi",
-      "՚i"
-    ],
+    "confusableChar": ["ˈi", "'i", " ̕i", " ̔i", " ̒i", "＇i", "ʼi", "՚i"],
     "confusableUnicode": [
       "\\u02c8\\u0069",
       "\\u0027\\u0069",
@@ -208,13 +139,7 @@
   {
     "label": "’i’",
     "id": "\\u2019\\u0069\\u2019",
-    "confusableChar": [
-      "ʼiʼ",
-      "ˈiˈ",
-      "՚i՚",
-      "＇i＇",
-      "'i'"
-    ],
+    "confusableChar": ["ʼiʼ", "ˈiˈ", "՚i՚", "＇i＇", "'i'"],
     "confusableUnicode": [
       "\\u02bc\\u0069\\u02bc",
       "\\u02c8\\u0069\\u02c8",
@@ -226,16 +151,7 @@
   {
     "label": "’o",
     "id": "\\u2019\\u006f",
-    "confusableChar": [
-      "ʼo",
-      "՚o",
-      "＇o",
-      "ˈo",
-      "'o",
-      " ̕o",
-      " ̔o",
-      " ̒o"
-    ],
+    "confusableChar": ["ʼo", "՚o", "＇o", "ˈo", "'o", " ̕o", " ̔o", " ̒o"],
     "confusableUnicode": [
       "\\u02bc\\u006f",
       "\\u055a\\u006f",
@@ -250,15 +166,7 @@
   {
     "label": "’o’",
     "id": "\\u2019\\u006f\\u2019",
-    "confusableChar": [
-      " ̒o ̒",
-      " ̔o ̔",
-      "ʼoʼ",
-      "ˈoˈ",
-      "՚o՚",
-      "＇o＇",
-      "'o'"
-    ],
+    "confusableChar": [" ̒o ̒", " ̔o ̔", "ʼoʼ", "ˈoˈ", "՚o՚", "＇o＇", "'o'"],
     "confusableUnicode": [
       "\\u0312\\u006f\\u0312",
       "\\u0314\\u006f\\u0314",
@@ -272,16 +180,7 @@
   {
     "label": "’oo",
     "id": "\\u2019\\u006f\\u006f",
-    "confusableChar": [
-      " ̕oo",
-      " ̒oo",
-      " ̔oo",
-      "ʼoo",
-      "ˈoo",
-      "՚oo",
-      "＇oo",
-      "'oo"
-    ],
+    "confusableChar": [" ̕oo", " ̒oo", " ̔oo", "ʼoo", "ˈoo", "՚oo", "＇oo", "'oo"],
     "confusableUnicode": [
       "\\u0315\\u006f\\u006f",
       "\\u0312\\u006f\\u006f",
@@ -320,16 +219,7 @@
   {
     "label": "’u",
     "id": "\\u2019\\u0075",
-    "confusableChar": [
-      "＇u",
-      " ̔u",
-      " ̒u",
-      "ʼu",
-      "̓ ̕u",
-      "՚u",
-      "ˈu",
-      "'u"
-    ],
+    "confusableChar": ["＇u", " ̔u", " ̒u", "ʼu", "̓ ̕u", "՚u", "ˈu", "'u"],
     "confusableUnicode": [
       "\\uff07\\u0075",
       "\\u0314\\u0075",
@@ -368,14 +258,7 @@
   {
     "label": "ˈ",
     "id": "\\u02c8",
-    "confusableChar": [
-      " ̒",
-      "̓ ̕",
-      " ̔",
-      "’",
-      "՚",
-      "ʼ"
-    ],
+    "confusableChar": [" ̒", "̓ ̕", " ̔", "’", "՚", "ʼ"],
     "confusableUnicode": [
       "\\u0312",
       "\\u0313\\u0315",
@@ -388,14 +271,7 @@
   {
     "label": "ˈl",
     "id": "\\u02c8\\u006c",
-    "confusableChar": [
-      " ̕l",
-      " ̒l",
-      " ̔l",
-      "ʼl",
-      "’l",
-      "՚l"
-    ],
+    "confusableChar": [" ̕l", " ̒l", " ̔l", "ʼl", "’l", "՚l"],
     "confusableUnicode": [
       "\\u0315\\u006c",
       "\\u0312\\u006c",
@@ -408,14 +284,7 @@
   {
     "label": "ˈm",
     "id": "\\u02c8\\u006d",
-    "confusableChar": [
-      " ̕m",
-      " ̒m",
-      " ̔m",
-      "ʼm",
-      "’m",
-      "՚m"
-    ],
+    "confusableChar": [" ̕m", " ̒m", " ̔m", "ʼm", "’m", "՚m"],
     "confusableUnicode": [
       "\\u0315\\u006d",
       "\\u0312\\u006d",
@@ -428,14 +297,7 @@
   {
     "label": "ˈn",
     "id": "\\u02c8\\u006e",
-    "confusableChar": [
-      " ̕n",
-      " ̒n",
-      " ̔n",
-      "ʼn",
-      "’n",
-      "՚n"
-    ],
+    "confusableChar": [" ̕n", " ̒n", " ̔n", "ʼn", "’n", "՚n"],
     "confusableUnicode": [
       "\\u0315\\u006e",
       "\\u0312\\u006e",
@@ -448,14 +310,7 @@
   {
     "label": "ˈw",
     "id": "\\u02c8\\u0077",
-    "confusableChar": [
-      " ̕w",
-      " ̒w",
-      " ̔w",
-      "ʼw",
-      "’w",
-      "՚w"
-    ],
+    "confusableChar": [" ̕w", " ̒w", " ̔w", "ʼw", "’w", "՚w"],
     "confusableUnicode": [
       "\\u0315\\u0077",
       "\\u0312\\u0077",
@@ -468,14 +323,7 @@
   {
     "label": "ˈẅ",
     "id": "\\u02c8\\u1e85",
-    "confusableChar": [
-      " ̕ẅ",
-      " ̒ẅ",
-      " ̔ẅ",
-      "ʼẅ",
-      "’ẅ",
-      "՚ẅ"
-    ],
+    "confusableChar": [" ̕ẅ", " ̒ẅ", " ̔ẅ", "ʼẅ", "’ẅ", "՚ẅ"],
     "confusableUnicode": [
       "\\u0315\\u1e85",
       "\\u0312\\u1e85",
@@ -488,14 +336,7 @@
   {
     "label": "ˈy",
     "id": "\\u02c8\\u0079",
-    "confusableChar": [
-      " ̕y",
-      " ̒y",
-      " ̔y",
-      "ʼy",
-      "’y",
-      "՚y"
-    ],
+    "confusableChar": [" ̕y", " ̒y", " ̔y", "ʼy", "’y", "՚y"],
     "confusableUnicode": [
       "\\u0315\\u0079",
       "\\u0312\\u0079",
@@ -514,14 +355,8 @@
   {
     "label": "¢",
     "id": "\\u00a2",
-    "confusableChar": [
-      "￠",
-      "ȼ"
-    ],
-    "confusableUnicode": [
-      "\\uffe0",
-      "\\u023c"
-    ]
+    "confusableChar": ["￠", "ȼ"],
+    "confusableUnicode": ["\\uffe0", "\\u023c"]
   },
   {
     "label": "¢̕",
@@ -576,12 +411,8 @@
   {
     "label": "$",
     "id": "\\u0024",
-    "confusableChar": [
-      "＄"
-    ],
-    "confusableUnicode": [
-      "\\uff04"
-    ]
+    "confusableChar": ["＄"],
+    "confusableUnicode": ["\\uff04"]
   },
   {
     "label": "a",
@@ -598,15 +429,7 @@
   {
     "label": "a̓",
     "id": "\\u0061\\u0313",
-    "confusableChar": [
-      "aˈ",
-      "a̕",
-      "a̒",
-      "a̔",
-      "aʼ",
-      "a’",
-      "a՚"
-    ],
+    "confusableChar": ["aˈ", "a̕", "a̒", "a̔", "aʼ", "a’", "a՚"],
     "confusableUnicode": [
       "\\u0061\\u02c8",
       "\\u0061\\u0315",
@@ -620,22 +443,14 @@
   {
     "label": "á",
     "id": "\\u00e1",
-    "confusableChar": [
-      "á"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301"
-    ]
+    "confusableChar": ["á"],
+    "confusableUnicode": ["\\u0061\\u0301"]
   },
   {
     "label": "Á",
     "id": "\\u00c1",
-    "confusableChar": [
-      "Á"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0301"
-    ]
+    "confusableChar": ["Á"],
+    "confusableUnicode": ["\\u0041\\u0301"]
   },
   {
     "label": "á",
@@ -694,58 +509,32 @@
   {
     "label": "ä̀",
     "id": "\\u00e4\\u0300",
-    "confusableChar": [
-      "ä̀",
-      "à̈"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0308\\u0300",
-      "\\u0061\\u0300\\u0308"
-    ]
+    "confusableChar": ["ä̀", "à̈"],
+    "confusableUnicode": ["\\u0061\\u0308\\u0300", "\\u0061\\u0300\\u0308"]
   },
   {
     "label": "ä̂",
     "id": "\\u00e4\\u0302",
-    "confusableChar": [
-      "ä̂",
-      "â̈"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0308\\u0302",
-      "\\u0061\\u0302\\u0308"
-    ]
+    "confusableChar": ["ä̂", "â̈"],
+    "confusableUnicode": ["\\u0061\\u0308\\u0302", "\\u0061\\u0302\\u0308"]
   },
   {
     "label": "ä̌",
     "id": "\\u00e4\\u030c",
-    "confusableChar": [
-      "ä̌",
-      "ǎ̈"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0308\\u030c",
-      "\\u0061\\u030c\\u0308"
-    ]
+    "confusableChar": ["ä̌", "ǎ̈"],
+    "confusableUnicode": ["\\u0061\\u0308\\u030c", "\\u0061\\u030c\\u0308"]
   },
   {
     "label": "ą",
     "id": "\\u0105",
-    "confusableChar": [
-      "ą"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328"
-    ]
+    "confusableChar": ["ą"],
+    "confusableUnicode": ["\\u0061\\u0328"]
   },
   {
     "label": "Ą",
     "id": "\\u0104",
-    "confusableChar": [
-      "Ą"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0328"
-    ]
+    "confusableChar": ["Ą"],
+    "confusableUnicode": ["\\u0041\\u0328"]
   },
   {
     "label": "ą",
@@ -756,36 +545,20 @@
   {
     "label": "ą́",
     "id": "\\u0105\\u0301",
-    "confusableChar": [
-      "ą́",
-      "ą́"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301\\u0328",
-      "\\u0061\\u0328\\u0301"
-    ]
+    "confusableChar": ["ą́", "ą́"],
+    "confusableUnicode": ["\\u0061\\u0301\\u0328", "\\u0061\\u0328\\u0301"]
   },
   {
     "label": "Ą́",
     "id": "\\u0104\\u0301",
-    "confusableChar": [
-      "Ą́",
-      "Ą́"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0328\\u0301",
-      "\\u0041\\u0301\\u0328"
-    ]
+    "confusableChar": ["Ą́", "Ą́"],
+    "confusableUnicode": ["\\u0041\\u0328\\u0301", "\\u0041\\u0301\\u0328"]
   },
   {
     "label": "ą̀",
     "id": "\\u0105\\u0300",
-    "confusableChar": [
-      "ą̀"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0300\\u0328"
-    ]
+    "confusableChar": ["ą̀"],
+    "confusableUnicode": ["\\u0061\\u0300\\u0328"]
   },
   {
     "label": "ą̀",
@@ -796,12 +569,8 @@
   {
     "label": "ą̂",
     "id": "\\u0105\\u0302",
-    "confusableChar": [
-      "ą̂"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0302\\u0328"
-    ]
+    "confusableChar": ["ą̂"],
+    "confusableUnicode": ["\\u0061\\u0302\\u0328"]
   },
   {
     "label": "ą̂",
@@ -812,12 +581,8 @@
   {
     "label": "ą̌",
     "id": "\\u0105\\u030c",
-    "confusableChar": [
-      "ą̌"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u030c\\u0328"
-    ]
+    "confusableChar": ["ą̌"],
+    "confusableUnicode": ["\\u0061\\u030c\\u0328"]
   },
   {
     "label": "ą̌",
@@ -828,12 +593,8 @@
   {
     "label": "ą̈",
     "id": "\\u0105\\u0308",
-    "confusableChar": [
-      "ą̈"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0308\\u0328"
-    ]
+    "confusableChar": ["ą̈"],
+    "confusableUnicode": ["\\u0061\\u0308\\u0328"]
   },
   {
     "label": "ą̈",
@@ -844,11 +605,7 @@
   {
     "label": "ą̈̀",
     "id": "\\u0105\\u0308\\u0300",
-    "confusableChar": [
-      "ą̀̈",
-      "ą̈̀",
-      "ą̈̀"
-    ],
+    "confusableChar": ["ą̀̈", "ą̈̀", "ą̈̀"],
     "confusableUnicode": [
       "\\u0105\\u0300\\u0308",
       "\\u0061\\u0328\\u0308\\u0300",
@@ -858,11 +615,7 @@
   {
     "label": "ą̈̂",
     "id": "\\u0105\\u0308\\u0302",
-    "confusableChar": [
-      "ą̂̈",
-      "ą̈̂",
-      "ą̈̂"
-    ],
+    "confusableChar": ["ą̂̈", "ą̈̂", "ą̈̂"],
     "confusableUnicode": [
       "\\u0105\\u0302\\u0308",
       "\\u0061\\u0328\\u0308\\u0302",
@@ -872,11 +625,7 @@
   {
     "label": "ą̈̌",
     "id": "\\u0105\\u0308\\u030c",
-    "confusableChar": [
-      "ą̌̈",
-      "ą̈̌",
-      "ą̈̌"
-    ],
+    "confusableChar": ["ą̌̈", "ą̈̌", "ą̈̌"],
     "confusableUnicode": [
       "\\u0105\\u030c\\u0308",
       "\\u0061\\u0328\\u0308\\u030c",
@@ -886,12 +635,7 @@
   {
     "label": "ą̄",
     "id": "\\u0105\\u0304",
-    "confusableChar": [
-      "ą̄",
-      "ą︥",
-      "ą̅",
-      "ą︤"
-    ],
+    "confusableChar": ["ą̄", "ą︥", "ą̅", "ą︤"],
     "confusableUnicode": [
       "\\u0061\\u0304\\u0328",
       "\\u0061\\ufe25\\u0328",
@@ -902,12 +646,7 @@
   {
     "label": "ą̄́",
     "id": "\\u0105\\u0304\\u0301",
-    "confusableChar": [
-      "ą̄́",
-      "ą̅́",
-      "ą︤́",
-      "ą︥́"
-    ],
+    "confusableChar": ["ą̄́", "ą̅́", "ą︤́", "ą︥́"],
     "confusableUnicode": [
       "\\u0061\\u0304\\u0328\\u0301",
       "\\u0061\\u0305\\u0328\\u0301",
@@ -918,12 +657,7 @@
   {
     "label": "ą̄̀",
     "id": "\\u0105\\u0304\\u0300",
-    "confusableChar": [
-      "ą︥̀",
-      "ą̅̀",
-      "ą̄̀",
-      "ą︤̀"
-    ],
+    "confusableChar": ["ą︥̀", "ą̅̀", "ą̄̀", "ą︤̀"],
     "confusableUnicode": [
       "\\u0061\\ufe25\\u0328\\u0300",
       "\\u0061\\u0305\\u0328\\u0300",
@@ -934,14 +668,7 @@
   {
     "label": "ā",
     "id": "\\u0101",
-    "confusableChar": [
-      "ā",
-      "a̅",
-      "a︤",
-      "a︥",
-      "a¯",
-      "a‾"
-    ],
+    "confusableChar": ["ā", "a̅", "a︤", "a︥", "a¯", "a‾"],
     "confusableUnicode": [
       "\\u0061\\u0304",
       "\\u0061\\u0305",
@@ -954,12 +681,7 @@
   {
     "label": "ā́",
     "id": "\\u0101\\u0301",
-    "confusableChar": [
-      "a̅́",
-      "a︥́",
-      "a︤́",
-      "ā́"
-    ],
+    "confusableChar": ["a̅́", "a︥́", "a︤́", "ā́"],
     "confusableUnicode": [
       "\\u0061\\u0305\\u0301",
       "\\u0061\\ufe25\\u0301",
@@ -970,12 +692,7 @@
   {
     "label": "ā̀",
     "id": "\\u0101\\u0300",
-    "confusableChar": [
-      "ā̀",
-      "a︥̀",
-      "a̅̀",
-      "a︤̀"
-    ],
+    "confusableChar": ["ā̀", "a︥̀", "a̅̀", "a︤̀"],
     "confusableUnicode": [
       "\\u0061\\u0304\\u0300",
       "\\u0061\\ufe25\\u0300",
@@ -986,30 +703,14 @@
   {
     "label": "a̱",
     "id": "\\u0061\\u0331",
-    "confusableChar": [
-      "a̲",
-      "a_",
-      "a̠"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0332",
-      "\\u0061\\u005f",
-      "\\u0061\\u0320"
-    ]
+    "confusableChar": ["a̲", "a_", "a̠"],
+    "confusableUnicode": ["\\u0061\\u0332", "\\u0061\\u005f", "\\u0061\\u0320"]
   },
   {
     "label": "a:",
     "id": "\\u0061\\u003a",
-    "confusableChar": [
-      "a：",
-      "a꞉",
-      "a˸"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\uff1a",
-      "\\u0061\\ua789",
-      "\\u0061\\u02f8"
-    ]
+    "confusableChar": ["a：", "a꞉", "a˸"],
+    "confusableUnicode": ["\\u0061\\uff1a", "\\u0061\\ua789", "\\u0061\\u02f8"]
   },
   {
     "label": "a:w̓",
@@ -1042,12 +743,7 @@
   {
     "label": "a·",
     "id": "\\u0061\\u00b7",
-    "confusableChar": [
-      "aᐧ",
-      "a⸱",
-      "a・",
-      "a･"
-    ],
+    "confusableChar": ["aᐧ", "a⸱", "a・", "a･"],
     "confusableUnicode": [
       "\\u0061\\u1427",
       "\\u0061\\u2e31",
@@ -1058,17 +754,7 @@
   {
     "label": "a'",
     "id": "\\u0061\\u0027",
-    "confusableChar": [
-      "a＇",
-      "a’",
-      "a̓",
-      "a̕",
-      "a̒",
-      "a̔",
-      "aʼ",
-      "aˈ",
-      "a՚"
-    ],
+    "confusableChar": ["a＇", "a’", "a̓", "a̕", "a̒", "a̔", "aʼ", "aˈ", "a՚"],
     "confusableUnicode": [
       "\\u0061\\uff07",
       "\\u0061\\u2019",
@@ -1084,17 +770,7 @@
   {
     "label": "a’",
     "id": "\\u0061\\u2019",
-    "confusableChar": [
-      "a̓",
-      "a̕",
-      "a̒",
-      "a̔",
-      "aʼ",
-      "aˈ",
-      "a՚",
-      "a＇",
-      "a'"
-    ],
+    "confusableChar": ["a̓", "a̕", "a̒", "a̔", "aʼ", "aˈ", "a՚", "a＇", "a'"],
     "confusableUnicode": [
       "\\u0061\\u0313",
       "\\u0061\\u0315",
@@ -1110,13 +786,7 @@
   {
     "label": "aˈa",
     "id": "\\u0061\\u02c8\\u0061",
-    "confusableChar": [
-      "a̕a",
-      "aʼa",
-      "a՚a",
-      "a＇a",
-      "a'a"
-    ],
+    "confusableChar": ["a̕a", "aʼa", "a՚a", "a＇a", "a'a"],
     "confusableUnicode": [
       "\\u0061\\u0315\\u0061",
       "\\u0061\\u02bc\\u0061",
@@ -1158,43 +828,25 @@
   {
     "label": "áa",
     "id": "\\u00e1\\u0061",
-    "confusableChar": [
-      "áa"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301\\u0061"
-    ]
+    "confusableChar": ["áa"],
+    "confusableUnicode": ["\\u0061\\u0301\\u0061"]
   },
   {
     "label": "ąą",
     "id": "\\u0105\\u0105",
-    "confusableChar": [
-      "ąą"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328\\u0061\\u0328"
-    ]
+    "confusableChar": ["ąą"],
+    "confusableUnicode": ["\\u0061\\u0328\\u0061\\u0328"]
   },
   {
     "label": "āa",
     "id": "\\u0101\\u0061",
-    "confusableChar": [
-      "āa",
-      "a̅a"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0304\\u0061",
-      "\\u0061\\u0305\\u0061"
-    ]
+    "confusableChar": ["āa", "a̅a"],
+    "confusableUnicode": ["\\u0061\\u0304\\u0061", "\\u0061\\u0305\\u0061"]
   },
   {
     "label": "a̱a̱",
     "id": "\\u0061\\u0331\\u0061\\u0331",
-    "confusableChar": [
-      "a̲a̲",
-      "a̠a̠",
-      "a_a_"
-    ],
+    "confusableChar": ["a̲a̲", "a̠a̠", "a_a_"],
     "confusableUnicode": [
       "\\u0061\\u0332\\u0061\\u0332",
       "\\u0061\\u0320\\u0061\\u0320",
@@ -1222,12 +874,8 @@
   {
     "label": "æ",
     "id": "\\u00e6",
-    "confusableChar": [
-      "ae"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0065"
-    ]
+    "confusableChar": ["ae"],
+    "confusableUnicode": ["\\u0061\\u0065"]
   },
   {
     "label": "ah",
@@ -1244,14 +892,7 @@
   {
     "label": "ai’",
     "id": "\\u0061\\u0069\\u2019",
-    "confusableChar": [
-      "ai̕",
-      "aiʼ",
-      "aiˈ",
-      "ai՚",
-      "ai＇",
-      "ai'"
-    ],
+    "confusableChar": ["ai̕", "aiʼ", "aiˈ", "ai՚", "ai＇", "ai'"],
     "confusableUnicode": [
       "\\u0061\\u0069\\u0315",
       "\\u0061\\u0069\\u02bc",
@@ -1276,12 +917,7 @@
   {
     "label": "aiʼ",
     "id": "\\u0061\\u0069\\u02bc",
-    "confusableChar": [
-      "aiˈ",
-      "ai̕",
-      "ai’",
-      "ai՚"
-    ],
+    "confusableChar": ["aiˈ", "ai̕", "ai’", "ai՚"],
     "confusableUnicode": [
       "\\u0061\\u0069\\u02c8",
       "\\u0061\\u0069\\u0315",
@@ -1310,22 +946,14 @@
   {
     "label": "aó",
     "id": "\\u0061\\u00f3",
-    "confusableChar": [
-      "aó"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u006f\\u0301"
-    ]
+    "confusableChar": ["aó"],
+    "confusableUnicode": ["\\u0061\\u006f\\u0301"]
   },
   {
     "label": "áo",
     "id": "\\u00e1\\u006f",
-    "confusableChar": [
-      "áo"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301\\u006f"
-    ]
+    "confusableChar": ["áo"],
+    "confusableUnicode": ["\\u0061\\u0301\\u006f"]
   },
   {
     "label": "aw",
@@ -1336,15 +964,7 @@
   {
     "label": "aw̓",
     "id": "\\u0061\\u0077\\u0313",
-    "confusableChar": [
-      "awˈ",
-      "aw̕",
-      "aw̒",
-      "aw̔",
-      "awʼ",
-      "aw’",
-      "aw՚"
-    ],
+    "confusableChar": ["awˈ", "aw̕", "aw̒", "aw̔", "awʼ", "aw’", "aw՚"],
     "confusableUnicode": [
       "\\u0061\\u0077\\u02c8",
       "\\u0061\\u0077\\u0315",
@@ -1358,32 +978,20 @@
   {
     "label": "áw",
     "id": "\\u00e1\\u0077",
-    "confusableChar": [
-      "áw"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301\\u0077"
-    ]
+    "confusableChar": ["áw"],
+    "confusableUnicode": ["\\u0061\\u0301\\u0077"]
   },
   {
     "label": "ąw",
     "id": "\\u0105\\u0077",
-    "confusableChar": [
-      "ąw"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328\\u0077"
-    ]
+    "confusableChar": ["ąw"],
+    "confusableUnicode": ["\\u0061\\u0328\\u0077"]
   },
   {
     "label": "ą̈w",
     "id": "\\u0105\\u0308\\u0077",
-    "confusableChar": [
-      "ą̈w"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328\\u0308\\u0077"
-    ]
+    "confusableChar": ["ą̈w"],
+    "confusableUnicode": ["\\u0061\\u0328\\u0308\\u0077"]
   },
   {
     "label": "ay",
@@ -1394,54 +1002,32 @@
   {
     "label": "áy",
     "id": "\\u00e1\\u0079",
-    "confusableChar": [
-      "áy"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0301\\u0079"
-    ]
+    "confusableChar": ["áy"],
+    "confusableUnicode": ["\\u0061\\u0301\\u0079"]
   },
   {
     "label": "äy",
     "id": "\\u00e4\\u0079",
-    "confusableChar": [
-      "äy"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0308\\u0079"
-    ]
+    "confusableChar": ["äy"],
+    "confusableUnicode": ["\\u0061\\u0308\\u0079"]
   },
   {
     "label": "ąy",
     "id": "\\u0105\\u0079",
-    "confusableChar": [
-      "ąy"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328\\u0079"
-    ]
+    "confusableChar": ["ąy"],
+    "confusableUnicode": ["\\u0061\\u0328\\u0079"]
   },
   {
     "label": "ą̈y",
     "id": "\\u0105\\u0308\\u0079",
-    "confusableChar": [
-      "ą̈y"
-    ],
-    "confusableUnicode": [
-      "\\u0061\\u0328\\u0308\\u0079"
-    ]
+    "confusableChar": ["ą̈y"],
+    "confusableUnicode": ["\\u0061\\u0328\\u0308\\u0079"]
   },
   {
     "label": "Ⱥ",
     "id": "\\u023a",
-    "confusableChar": [
-      "A̸",
-      "A̷"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0338",
-      "\\u0041\\u0337"
-    ]
+    "confusableChar": ["A̸", "A̷"],
+    "confusableUnicode": ["\\u0041\\u0338", "\\u0041\\u0337"]
   },
   {
     "label": "b",
@@ -1458,15 +1044,7 @@
   {
     "label": "b̓",
     "id": "\\u0062\\u0313",
-    "confusableChar": [
-      "bˈ",
-      "b̕",
-      "b̒",
-      "b̔",
-      "bʼ",
-      "b’",
-      "b՚"
-    ],
+    "confusableChar": ["bˈ", "b̕", "b̒", "b̔", "bʼ", "b’", "b՚"],
     "confusableUnicode": [
       "\\u0062\\u02c8",
       "\\u0062\\u0315",
@@ -1492,15 +1070,7 @@
   {
     "label": "c̓",
     "id": "\\u0063\\u0313",
-    "confusableChar": [
-      "c̔",
-      "c̕",
-      "cˈ",
-      "c’",
-      "c՚",
-      "cʼ",
-      "c̒"
-    ],
+    "confusableChar": ["c̔", "c̕", "cˈ", "c’", "c՚", "cʼ", "c̒"],
     "confusableUnicode": [
       "\\u0063\\u0314",
       "\\u0063\\u0315",
@@ -1514,32 +1084,20 @@
   {
     "label": "Ć",
     "id": "\\u0106",
-    "confusableChar": [
-      "Ć"
-    ],
-    "confusableUnicode": [
-      "\\u0043\\u0301"
-    ]
+    "confusableChar": ["Ć"],
+    "confusableUnicode": ["\\u0043\\u0301"]
   },
   {
     "label": "ĉ",
     "id": "\\u0109",
-    "confusableChar": [
-      "ĉ"
-    ],
-    "confusableUnicode": [
-      "\\u0063\\u0302"
-    ]
+    "confusableChar": ["ĉ"],
+    "confusableUnicode": ["\\u0063\\u0302"]
   },
   {
     "label": "č",
     "id": "\\u010d",
-    "confusableChar": [
-      "č"
-    ],
-    "confusableUnicode": [
-      "\\u0063\\u030c"
-    ]
+    "confusableChar": ["č"],
+    "confusableUnicode": ["\\u0063\\u030c"]
   },
   {
     "label": "č",
@@ -1598,15 +1156,7 @@
   {
     "label": "c̕",
     "id": "\\u0063\\u0315",
-    "confusableChar": [
-      "c̓",
-      "c̍",
-      "c̔",
-      "c̒",
-      "cʼ",
-      "c’",
-      "c՚"
-    ],
+    "confusableChar": ["c̓", "c̍", "c̔", "c̒", "cʼ", "c’", "c՚"],
     "confusableUnicode": [
       "\\u0063\\u0313",
       "\\u0063\\u030d",
@@ -1626,17 +1176,7 @@
   {
     "label": "c’",
     "id": "\\u0063\\u2019",
-    "confusableChar": [
-      "c̓",
-      "c̕",
-      "c̒",
-      "c̔",
-      "cʼ",
-      "cˈ",
-      "c՚",
-      "c＇",
-      "c'"
-    ],
+    "confusableChar": ["c̓", "c̕", "c̒", "c̔", "cʼ", "cˈ", "c՚", "c＇", "c'"],
     "confusableUnicode": [
       "\\u0063\\u0313",
       "\\u0063\\u0315",
@@ -1652,16 +1192,7 @@
   {
     "label": "č’",
     "id": "\\u010d\\u2019",
-    "confusableChar": [
-      "čʼ",
-      "č՚",
-      "č'",
-      "č̕",
-      "čʼ",
-      "č՚",
-      "č'",
-      "č̕"
-    ],
+    "confusableChar": ["čʼ", "č՚", "č'", "č̕", "čʼ", "č՚", "č'", "č̕"],
     "confusableUnicode": [
       "\\u010d\\u02bc",
       "\\u010d\\u055a",
@@ -1682,15 +1213,7 @@
   {
     "label": "ch̕",
     "id": "\\u0063\\u0068\\u0315",
-    "confusableChar": [
-      "chˈ",
-      "ch̓",
-      "ch̒",
-      "ch̔",
-      "chʼ",
-      "ch’",
-      "ch՚"
-    ],
+    "confusableChar": ["chˈ", "ch̓", "ch̒", "ch̔", "chʼ", "ch’", "ch՚"],
     "confusableUnicode": [
       "\\u0063\\u0068\\u02c8",
       "\\u0063\\u0068\\u0313",
@@ -1704,12 +1227,7 @@
   {
     "label": "ch'",
     "id": "\\u0063\\u0068\\u0027",
-    "confusableChar": [
-      "ch＇",
-      "ch՚",
-      "ch’",
-      "chʼ"
-    ],
+    "confusableChar": ["ch＇", "ch՚", "ch’", "chʼ"],
     "confusableUnicode": [
       "\\u0063\\u0068\\uff07",
       "\\u0063\\u0068\\u055a",
@@ -1746,15 +1264,7 @@
   {
     "label": "chˈ",
     "id": "\\u0063\\u0068\\u02c8",
-    "confusableChar": [
-      "ch̓",
-      "ch̕",
-      "ch̒",
-      "ch̔",
-      "chʼ",
-      "ch’",
-      "ch՚"
-    ],
+    "confusableChar": ["ch̓", "ch̕", "ch̒", "ch̔", "chʼ", "ch’", "ch՚"],
     "confusableUnicode": [
       "\\u0063\\u0068\\u0313",
       "\\u0063\\u0068\\u0315",
@@ -1768,15 +1278,7 @@
   {
     "label": "chʼ",
     "id": "\\u0063\\u0068\\u02bc",
-    "confusableChar": [
-      "ch̕",
-      "chˈ",
-      "ch՚",
-      "ch’",
-      "ch̒",
-      "ch̔",
-      "ch̓"
-    ],
+    "confusableChar": ["ch̕", "chˈ", "ch՚", "ch’", "ch̒", "ch̔", "ch̓"],
     "confusableUnicode": [
       "\\u0063\\u0068\\u0315",
       "\\u0063\\u0068\\u02c8",
@@ -1796,15 +1298,7 @@
   {
     "label": "cʼ",
     "id": "\\u0063\\u02bc",
-    "confusableChar": [
-      "c̓",
-      "c̔",
-      "c̕",
-      "cˈ",
-      "c’",
-      "c՚",
-      "c̒"
-    ],
+    "confusableChar": ["c̓", "c̔", "c̕", "cˈ", "c’", "c՚", "c̒"],
     "confusableUnicode": [
       "\\u0063\\u0313",
       "\\u0063\\u0314",
@@ -1818,16 +1312,7 @@
   {
     "label": "čʼ",
     "id": "\\u010d\\u02bc",
-    "confusableChar": [
-      "č̕",
-      "čˈ",
-      "č’",
-      "č՚",
-      "č̕",
-      "čˈ",
-      "č’",
-      "č՚"
-    ],
+    "confusableChar": ["č̕", "čˈ", "č’", "č՚", "č̕", "čˈ", "č’", "č՚"],
     "confusableUnicode": [
       "\\u0063\\u030c\\u0315",
       "\\u0063\\u030c\\u02c8",
@@ -1842,14 +1327,8 @@
   {
     "label": "Ȼ",
     "id": "\\u023b",
-    "confusableChar": [
-      "C̸",
-      "C̷"
-    ],
-    "confusableUnicode": [
-      "\\u0043\\u0338",
-      "\\u0043\\u0337"
-    ]
+    "confusableChar": ["C̸", "C̷"],
+    "confusableUnicode": ["\\u0043\\u0338", "\\u0043\\u0337"]
   },
   {
     "label": "d",
@@ -1866,15 +1345,7 @@
   {
     "label": "d̓",
     "id": "\\u0064\\u0313",
-    "confusableChar": [
-      "dˈ",
-      "d̕",
-      "d̒",
-      "d̔",
-      "dʼ",
-      "d’",
-      "d՚"
-    ],
+    "confusableChar": ["dˈ", "d̕", "d̒", "d̔", "dʼ", "d’", "d՚"],
     "confusableUnicode": [
       "\\u0064\\u02c8",
       "\\u0064\\u0315",
@@ -1912,14 +1383,8 @@
   {
     "label": "dł",
     "id": "\\u0064\\u0142",
-    "confusableChar": [
-      "dl̸",
-      "dl̷"
-    ],
-    "confusableUnicode": [
-      "\\u0064\\u006c\\u0338",
-      "\\u0064\\u006c\\u0337"
-    ]
+    "confusableChar": ["dl̸", "dl̷"],
+    "confusableUnicode": ["\\u0064\\u006c\\u0338", "\\u0064\\u006c\\u0337"]
   },
   {
     "label": "dr",
@@ -1936,12 +1401,8 @@
   {
     "label": "ʣ",
     "id": "\\u02a3",
-    "confusableChar": [
-      "dz"
-    ],
-    "confusableUnicode": [
-      "\\u0064\\u007a"
-    ]
+    "confusableChar": ["dz"],
+    "confusableUnicode": ["\\u0064\\u007a"]
   },
   {
     "label": "dᶻ",
@@ -1952,22 +1413,13 @@
   {
     "label": "dẑ",
     "id": "\\u0064\\u1e91",
-    "confusableChar": [
-      "dẑ"
-    ],
-    "confusableUnicode": [
-      "\\u0064\\u007a\\u0302"
-    ]
+    "confusableChar": ["dẑ"],
+    "confusableUnicode": ["\\u0064\\u007a\\u0302"]
   },
   {
     "label": "dẕ",
     "id": "\\u0064\\u1e95",
-    "confusableChar": [
-      "dz̲",
-      "dz̠",
-      "dz_",
-      "dẕ"
-    ],
+    "confusableChar": ["dz̲", "dz̠", "dz_", "dẕ"],
     "confusableUnicode": [
       "\\u0064\\u007a\\u0332",
       "\\u0064\\u007a\\u0320",
@@ -2050,22 +1502,14 @@
   {
     "label": "é",
     "id": "\\u00e9",
-    "confusableChar": [
-      "é"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0301"
-    ]
+    "confusableChar": ["é"],
+    "confusableUnicode": ["\\u0065\\u0301"]
   },
   {
     "label": "É",
     "id": "\\u00c9",
-    "confusableChar": [
-      "É"
-    ],
-    "confusableUnicode": [
-      "\\u0045\\u0301"
-    ]
+    "confusableChar": ["É"],
+    "confusableUnicode": ["\\u0045\\u0301"]
   },
   {
     "label": "é",
@@ -2076,224 +1520,133 @@
   {
     "label": "è",
     "id": "\\u00e8",
-    "confusableChar": [
-      "è"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0300"
-    ]
+    "confusableChar": ["è"],
+    "confusableUnicode": ["\\u0065\\u0300"]
   },
   {
     "label": "ê",
     "id": "\\u00ea",
-    "confusableChar": [
-      "ê"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0302"
-    ]
+    "confusableChar": ["ê"],
+    "confusableUnicode": ["\\u0065\\u0302"]
   },
   {
     "label": "ě",
     "id": "\\u011b",
-    "confusableChar": [
-      "ě"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u030c"
-    ]
+    "confusableChar": ["ě"],
+    "confusableUnicode": ["\\u0065\\u030c"]
   },
   {
     "label": "ë",
     "id": "\\u00eb",
-    "confusableChar": [
-      "ë"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0308"
-    ]
+    "confusableChar": ["ë"],
+    "confusableUnicode": ["\\u0065\\u0308"]
   },
   {
     "label": "ë̀",
     "id": "\\u00eb\\u0300",
-    "confusableChar": [
-      "ë̀"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0308\\u0300"
-    ]
+    "confusableChar": ["ë̀"],
+    "confusableUnicode": ["\\u0065\\u0308\\u0300"]
   },
   {
     "label": "ë̂",
     "id": "\\u00eb\\u0302",
-    "confusableChar": [
-      "ë̂"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0308\\u0302"
-    ]
+    "confusableChar": ["ë̂"],
+    "confusableUnicode": ["\\u0065\\u0308\\u0302"]
   },
   {
     "label": "ë̌",
     "id": "\\u00eb\\u030c",
-    "confusableChar": [
-      "ë̌"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0308\\u030c"
-    ]
+    "confusableChar": ["ë̌"],
+    "confusableUnicode": ["\\u0065\\u0308\\u030c"]
   },
   {
     "label": "ę",
     "id": "\\u0119",
-    "confusableChar": [
-      "ę"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328"
-    ]
+    "confusableChar": ["ę"],
+    "confusableUnicode": ["\\u0065\\u0328"]
   },
   {
     "label": "Ę",
     "id": "\\u0118",
-    "confusableChar": [
-      "Ę"
-    ],
-    "confusableUnicode": [
-      "\\u0045\\u0328"
-    ]
+    "confusableChar": ["Ę"],
+    "confusableUnicode": ["\\u0045\\u0328"]
   },
   {
     "label": "ę́",
     "id": "\\u0119\\u0301",
-    "confusableChar": [
-      "ę́"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0301"
-    ]
+    "confusableChar": ["ę́"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0301"]
   },
   {
     "label": "Ę́",
     "id": "\\u0118\\u0301",
-    "confusableChar": [
-      "Ę́"
-    ],
-    "confusableUnicode": [
-      "\\u0045\\u0328\\u0301"
-    ]
+    "confusableChar": ["Ę́"],
+    "confusableUnicode": ["\\u0045\\u0328\\u0301"]
   },
   {
     "label": "ę̀",
     "id": "\\u0119\\u0300",
-    "confusableChar": [
-      "ę̀"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0300"
-    ]
+    "confusableChar": ["ę̀"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0300"]
   },
   {
     "label": "ę̂",
     "id": "\\u0119\\u0302",
-    "confusableChar": [
-      "ę̂"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0302"
-    ]
+    "confusableChar": ["ę̂"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0302"]
   },
   {
     "label": "ę̌",
     "id": "\\u0119\\u030c",
-    "confusableChar": [
-      "ę̌"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u030c"
-    ]
+    "confusableChar": ["ę̌"],
+    "confusableUnicode": ["\\u0065\\u0328\\u030c"]
   },
   {
     "label": "ę̈",
     "id": "\\u0119\\u0308",
-    "confusableChar": [
-      "ę̈"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0308"
-    ]
+    "confusableChar": ["ę̈"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0308"]
   },
   {
     "label": "ę̈̀",
     "id": "\\u0119\\u0308\\u0300",
-    "confusableChar": [
-      "ę̈̀"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0308\\u0300"
-    ]
+    "confusableChar": ["ę̈̀"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0308\\u0300"]
   },
   {
     "label": "ę̈̂",
     "id": "\\u0119\\u0308\\u0302",
-    "confusableChar": [
-      "ę̈̂"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0308\\u0302"
-    ]
+    "confusableChar": ["ę̈̂"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0308\\u0302"]
   },
   {
     "label": "ę̈̌",
     "id": "\\u0119\\u0308\\u030c",
-    "confusableChar": [
-      "ę̈̌"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0308\\u030c"
-    ]
+    "confusableChar": ["ę̈̌"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0308\\u030c"]
   },
   {
     "label": "ę̄",
     "id": "\\u0119\\u0304",
-    "confusableChar": [
-      "ę̄"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0304"
-    ]
+    "confusableChar": ["ę̄"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0304"]
   },
   {
     "label": "ę̄́",
     "id": "\\u0119\\u0304\\u0301",
-    "confusableChar": [
-      "ę̄́"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0304\\u0301"
-    ]
+    "confusableChar": ["ę̄́"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0304\\u0301"]
   },
   {
     "label": "ę̄̀",
     "id": "\\u0119\\u0304\\u0300",
-    "confusableChar": [
-      "ę̄̀"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0304\\u0300"
-    ]
+    "confusableChar": ["ę̄̀"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0304\\u0300"]
   },
   {
     "label": "ē",
     "id": "\\u0113",
-    "confusableChar": [
-      "ē",
-      "e̅",
-      "e︤",
-      "e︥",
-      "e¯",
-      "e‾"
-    ],
+    "confusableChar": ["ē", "e̅", "e︤", "e︥", "e¯", "e‾"],
     "confusableUnicode": [
       "\\u0065\\u0304",
       "\\u0065\\u0305",
@@ -2370,55 +1723,25 @@
   {
     "label": "e̱",
     "id": "\\u0065\\u0331",
-    "confusableChar": [
-      "e̲",
-      "e̠",
-      "e_"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0332",
-      "\\u0065\\u0320",
-      "\\u0065\\u005f"
-    ]
+    "confusableChar": ["e̲", "e̠", "e_"],
+    "confusableUnicode": ["\\u0065\\u0332", "\\u0065\\u0320", "\\u0065\\u005f"]
   },
   {
     "label": "e:",
     "id": "\\u0065\\u003a",
-    "confusableChar": [
-      "e：",
-      "e꞉",
-      "e˸"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\uff1a",
-      "\\u0065\\ua789",
-      "\\u0065\\u02f8"
-    ]
+    "confusableChar": ["e：", "e꞉", "e˸"],
+    "confusableUnicode": ["\\u0065\\uff1a", "\\u0065\\ua789", "\\u0065\\u02f8"]
   },
   {
     "label": "é:y",
     "id": "\\u00e9\\u003a\\u0079",
-    "confusableChar": [
-      "é:y"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0301\\u003a\\u0079"
-    ]
+    "confusableChar": ["é:y"],
+    "confusableUnicode": ["\\u0065\\u0301\\u003a\\u0079"]
   },
   {
     "label": "e'",
     "id": "\\u0065\\u0027",
-    "confusableChar": [
-      "e＇",
-      "e’",
-      "e̓",
-      "e̕",
-      "e̒",
-      "e̔",
-      "eʼ",
-      "eˈ",
-      "e՚"
-    ],
+    "confusableChar": ["e＇", "e’", "e̓", "e̕", "e̒", "e̔", "eʼ", "eˈ", "e՚"],
     "confusableUnicode": [
       "\\u0065\\uff07",
       "\\u0065\\u2019",
@@ -2434,17 +1757,7 @@
   {
     "label": "e’",
     "id": "\\u0065\\u2019",
-    "confusableChar": [
-      "e＇",
-      "e'",
-      "e̓",
-      "e̕",
-      "e̒",
-      "e̔",
-      "eʼ",
-      "eˈ",
-      "e՚"
-    ],
+    "confusableChar": ["e＇", "e'", "e̓", "e̕", "e̒", "e̔", "eʼ", "eˈ", "e՚"],
     "confusableUnicode": [
       "\\u0065\\uff07",
       "\\u0065\\u0027",
@@ -2460,12 +1773,7 @@
   {
     "label": "eˈe",
     "id": "\\u0065\\u02c8\\u0065",
-    "confusableChar": [
-      "e̕e",
-      "eʼe",
-      "e’e",
-      "e՚e"
-    ],
+    "confusableChar": ["e̕e", "eʼe", "e’e", "e՚e"],
     "confusableUnicode": [
       "\\u0065\\u0315\\u0065",
       "\\u0065\\u02bc\\u0065",
@@ -2482,12 +1790,8 @@
   {
     "label": "ęą",
     "id": "\\u0119\\u0105",
-    "confusableChar": [
-      "ęą"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0328\\u0061\\u0328"
-    ]
+    "confusableChar": ["ęą"],
+    "confusableUnicode": ["\\u0065\\u0328\\u0061\\u0328"]
   },
   {
     "label": "ee",
@@ -2498,24 +1802,14 @@
   {
     "label": "ée",
     "id": "\\u00e9\\u0065",
-    "confusableChar": [
-      "ée"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0301\\u0065"
-    ]
+    "confusableChar": ["ée"],
+    "confusableUnicode": ["\\u0065\\u0301\\u0065"]
   },
   {
     "label": "ēe",
     "id": "\\u0113\\u0065",
-    "confusableChar": [
-      "ēe",
-      "e̅e"
-    ],
-    "confusableUnicode": [
-      "\\u0065\\u0304\\u0065",
-      "\\u0065\\u0305\\u0065"
-    ]
+    "confusableChar": ["ēe", "e̅e"],
+    "confusableUnicode": ["\\u0065\\u0304\\u0065", "\\u0065\\u0305\\u0065"]
   },
   {
     "label": "eii",
@@ -2532,15 +1826,7 @@
   {
     "label": "ew̓",
     "id": "\\u0065\\u0077\\u0313",
-    "confusableChar": [
-      "ewˈ",
-      "ew̕",
-      "ew̒",
-      "ew̔",
-      "ewʼ",
-      "ew’",
-      "ew՚"
-    ],
+    "confusableChar": ["ewˈ", "ew̕", "ew̒", "ew̔", "ewʼ", "ew’", "ew՚"],
     "confusableUnicode": [
       "\\u0065\\u0077\\u02c8",
       "\\u0065\\u0077\\u0315",
@@ -2560,15 +1846,7 @@
   {
     "label": "ey̓",
     "id": "\\u0065\\u0079\\u0313",
-    "confusableChar": [
-      "ey̕",
-      "eyˈ",
-      "ey̒",
-      "ey̔",
-      "eyʼ",
-      "ey’",
-      "ey՚"
-    ],
+    "confusableChar": ["ey̕", "eyˈ", "ey̒", "ey̔", "eyʼ", "ey’", "ey՚"],
     "confusableUnicode": [
       "\\u0065\\u0079\\u0315",
       "\\u0065\\u0079\\u02c8",
@@ -2594,72 +1872,44 @@
   {
     "label": "ə",
     "id": "\\u0259",
-    "confusableChar": [
-      "ǝ"
-    ],
-    "confusableUnicode": [
-      "\\u01dd"
-    ]
+    "confusableChar": ["ǝ"],
+    "confusableUnicode": ["\\u01dd"]
   },
   {
     "label": "ə́",
     "id": "\\u0259\\u0301",
-    "confusableChar": [
-      "ǝ́"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u0301"
-    ]
+    "confusableChar": ["ǝ́"],
+    "confusableUnicode": ["\\u01dd\\u0301"]
   },
   {
     "label": "ə̣",
     "id": "\\u0259\\u0323",
-    "confusableChar": [
-      "ǝ̣"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u0323"
-    ]
+    "confusableChar": ["ǝ̣"],
+    "confusableUnicode": ["\\u01dd\\u0323"]
   },
   {
     "label": "əl",
     "id": "\\u0259\\u006c",
-    "confusableChar": [
-      "ǝl"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u006c"
-    ]
+    "confusableChar": ["ǝl"],
+    "confusableUnicode": ["\\u01dd\\u006c"]
   },
   {
     "label": "əm",
     "id": "\\u0259\\u006d",
-    "confusableChar": [
-      "ǝm"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u006d"
-    ]
+    "confusableChar": ["ǝm"],
+    "confusableUnicode": ["\\u01dd\\u006d"]
   },
   {
     "label": "ən",
     "id": "\\u0259\\u006e",
-    "confusableChar": [
-      "ǝn"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u006e"
-    ]
+    "confusableChar": ["ǝn"],
+    "confusableUnicode": ["\\u01dd\\u006e"]
   },
   {
     "label": "əw",
     "id": "\\u0259\\u0077",
-    "confusableChar": [
-      "ǝw"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u0077"
-    ]
+    "confusableChar": ["ǝw"],
+    "confusableUnicode": ["\\u01dd\\u0077"]
   },
   {
     "label": "əw̓",
@@ -2702,12 +1952,8 @@
   {
     "label": "əy",
     "id": "\\u0259\\u0079",
-    "confusableChar": [
-      "ǝy"
-    ],
-    "confusableUnicode": [
-      "\\u01dd\\u0079"
-    ]
+    "confusableChar": ["ǝy"],
+    "confusableUnicode": ["\\u01dd\\u0079"]
   },
   {
     "label": "əy̓",
@@ -2756,13 +2002,7 @@
   {
     "label": "ɛ̄ɛ",
     "id": "\\u025b\\u0304\\u025b",
-    "confusableChar": [
-      "ɛ̅ɛ",
-      "ɛ︤ɛ",
-      "ɛ︥ɛ",
-      "ɛ¯ɛ",
-      "ɛ‾ɛ"
-    ],
+    "confusableChar": ["ɛ̅ɛ", "ɛ︤ɛ", "ɛ︥ɛ", "ɛ¯ɛ", "ɛ‾ɛ"],
     "confusableUnicode": [
       "\\u025b\\u0305\\u025b",
       "\\u025b\\ufe24\\u025b",
@@ -2786,15 +2026,7 @@
   {
     "label": "g̓",
     "id": "\\u0067\\u0313",
-    "confusableChar": [
-      "gˈ",
-      "g’",
-      "g՚",
-      "gʼ",
-      "g̒",
-      "g̔",
-      "g̕"
-    ],
+    "confusableChar": ["gˈ", "g’", "g՚", "gʼ", "g̒", "g̔", "g̕"],
     "confusableUnicode": [
       "\\u0067\\u02c8",
       "\\u0067\\u2019",
@@ -2808,36 +2040,19 @@
   {
     "label": "ĝ",
     "id": "\\u011d",
-    "confusableChar": [
-      "ĝ"
-    ],
-    "confusableUnicode": [
-      "\\u0067\\u0302"
-    ]
+    "confusableChar": ["ĝ"],
+    "confusableUnicode": ["\\u0067\\u0302"]
   },
   {
     "label": "ǧ",
     "id": "\\u01e7",
-    "confusableChar": [
-      "ǧ",
-      "ğ"
-    ],
-    "confusableUnicode": [
-      "\\u0067\\u030c",
-      "\\u011f"
-    ]
+    "confusableChar": ["ǧ", "ğ"],
+    "confusableUnicode": ["\\u0067\\u030c", "\\u011f"]
   },
   {
     "label": "ḡ",
     "id": "\\u1e21",
-    "confusableChar": [
-      "ḡ",
-      "g̅",
-      "g︤",
-      "g︥",
-      "g¯",
-      "g‾"
-    ],
+    "confusableChar": ["ḡ", "g̅", "g︤", "g︥", "g¯", "g‾"],
     "confusableUnicode": [
       "\\u0067\\u0304",
       "\\u0067\\u0305",
@@ -2850,16 +2065,8 @@
   {
     "label": "g̱",
     "id": "\\u0067\\u0331",
-    "confusableChar": [
-      "g_",
-      "g̠",
-      "g̲"
-    ],
-    "confusableUnicode": [
-      "\\u0067\\u005f",
-      "\\u0067\\u0320",
-      "\\u0067\\u0332"
-    ]
+    "confusableChar": ["g_", "g̠", "g̲"],
+    "confusableUnicode": ["\\u0067\\u005f", "\\u0067\\u0320", "\\u0067\\u0332"]
   },
   {
     "label": "g°",
@@ -2906,14 +2113,8 @@
   {
     "label": "ǧv",
     "id": "\\u01e7\\u0076",
-    "confusableChar": [
-      "ǧv",
-      "ğv"
-    ],
-    "confusableUnicode": [
-      "\\u0067\\u030c\\u0076",
-      "\\u011f\\u0076"
-    ]
+    "confusableChar": ["ǧv", "ğv"],
+    "confusableUnicode": ["\\u0067\\u030c\\u0076", "\\u011f\\u0076"]
   },
   {
     "label": "gw",
@@ -2930,15 +2131,7 @@
   {
     "label": "g̓w",
     "id": "\\u0067\\u0313\\u0077",
-    "confusableChar": [
-      "g’w",
-      "gʼw",
-      "g՚w",
-      "gˈw",
-      "g̕w",
-      "g̔w",
-      "g̒w"
-    ],
+    "confusableChar": ["g’w", "gʼw", "g՚w", "gˈw", "g̕w", "g̔w", "g̒w"],
     "confusableUnicode": [
       "\\u0067\\u2019\\u0077",
       "\\u0067\\u02bc\\u0077",
@@ -2952,23 +2145,13 @@
   {
     "label": "ǧʷ",
     "id": "\\u01e7\\u02b7",
-    "confusableChar": [
-      "ǧʷ",
-      "ğʷ"
-    ],
-    "confusableUnicode": [
-      "\\u0067\\u030c\\u02b7",
-      "\\u011f\\u02b7"
-    ]
+    "confusableChar": ["ǧʷ", "ğʷ"],
+    "confusableUnicode": ["\\u0067\\u030c\\u02b7", "\\u011f\\u02b7"]
   },
   {
     "label": "g̱w",
     "id": "\\u0067\\u0331\\u0077",
-    "confusableChar": [
-      "g̲w",
-      "g̠w",
-      "g_w"
-    ],
+    "confusableChar": ["g̲w", "g̠w", "g_w"],
     "confusableUnicode": [
       "\\u0067\\u0332\\u0077",
       "\\u0067\\u0320\\u0077",
@@ -3002,12 +2185,8 @@
   {
     "label": "ɣ",
     "id": "\\u0263",
-    "confusableChar": [
-      "ɤ"
-    ],
-    "confusableUnicode": [
-      "\\u0264"
-    ]
+    "confusableChar": ["ɤ"],
+    "confusableUnicode": ["\\u0264"]
   },
   {
     "label": "ɣ̓",
@@ -3110,15 +2289,7 @@
   {
     "label": "h̓",
     "id": "\\u0068\\u0313",
-    "confusableChar": [
-      "hˈ",
-      "h̕",
-      "h̒",
-      "h̔",
-      "hʼ",
-      "h’",
-      "h՚"
-    ],
+    "confusableChar": ["hˈ", "h̕", "h̒", "h̔", "hʼ", "h’", "h՚"],
     "confusableUnicode": [
       "\\u0068\\u02c8",
       "\\u0068\\u0315",
@@ -3132,22 +2303,14 @@
   {
     "label": "ĥ",
     "id": "\\u0125",
-    "confusableChar": [
-      "ĥ"
-    ],
-    "confusableUnicode": [
-      "\\u0068\\u0302"
-    ]
+    "confusableChar": ["ĥ"],
+    "confusableUnicode": ["\\u0068\\u0302"]
   },
   {
     "label": "ḥ",
     "id": "\\u1e25",
-    "confusableChar": [
-      "ḥ"
-    ],
-    "confusableUnicode": [
-      "\\u0068\\u0323"
-    ]
+    "confusableChar": ["ḥ"],
+    "confusableUnicode": ["\\u0068\\u0323"]
   },
   {
     "label": "ḥ",
@@ -3194,15 +2357,7 @@
   {
     "label": "i̓",
     "id": "\\u0069\\u0313",
-    "confusableChar": [
-      "iˈ",
-      "i̕",
-      "i̒",
-      "i̔",
-      "iʼ",
-      "i’",
-      "i՚"
-    ],
+    "confusableChar": ["iˈ", "i̕", "i̒", "i̔", "iʼ", "i’", "i՚"],
     "confusableUnicode": [
       "\\u0069\\u02c8",
       "\\u0069\\u0315",
@@ -3216,22 +2371,14 @@
   {
     "label": "í",
     "id": "\\u00ed",
-    "confusableChar": [
-      "í"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0301"
-    ]
+    "confusableChar": ["í"],
+    "confusableUnicode": ["\\u0069\\u0301"]
   },
   {
     "label": "Í",
     "id": "\\u00cd",
-    "confusableChar": [
-      "Í"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0301"
-    ]
+    "confusableChar": ["Í"],
+    "confusableUnicode": ["\\u0049\\u0301"]
   },
   {
     "label": "í",
@@ -3242,176 +2389,103 @@
   {
     "label": "ì",
     "id": "\\u00ec",
-    "confusableChar": [
-      "ì"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0300"
-    ]
+    "confusableChar": ["ì"],
+    "confusableUnicode": ["\\u0069\\u0300"]
   },
   {
     "label": "Ì",
     "id": "\\u00cc",
-    "confusableChar": [
-      "Ì"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0300"
-    ]
+    "confusableChar": ["Ì"],
+    "confusableUnicode": ["\\u0049\\u0300"]
   },
   {
     "label": "î",
     "id": "\\u00ee",
-    "confusableChar": [
-      "î"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0302"
-    ]
+    "confusableChar": ["î"],
+    "confusableUnicode": ["\\u0069\\u0302"]
   },
   {
     "label": "ǐ",
     "id": "\\u01d0",
-    "confusableChar": [
-      "ǐ"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u030c"
-    ]
+    "confusableChar": ["ǐ"],
+    "confusableUnicode": ["\\u0069\\u030c"]
   },
   {
     "label": "ï",
     "id": "\\u00ef",
-    "confusableChar": [
-      "ï"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0308"
-    ]
+    "confusableChar": ["ï"],
+    "confusableUnicode": ["\\u0069\\u0308"]
   },
   {
     "label": "Ĩ",
     "id": "\\u0128",
-    "confusableChar": [
-      "Ĩ",
-      "I̴"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0303",
-      "\\u0049\\u0334"
-    ]
+    "confusableChar": ["Ĩ", "I̴"],
+    "confusableUnicode": ["\\u0049\\u0303", "\\u0049\\u0334"]
   },
   {
     "label": "į",
     "id": "\\u012f",
-    "confusableChar": [
-      "į"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328"
-    ]
+    "confusableChar": ["į"],
+    "confusableUnicode": ["\\u0069\\u0328"]
   },
   {
     "label": "Į",
     "id": "\\u012e",
-    "confusableChar": [
-      "Į"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0328"
-    ]
+    "confusableChar": ["Į"],
+    "confusableUnicode": ["\\u0049\\u0328"]
   },
   {
     "label": "Į́",
     "id": "\\u012e\\u0301",
-    "confusableChar": [
-      "Į́"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0328\\u0301"
-    ]
+    "confusableChar": ["Į́"],
+    "confusableUnicode": ["\\u0049\\u0328\\u0301"]
   },
   {
     "label": "į́",
     "id": "\\u012f\\u0301",
-    "confusableChar": [
-      "į́"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0301"
-    ]
+    "confusableChar": ["į́"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0301"]
   },
   {
     "label": "į̀",
     "id": "\\u012f\\u0300",
-    "confusableChar": [
-      "į̀"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0300"
-    ]
+    "confusableChar": ["į̀"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0300"]
   },
   {
     "label": "į̂",
     "id": "\\u012f\\u0302",
-    "confusableChar": [
-      "į̂"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0302"
-    ]
+    "confusableChar": ["į̂"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0302"]
   },
   {
     "label": "į̌",
     "id": "\\u012f\\u030c",
-    "confusableChar": [
-      "į̌"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u030c"
-    ]
+    "confusableChar": ["į̌"],
+    "confusableUnicode": ["\\u0069\\u0328\\u030c"]
   },
   {
     "label": "į̄",
     "id": "\\u012f\\u0304",
-    "confusableChar": [
-      "į̄"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0304"
-    ]
+    "confusableChar": ["į̄"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0304"]
   },
   {
     "label": "į̄́",
     "id": "\\u012f\\u0304\\u0301",
-    "confusableChar": [
-      "į̄́"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0304\\u0301"
-    ]
+    "confusableChar": ["į̄́"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0304\\u0301"]
   },
   {
     "label": "į̄̀",
     "id": "\\u012f\\u0304\\u0300",
-    "confusableChar": [
-      "į̄̀"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0304\\u0300"
-    ]
+    "confusableChar": ["į̄̀"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0304\\u0300"]
   },
   {
     "label": "ī",
     "id": "\\u012b",
-    "confusableChar": [
-      "ī",
-      "i̅",
-      "i︤",
-      "i︥",
-      "i¯",
-      "i‾"
-    ],
+    "confusableChar": ["ī", "i̅", "i︤", "i︥", "i¯", "i‾"],
     "confusableUnicode": [
       "\\u0069\\u0304",
       "\\u0069\\u0305",
@@ -3424,12 +2498,7 @@
   {
     "label": "ī́",
     "id": "\\u012b\\u0301",
-    "confusableChar": [
-      "i̅́",
-      "i︥́",
-      "i︤́",
-      "ī́"
-    ],
+    "confusableChar": ["i̅́", "i︥́", "i︤́", "ī́"],
     "confusableUnicode": [
       "\\u0069\\u0305\\u0301",
       "\\u0069\\ufe25\\u0301",
@@ -3440,11 +2509,7 @@
   {
     "label": "ī̀",
     "id": "\\u012b\\u0300",
-    "confusableChar": [
-      "ī̀",
-      "i̅̀",
-      "i︤̀"
-    ],
+    "confusableChar": ["ī̀", "i̅̀", "i︤̀"],
     "confusableUnicode": [
       "\\u0069\\u0304\\u0300",
       "\\u0069\\u0305\\u0300",
@@ -3460,30 +2525,14 @@
   {
     "label": "i̱",
     "id": "\\u0069\\u0331",
-    "confusableChar": [
-      "i̲",
-      "i̠",
-      "i_"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0332",
-      "\\u0069\\u0320",
-      "\\u0069\\u005f"
-    ]
+    "confusableChar": ["i̲", "i̠", "i_"],
+    "confusableUnicode": ["\\u0069\\u0332", "\\u0069\\u0320", "\\u0069\\u005f"]
   },
   {
     "label": "i:",
     "id": "\\u0069\\u003a",
-    "confusableChar": [
-      "i：",
-      "i꞉",
-      "i˸"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\uff1a",
-      "\\u0069\\ua789",
-      "\\u0069\\u02f8"
-    ]
+    "confusableChar": ["i：", "i꞉", "i˸"],
+    "confusableUnicode": ["\\u0069\\uff1a", "\\u0069\\ua789", "\\u0069\\u02f8"]
   },
   {
     "label": "i·",
@@ -3494,14 +2543,7 @@
   {
     "label": "i'",
     "id": "\\u0069\\u0027",
-    "confusableChar": [
-      "i＇",
-      "i’",
-      "i̕",
-      "iʼ",
-      "iˈ",
-      "i՚"
-    ],
+    "confusableChar": ["i＇", "i’", "i̕", "iʼ", "iˈ", "i՚"],
     "confusableUnicode": [
       "\\u0069\\uff07",
       "\\u0069\\u2019",
@@ -3514,14 +2556,7 @@
   {
     "label": "i’",
     "id": "\\u0069\\u2019",
-    "confusableChar": [
-      "i̕",
-      "iʼ",
-      "iˈ",
-      "i՚",
-      "i＇",
-      "i'"
-    ],
+    "confusableChar": ["i̕", "iʼ", "iˈ", "i՚", "i＇", "i'"],
     "confusableUnicode": [
       "\\u0069\\u0315",
       "\\u0069\\u02bc",
@@ -3534,12 +2569,7 @@
   {
     "label": "iˈi",
     "id": "\\u0069\\u02c8\\u0069",
-    "confusableChar": [
-      "i̕i",
-      "iʼi",
-      "i’i",
-      "i՚i"
-    ],
+    "confusableChar": ["i̕i", "iʼi", "i’i", "i՚i"],
     "confusableUnicode": [
       "\\u0069\\u0315\\u0069",
       "\\u0069\\u02bc\\u0069",
@@ -3574,32 +2604,19 @@
   {
     "label": "įį",
     "id": "\\u012f\\u012f",
-    "confusableChar": [
-      "įį"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0069\\u0328"
-    ]
+    "confusableChar": ["įį"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0069\\u0328"]
   },
   {
     "label": "į̀į̀",
     "id": "\\u012f\\u0300\\u012f\\u0300",
-    "confusableChar": [
-      "į̀į̀"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0328\\u0300\\u0069\\u0328\\u0300"
-    ]
+    "confusableChar": ["į̀į̀"],
+    "confusableUnicode": ["\\u0069\\u0328\\u0300\\u0069\\u0328\\u0300"]
   },
   {
     "label": "īi",
     "id": "\\u012b\\u0069",
-    "confusableChar": [
-      "īi",
-      "i̅i",
-      "i︤i",
-      "i︥i"
-    ],
+    "confusableChar": ["īi", "i̅i", "i︤i", "i︥i"],
     "confusableUnicode": [
       "\\u0069\\u0304\\u0069",
       "\\u0069\\u0305\\u0069",
@@ -3628,76 +2645,44 @@
   {
     "label": "ı",
     "id": "\\u0131",
-    "confusableChar": [
-      "ɩ"
-    ],
-    "confusableUnicode": [
-      "\\u0269"
-    ]
+    "confusableChar": ["ɩ"],
+    "confusableUnicode": ["\\u0269"]
   },
   {
     "label": "ı́",
     "id": "\\u0131\\u0301",
-    "confusableChar": [
-      "ɩ́"
-    ],
-    "confusableUnicode": [
-      "\\u0269\\u0301"
-    ]
+    "confusableChar": ["ɩ́"],
+    "confusableUnicode": ["\\u0269\\u0301"]
   },
   {
     "label": "ı̨",
     "id": "\\u0131\\u0328",
-    "confusableChar": [
-      "ɩ̨"
-    ],
-    "confusableUnicode": [
-      "\\u0269\\u0328"
-    ]
+    "confusableChar": ["ɩ̨"],
+    "confusableUnicode": ["\\u0269\\u0328"]
   },
   {
     "label": "ı̨́",
     "id": "\\u0131\\u0328\\u0301",
-    "confusableChar": [
-      "ɩ̨́"
-    ],
-    "confusableUnicode": [
-      "\\u0269\\u0328\\u0301"
-    ]
+    "confusableChar": ["ɩ̨́"],
+    "confusableUnicode": ["\\u0269\\u0328\\u0301"]
   },
   {
     "label": "Ɨ",
     "id": "\\u0197",
-    "confusableChar": [
-      "I̸",
-      "I̷"
-    ],
-    "confusableUnicode": [
-      "\\u0049\\u0338",
-      "\\u0049\\u0337"
-    ]
+    "confusableChar": ["I̸", "I̷"],
+    "confusableUnicode": ["\\u0049\\u0338", "\\u0049\\u0337"]
   },
   {
     "label": "ɨ",
     "id": "\\u0268",
-    "confusableChar": [
-      "i̸",
-      "i̷"
-    ],
-    "confusableUnicode": [
-      "\\u0069\\u0338",
-      "\\u0069\\u0337"
-    ]
+    "confusableChar": ["i̸", "i̷"],
+    "confusableUnicode": ["\\u0069\\u0338", "\\u0069\\u0337"]
   },
   {
     "label": "ɩ",
     "id": "\\u0269",
-    "confusableChar": [
-      "ı"
-    ],
-    "confusableUnicode": [
-      "\\u0131"
-    ]
+    "confusableChar": ["ı"],
+    "confusableUnicode": ["\\u0131"]
   },
   {
     "label": "j",
@@ -3714,22 +2699,14 @@
   {
     "label": "ĵ",
     "id": "\\u0135",
-    "confusableChar": [
-      "ĵ"
-    ],
-    "confusableUnicode": [
-      "\\u006a\\u0302"
-    ]
+    "confusableChar": ["ĵ"],
+    "confusableUnicode": ["\\u006a\\u0302"]
   },
   {
     "label": "ǰ",
     "id": "\\u01f0",
-    "confusableChar": [
-      "ǰ"
-    ],
-    "confusableUnicode": [
-      "\\u006a\\u030c"
-    ]
+    "confusableChar": ["ǰ"],
+    "confusableUnicode": ["\\u006a\\u030c"]
   },
   {
     "label": "k",
@@ -3746,12 +2723,7 @@
   {
     "label": "k̓",
     "id": "\\u006b\\u0313",
-    "confusableChar": [
-      "k̍",
-      "k̒",
-      "k̔",
-      "k̕"
-    ],
+    "confusableChar": ["k̍", "k̒", "k̔", "k̕"],
     "confusableUnicode": [
       "\\u006b\\u030d",
       "\\u006b\\u0312",
@@ -3768,25 +2740,13 @@
   {
     "label": "Ḱ",
     "id": "\\u004b\\u0301",
-    "confusableChar": [
-      "Ќ"
-    ],
-    "confusableUnicode": [
-      "\\u040c"
-    ]
+    "confusableChar": ["Ќ"],
+    "confusableUnicode": ["\\u040c"]
   },
   {
     "label": "k̕",
     "id": "\\u006b\\u0315",
-    "confusableChar": [
-      "k̓",
-      "k̍",
-      "k̒",
-      "k̔",
-      "kʼ",
-      "k’",
-      "k՚"
-    ],
+    "confusableChar": ["k̓", "k̍", "k̒", "k̔", "kʼ", "k’", "k՚"],
     "confusableUnicode": [
       "\\u006b\\u0313",
       "\\u006b\\u030d",
@@ -3800,12 +2760,7 @@
   {
     "label": "ḵ",
     "id": "\\u1e35",
-    "confusableChar": [
-      "k̲",
-      "k̠",
-      "k_",
-      "ḵ"
-    ],
+    "confusableChar": ["k̲", "k̠", "k_", "ḵ"],
     "confusableUnicode": [
       "\\u006b\\u0332",
       "\\u006b\\u0320",
@@ -3816,12 +2771,7 @@
   {
     "label": "Ḵ",
     "id": "\\u1e34",
-    "confusableChar": [
-      "K̲",
-      "K̠",
-      "K_",
-      "Ḵ"
-    ],
+    "confusableChar": ["K̲", "K̠", "K_", "Ḵ"],
     "confusableUnicode": [
       "\\u004b\\u0332",
       "\\u004b\\u0320",
@@ -3832,11 +2782,7 @@
   {
     "label": "ḵ̓",
     "id": "\\u1e35\\u0313",
-    "confusableChar": [
-      "k̲̓",
-      "k_̓",
-      "k̠̓"
-    ],
+    "confusableChar": ["k̲̓", "k_̓", "k̠̓"],
     "confusableUnicode": [
       "\\u006b\\u0332\\u0313",
       "\\u006b\\u005f\\u0313",
@@ -3852,11 +2798,7 @@
   {
     "label": "ḵ̕",
     "id": "\\u1e35\\u0315",
-    "confusableChar": [
-      "k̲̕",
-      "k̠̕",
-      "k_̕"
-    ],
+    "confusableChar": ["k̲̕", "k̠̕", "k_̕"],
     "confusableUnicode": [
       "\\u006b\\u0332\\u0315",
       "\\u006b\\u0320\\u0315",
@@ -3866,27 +2808,13 @@
   {
     "label": "K̵",
     "id": "\\u004b\\u0335",
-    "confusableChar": [
-      "K̶"
-    ],
-    "confusableUnicode": [
-      "\\u004b\\u0336"
-    ]
+    "confusableChar": ["K̶"],
+    "confusableUnicode": ["\\u004b\\u0336"]
   },
   {
     "label": "k'",
     "id": "\\u006b\\u0027",
-    "confusableChar": [
-      "kʼ",
-      "k̒",
-      "k̓",
-      "k̔",
-      "k̕",
-      "k＇",
-      "kˈ",
-      "k’",
-      "k՚"
-    ],
+    "confusableChar": ["kʼ", "k̒", "k̓", "k̔", "k̕", "k＇", "kˈ", "k’", "k՚"],
     "confusableUnicode": [
       "\\u006b\\u02bc",
       "\\u006b\\u0312",
@@ -3962,14 +2890,7 @@
   {
     "label": "k'w",
     "id": "\\u006b\\u0027\\u0077",
-    "confusableChar": [
-      "k＇w",
-      "k’w",
-      "k̕w",
-      "kʼw",
-      "kˈw",
-      "k՚w"
-    ],
+    "confusableChar": ["k＇w", "k’w", "k̕w", "kʼw", "kˈw", "k՚w"],
     "confusableUnicode": [
       "\\u006b\\uff07\\u0077",
       "\\u006b\\u2019\\u0077",
@@ -3982,13 +2903,7 @@
   {
     "label": "k'y",
     "id": "\\u006b\\u0027\\u0079",
-    "confusableChar": [
-      "k＇y",
-      "k’y",
-      "kʼy",
-      "kˈy",
-      "k՚y"
-    ],
+    "confusableChar": ["k＇y", "k’y", "kʼy", "kˈy", "k՚y"],
     "confusableUnicode": [
       "\\u006b\\uff07\\u0079",
       "\\u006b\\u2019\\u0079",
@@ -4000,15 +2915,7 @@
   {
     "label": "k’",
     "id": "\\u006b\\u2019",
-    "confusableChar": [
-      "kʼ",
-      "k̓",
-      "k̕",
-      "k'",
-      "k＇",
-      "kˈ",
-      "k՚"
-    ],
+    "confusableChar": ["kʼ", "k̓", "k̕", "k'", "k＇", "kˈ", "k՚"],
     "confusableUnicode": [
       "\\u006b\\u02bc",
       "\\u006b\\u0313",
@@ -4022,15 +2929,7 @@
   {
     "label": "kˈ",
     "id": "\\u006b\\u02c8",
-    "confusableChar": [
-      "kʼ",
-      "k̓",
-      "k̕",
-      "k'",
-      "k＇",
-      "k’",
-      "k՚"
-    ],
+    "confusableChar": ["kʼ", "k̓", "k̕", "k'", "k＇", "k’", "k՚"],
     "confusableUnicode": [
       "\\u006b\\u02bc",
       "\\u006b\\u0313",
@@ -4102,12 +3001,7 @@
   {
     "label": "kˈw",
     "id": "\\u006b\\u02c8\\u0077",
-    "confusableChar": [
-      "k̕w",
-      "kʼw",
-      "k’w",
-      "k՚w"
-    ],
+    "confusableChar": ["k̕w", "kʼw", "k’w", "k՚w"],
     "confusableUnicode": [
       "\\u006b\\u0315\\u0077",
       "\\u006b\\u02bc\\u0077",
@@ -4118,12 +3012,7 @@
   {
     "label": "kˈy",
     "id": "\\u006b\\u02c8\\u0079",
-    "confusableChar": [
-      "k̕y",
-      "kʼy",
-      "k’y",
-      "k՚y"
-    ],
+    "confusableChar": ["k̕y", "kʼy", "k’y", "k՚y"],
     "confusableUnicode": [
       "\\u006b\\u0315\\u0079",
       "\\u006b\\u02bc\\u0079",
@@ -4182,15 +3071,7 @@
   {
     "label": "kw̕",
     "id": "\\u006b\\u0077\\u0315",
-    "confusableChar": [
-      "kwˈ",
-      "kw̓",
-      "kw̒",
-      "kw̔",
-      "kwʼ",
-      "kw’",
-      "kw՚"
-    ],
+    "confusableChar": ["kwˈ", "kw̓", "kw̒", "kw̔", "kwʼ", "kw’", "kw՚"],
     "confusableUnicode": [
       "\\u006b\\u0077\\u02c8",
       "\\u006b\\u0077\\u0313",
@@ -4204,12 +3085,7 @@
   {
     "label": "k̓ʷ",
     "id": "\\u006b\\u0313\\u02b7",
-    "confusableChar": [
-      "k̒ʷ",
-      "k̍ʷ",
-      "k̕ʷ",
-      "k̔ʷ"
-    ],
+    "confusableChar": ["k̒ʷ", "k̍ʷ", "k̕ʷ", "k̔ʷ"],
     "confusableUnicode": [
       "\\u006b\\u0312\\u02b7",
       "\\u006b\\u030d\\u02b7",
@@ -4232,15 +3108,7 @@
   {
     "label": "k̕ʷ",
     "id": "\\u006b\\u0315\\u02b7",
-    "confusableChar": [
-      "k̓ʷ",
-      "k̍ʷ",
-      "k̒ʷ",
-      "k̔ʷ",
-      "kʼʷ",
-      "k’ʷ",
-      "k՚ʷ"
-    ],
+    "confusableChar": ["k̓ʷ", "k̍ʷ", "k̒ʷ", "k̔ʷ", "kʼʷ", "k’ʷ", "k՚ʷ"],
     "confusableUnicode": [
       "\\u006b\\u0313\\u02b7",
       "\\u006b\\u030d\\u02b7",
@@ -4488,12 +3356,7 @@
   {
     "label": "k̓ʸ",
     "id": "\\u006b\\u0313\\u02b8",
-    "confusableChar": [
-      "k̒ʸ",
-      "k̍ʸ",
-      "k̔ʸ",
-      "k̕ʸ"
-    ],
+    "confusableChar": ["k̒ʸ", "k̍ʸ", "k̔ʸ", "k̕ʸ"],
     "confusableUnicode": [
       "\\u006b\\u0312\\u02b8",
       "\\u006b\\u030d\\u02b8",
@@ -4504,15 +3367,7 @@
   {
     "label": "kʼ",
     "id": "\\u006b\\u02bc",
-    "confusableChar": [
-      "k̓",
-      "k̕",
-      "k'",
-      "kˈ",
-      "k＇",
-      "k’",
-      "k՚"
-    ],
+    "confusableChar": ["k̓", "k̕", "k'", "kˈ", "k＇", "k’", "k՚"],
     "confusableUnicode": [
       "\\u006b\\u0313",
       "\\u006b\\u0315",
@@ -4526,14 +3381,7 @@
   {
     "label": "kʼw",
     "id": "\\u006b\\u02bc\\u0077",
-    "confusableChar": [
-      "k՚w",
-      "k'w",
-      "kˈw",
-      "k＇w",
-      "k’w",
-      "k̓w"
-    ],
+    "confusableChar": ["k՚w", "k'w", "kˈw", "k＇w", "k’w", "k̓w"],
     "confusableUnicode": [
       "\\u006b\\u055a\\u0077",
       "\\u006b\\u0027\\u0077",
@@ -4546,14 +3394,7 @@
   {
     "label": "kʼʷ",
     "id": "\\u006b\\u02bc\\u02b7",
-    "confusableChar": [
-      "k̓ʷ",
-      "k’ʷ",
-      "kˈʷ",
-      "k՚ʷ",
-      "k＇ʷ",
-      "k'ʷ"
-    ],
+    "confusableChar": ["k̓ʷ", "k’ʷ", "kˈʷ", "k՚ʷ", "k＇ʷ", "k'ʷ"],
     "confusableUnicode": [
       "\\u006b\\u0313\\u02b7",
       "\\u006b\\u2019\\u02b7",
@@ -4578,24 +3419,13 @@
   {
     "label": "l̲",
     "id": "\\u006c\\u0332",
-    "confusableChar": [
-      "l̠",
-      "ḻ"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0320",
-      "\\u006c\\u0331"
-    ]
+    "confusableChar": ["l̠", "ḻ"],
+    "confusableUnicode": ["\\u006c\\u0320", "\\u006c\\u0331"]
   },
   {
     "label": "l̓",
     "id": "\\u006c\\u0313",
-    "confusableChar": [
-      "l̍",
-      "l̒",
-      "l̔",
-      "l̕"
-    ],
+    "confusableChar": ["l̍", "l̒", "l̔", "l̕"],
     "confusableUnicode": [
       "\\u006c\\u030d",
       "\\u006c\\u0312",
@@ -4606,43 +3436,25 @@
   {
     "label": "ĺ",
     "id": "\\u013a",
-    "confusableChar": [
-      "ĺ"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0301"
-    ]
+    "confusableChar": ["ĺ"],
+    "confusableUnicode": ["\\u006c\\u0301"]
   },
   {
     "label": "l̀",
     "id": "\\u006c\\u0300",
-    "confusableChar": [
-      "Ì"
-    ],
-    "confusableUnicode": [
-      "\\u00cc"
-    ]
+    "confusableChar": ["Ì"],
+    "confusableUnicode": ["\\u00cc"]
   },
   {
     "label": "ľ",
     "id": "\\u013e",
-    "confusableChar": [
-      "ľ"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u030c"
-    ]
+    "confusableChar": ["ľ"],
+    "confusableUnicode": ["\\u006c\\u030c"]
   },
   {
     "label": "l̕",
     "id": "\\u006c\\u0315",
-    "confusableChar": [
-      "lʼ",
-      "l̔",
-      "lˈ",
-      "l’",
-      "l՚"
-    ],
+    "confusableChar": ["lʼ", "l̔", "lˈ", "l’", "l՚"],
     "confusableUnicode": [
       "\\u006c\\u02bc",
       "\\u006c\\u0314",
@@ -4660,12 +3472,8 @@
   {
     "label": "ḷ",
     "id": "\\u1e37",
-    "confusableChar": [
-      "ḷ"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0323"
-    ]
+    "confusableChar": ["ḷ"],
+    "confusableUnicode": ["\\u006c\\u0323"]
   },
   {
     "label": "ḷ̓",
@@ -4706,46 +3514,26 @@
   {
     "label": "ḷ́",
     "id": "\\u1e37\\u0301",
-    "confusableChar": [
-      "ḷ́"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0323\\u0301"
-    ]
+    "confusableChar": ["ḷ́"],
+    "confusableUnicode": ["\\u006c\\u0323\\u0301"]
   },
   {
     "label": "ł",
     "id": "\\u0142",
-    "confusableChar": [
-      "l̸",
-      "l̷"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0338",
-      "\\u006c\\u0337"
-    ]
+    "confusableChar": ["l̸", "l̷"],
+    "confusableUnicode": ["\\u006c\\u0338", "\\u006c\\u0337"]
   },
   {
     "label": "Ł",
     "id": "\\u0141",
-    "confusableChar": [
-      "L̸",
-      "L̷"
-    ],
-    "confusableUnicode": [
-      "\\u004c\\u0338",
-      "\\u004c\\u0337"
-    ]
+    "confusableChar": ["L̸", "L̷"],
+    "confusableUnicode": ["\\u004c\\u0338", "\\u004c\\u0337"]
   },
   {
     "label": "L̵",
     "id": "\\u004c\\u0335",
-    "confusableChar": [
-      "L̶"
-    ],
-    "confusableUnicode": [
-      "\\u004c\\u0336"
-    ]
+    "confusableChar": ["L̶"],
+    "confusableUnicode": ["\\u004c\\u0336"]
   },
   {
     "label": "lh",
@@ -4774,15 +3562,7 @@
   {
     "label": "lʼ",
     "id": "\\u006c\\u02bc",
-    "confusableChar": [
-      "l̒",
-      "l̓",
-      "l̔",
-      "l̕",
-      "lˈ",
-      "l’",
-      "l՚"
-    ],
+    "confusableChar": ["l̒", "l̓", "l̔", "l̕", "lˈ", "l’", "l՚"],
     "confusableUnicode": [
       "\\u006c\\u0312",
       "\\u006c\\u0313",
@@ -4802,24 +3582,14 @@
   {
     "label": "ɬ",
     "id": "\\u026c",
-    "confusableChar": [
-      "l̵"
-    ],
-    "confusableUnicode": [
-      "\\u006c\\u0335"
-    ]
+    "confusableChar": ["l̵"],
+    "confusableUnicode": ["\\u006c\\u0335"]
   },
   {
     "label": "ƛ",
     "id": "\\u019b",
-    "confusableChar": [
-      "λ̸",
-      "λ̷"
-    ],
-    "confusableUnicode": [
-      "\\u03bb\\u0338",
-      "\\u03bb\\u0337"
-    ]
+    "confusableChar": ["λ̸", "λ̷"],
+    "confusableUnicode": ["\\u03bb\\u0338", "\\u03bb\\u0337"]
   },
   {
     "label": "ƛ̓",
@@ -4864,15 +3634,7 @@
   {
     "label": "ƛ̕",
     "id": "\\u019b\\u0315",
-    "confusableChar": [
-      "ƛʼ",
-      "ƛ̍",
-      "ƛ̒",
-      "ƛ̓",
-      "ƛ̔",
-      "ƛ’",
-      "ƛ՚"
-    ],
+    "confusableChar": ["ƛʼ", "ƛ̍", "ƛ̒", "ƛ̓", "ƛ̔", "ƛ’", "ƛ՚"],
     "confusableUnicode": [
       "\\u019b\\u02bc",
       "\\u019b\\u030d",
@@ -4886,15 +3648,7 @@
   {
     "label": "ƛʼ",
     "id": "\\u019b\\u02bc",
-    "confusableChar": [
-      "ƛˈ",
-      "ƛ̕",
-      "ƛ̒",
-      "ƛ̔",
-      "ƛ̓",
-      "ƛ’",
-      "ƛ՚"
-    ],
+    "confusableChar": ["ƛˈ", "ƛ̕", "ƛ̒", "ƛ̔", "ƛ̓", "ƛ’", "ƛ՚"],
     "confusableUnicode": [
       "\\u019b\\u02c8",
       "\\u019b\\u0315",
@@ -4920,12 +3674,7 @@
   {
     "label": "m̓",
     "id": "\\u006d\\u0313",
-    "confusableChar": [
-      "m̍",
-      "m̒",
-      "m̔",
-      "m̕"
-    ],
+    "confusableChar": ["m̍", "m̒", "m̔", "m̕"],
     "confusableUnicode": [
       "\\u006d\\u030d",
       "\\u006d\\u0312",
@@ -4936,12 +3685,7 @@
   {
     "label": "m̕",
     "id": "\\u006d\\u0315",
-    "confusableChar": [
-      "m̍",
-      "m̒",
-      "m̔",
-      "m̓"
-    ],
+    "confusableChar": ["m̍", "m̒", "m̔", "m̓"],
     "confusableUnicode": [
       "\\u006d\\u030d",
       "\\u006d\\u0312",
@@ -4952,12 +3696,8 @@
   {
     "label": "ṃ",
     "id": "\\u1e43",
-    "confusableChar": [
-      "ṃ"
-    ],
-    "confusableUnicode": [
-      "\\u006d\\u0323"
-    ]
+    "confusableChar": ["ṃ"],
+    "confusableUnicode": ["\\u006d\\u0323"]
   },
   {
     "label": "ṃ̓",
@@ -4998,12 +3738,8 @@
   {
     "label": "ṃ́",
     "id": "\\u1e43\\u0301",
-    "confusableChar": [
-      "ṃ́"
-    ],
-    "confusableUnicode": [
-      "\\u006d\\u0323\\u0301"
-    ]
+    "confusableChar": ["ṃ́"],
+    "confusableUnicode": ["\\u006d\\u0323\\u0301"]
   },
   {
     "label": "mb",
@@ -5014,17 +3750,7 @@
   {
     "label": "mʼ",
     "id": "\\u006d\\u02bc",
-    "confusableChar": [
-      "m̓",
-      "m̕",
-      "m̒",
-      "m̔",
-      "m’",
-      "mˈ",
-      "m՚",
-      "m＇",
-      "m'"
-    ],
+    "confusableChar": ["m̓", "m̕", "m̒", "m̔", "m’", "mˈ", "m՚", "m＇", "m'"],
     "confusableUnicode": [
       "\\u006d\\u0313",
       "\\u006d\\u0315",
@@ -5052,12 +3778,7 @@
   {
     "label": "n̓",
     "id": "\\u006e\\u0313",
-    "confusableChar": [
-      "n̒",
-      "n̔",
-      "n̕",
-      "n̍"
-    ],
+    "confusableChar": ["n̒", "n̔", "n̕", "n̍"],
     "confusableUnicode": [
       "\\u006e\\u0312",
       "\\u006e\\u0314",
@@ -5068,27 +3789,13 @@
   {
     "label": "ñ",
     "id": "\\u00f1",
-    "confusableChar": [
-      "ñ",
-      "n̴"
-    ],
-    "confusableUnicode": [
-      "\\u006e\\u0303",
-      "\\u006e\\u0334"
-    ]
+    "confusableChar": ["ñ", "n̴"],
+    "confusableUnicode": ["\\u006e\\u0303", "\\u006e\\u0334"]
   },
   {
     "label": "n̕",
     "id": "\\u006e\\u0315",
-    "confusableChar": [
-      "nˈ",
-      "n̓",
-      "n̒",
-      "n̔",
-      "nʼ",
-      "n’",
-      "n՚"
-    ],
+    "confusableChar": ["nˈ", "n̓", "n̒", "n̔", "nʼ", "n’", "n՚"],
     "confusableUnicode": [
       "\\u006e\\u02c8",
       "\\u006e\\u0313",
@@ -5102,12 +3809,8 @@
   {
     "label": "ṇ",
     "id": "\\u1e47",
-    "confusableChar": [
-      "ṇ"
-    ],
-    "confusableUnicode": [
-      "\\u006e\\u0323"
-    ]
+    "confusableChar": ["ṇ"],
+    "confusableUnicode": ["\\u006e\\u0323"]
   },
   {
     "label": "ṇ̓",
@@ -5146,22 +3849,13 @@
   {
     "label": "ṇ́",
     "id": "\\u1e47\\u0301",
-    "confusableChar": [
-      "ṇ́"
-    ],
-    "confusableUnicode": [
-      "\\u006e\\u0323\\u0301"
-    ]
+    "confusableChar": ["ṇ́"],
+    "confusableUnicode": ["\\u006e\\u0323\\u0301"]
   },
   {
     "label": "Ṉ",
     "id": "\\u1e48",
-    "confusableChar": [
-      "N̲",
-      "N̠",
-      "N_",
-      "Ṉ"
-    ],
+    "confusableChar": ["N̲", "N̠", "N_", "Ṉ"],
     "confusableUnicode": [
       "\\u004e\\u0332",
       "\\u004e\\u0320",
@@ -5214,15 +3908,7 @@
   {
     "label": "nʼ",
     "id": "\\u006e\\u02bc",
-    "confusableChar": [
-      "nˈ",
-      "n̕",
-      "n̒",
-      "n̔",
-      "n̓",
-      "n’",
-      "n՚"
-    ],
+    "confusableChar": ["nˈ", "n̕", "n̒", "n̔", "n̓", "n’", "n՚"],
     "confusableUnicode": [
       "\\u006e\\u02c8",
       "\\u006e\\u0315",
@@ -5236,12 +3922,8 @@
   {
     "label": "ŋ",
     "id": "\\u014b",
-    "confusableChar": [
-      "ɲ"
-    ],
-    "confusableUnicode": [
-      "\\u0272"
-    ]
+    "confusableChar": ["ɲ"],
+    "confusableUnicode": ["\\u0272"]
   },
   {
     "label": "o",
@@ -5258,22 +3940,14 @@
   {
     "label": "ó",
     "id": "\\u00f3",
-    "confusableChar": [
-      "ó"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0301"
-    ]
+    "confusableChar": ["ó"],
+    "confusableUnicode": ["\\u006f\\u0301"]
   },
   {
     "label": "Ó",
     "id": "\\u00d3",
-    "confusableChar": [
-      "Ó"
-    ],
-    "confusableUnicode": [
-      "\\u004f\\u0301"
-    ]
+    "confusableChar": ["Ó"],
+    "confusableUnicode": ["\\u004f\\u0301"]
   },
   {
     "label": "ó",
@@ -5284,124 +3958,73 @@
   {
     "label": "ò",
     "id": "\\u00f2",
-    "confusableChar": [
-      "ò"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0300"
-    ]
+    "confusableChar": ["ò"],
+    "confusableUnicode": ["\\u006f\\u0300"]
   },
   {
     "label": "ô",
     "id": "\\u00f4",
-    "confusableChar": [
-      "ô"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0302"
-    ]
+    "confusableChar": ["ô"],
+    "confusableUnicode": ["\\u006f\\u0302"]
   },
   {
     "label": "ǒ",
     "id": "\\u01d2",
-    "confusableChar": [
-      "ǒ"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u030c"
-    ]
+    "confusableChar": ["ǒ"],
+    "confusableUnicode": ["\\u006f\\u030c"]
   },
   {
     "label": "ö",
     "id": "\\u00f6",
-    "confusableChar": [
-      "ö"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0308"
-    ]
+    "confusableChar": ["ö"],
+    "confusableUnicode": ["\\u006f\\u0308"]
   },
   {
     "label": "ǫ",
     "id": "\\u01eb",
-    "confusableChar": [
-      "ǫ"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0328"
-    ]
+    "confusableChar": ["ǫ"],
+    "confusableUnicode": ["\\u006f\\u0328"]
   },
   {
     "label": "Ǫ",
     "id": "\\u01ea",
-    "confusableChar": [
-      "Ǫ"
-    ],
-    "confusableUnicode": [
-      "\\u004f\\u0328"
-    ]
+    "confusableChar": ["Ǫ"],
+    "confusableUnicode": ["\\u004f\\u0328"]
   },
   {
     "label": "ǫ́",
     "id": "\\u01eb\\u0301",
-    "confusableChar": [
-      "ǫ́"
-    ],
-    "confusableUnicode": [
-      "\\u00f3\\u0328"
-    ]
+    "confusableChar": ["ǫ́"],
+    "confusableUnicode": ["\\u00f3\\u0328"]
   },
   {
     "label": "Ǫ́",
     "id": "\\u01ea\\u0301",
-    "confusableChar": [
-      "Ǫ́"
-    ],
-    "confusableUnicode": [
-      "\\u00d3\\u0328"
-    ]
+    "confusableChar": ["Ǫ́"],
+    "confusableUnicode": ["\\u00d3\\u0328"]
   },
   {
     "label": "ǫ̀",
     "id": "\\u01eb\\u0300",
-    "confusableChar": [
-      "ǫ̀"
-    ],
-    "confusableUnicode": [
-      "\\u00f2\\u0328"
-    ]
+    "confusableChar": ["ǫ̀"],
+    "confusableUnicode": ["\\u00f2\\u0328"]
   },
   {
     "label": "ǫ̂",
     "id": "\\u01eb\\u0302",
-    "confusableChar": [
-      "ǫ̂"
-    ],
-    "confusableUnicode": [
-      "\\u00f4\\u0328"
-    ]
+    "confusableChar": ["ǫ̂"],
+    "confusableUnicode": ["\\u00f4\\u0328"]
   },
   {
     "label": "ǫ̌",
     "id": "\\u01eb\\u030c",
-    "confusableChar": [
-      "ǫ̌"
-    ],
-    "confusableUnicode": [
-      "\\u01d2\\u0328"
-    ]
+    "confusableChar": ["ǫ̌"],
+    "confusableUnicode": ["\\u01d2\\u0328"]
   },
   {
     "label": "ǭ",
     "id": "\\u01ed",
-    "confusableChar": [
-      "ǭ",
-      "ǫ̅",
-      "ǫ︤",
-      "ǫ︥",
-      "ǫ¯",
-      "ǫ‾"
-    ],
+    "confusableChar": ["ǭ", "ǫ̅", "ǫ︤", "ǫ︥", "ǫ¯", "ǫ‾"],
     "confusableUnicode": [
       "\\u006f\\u0328\\u0304",
       "\\u006f\\u0328\\u0305",
@@ -5414,12 +4037,7 @@
   {
     "label": "ǭ́",
     "id": "\\u01ed\\u0301",
-    "confusableChar": [
-      "ǭ́",
-      "ǫ̅́",
-      "ǫ︤́",
-      "ǫ︥́"
-    ],
+    "confusableChar": ["ǭ́", "ǫ̅́", "ǫ︤́", "ǫ︥́"],
     "confusableUnicode": [
       "\\u006f\\u0328\\u0304\\u0301",
       "\\u006f\\u0328\\u0305\\u0301",
@@ -5430,12 +4048,7 @@
   {
     "label": "ǭ̀",
     "id": "\\u01ed\\u0300",
-    "confusableChar": [
-      "ǫ︤̀",
-      "ǫ︥̀",
-      "ǫ̅̀",
-      "ǭ̀"
-    ],
+    "confusableChar": ["ǫ︤̀", "ǫ︥̀", "ǫ̅̀", "ǭ̀"],
     "confusableUnicode": [
       "\\u006f\\u0328\\ufe24\\u0300",
       "\\u006f\\u0328\\ufe25\\u0300",
@@ -5446,14 +4059,7 @@
   {
     "label": "ō",
     "id": "\\u014d",
-    "confusableChar": [
-      "ō",
-      "o̅",
-      "o︤",
-      "o︥",
-      "o¯",
-      "o‾"
-    ],
+    "confusableChar": ["ō", "o̅", "o︤", "o︥", "o¯", "o‾"],
     "confusableUnicode": [
       "\\u006f\\u0304",
       "\\u006f\\u0305",
@@ -5528,29 +4134,13 @@
   {
     "label": "o̱",
     "id": "\\u006f\\u0331",
-    "confusableChar": [
-      "o̲",
-      "o̠"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0332",
-      "\\u006f\\u0320"
-    ]
+    "confusableChar": ["o̲", "o̠"],
+    "confusableUnicode": ["\\u006f\\u0332", "\\u006f\\u0320"]
   },
   {
     "label": "o'",
     "id": "\\u006f\\u0027",
-    "confusableChar": [
-      "o＇",
-      "o’",
-      "o̓",
-      "o̕",
-      "o̒",
-      "o̔",
-      "oʼ",
-      "o̍",
-      "o՚"
-    ],
+    "confusableChar": ["o＇", "o’", "o̓", "o̕", "o̒", "o̔", "oʼ", "o̍", "o՚"],
     "confusableUnicode": [
       "\\u006f\\uff07",
       "\\u006f\\u2019",
@@ -5566,17 +4156,7 @@
   {
     "label": "o’",
     "id": "\\u006f\\u2019",
-    "confusableChar": [
-      "o＇",
-      "o'",
-      "o̓",
-      "o̕",
-      "o̒",
-      "o̔",
-      "oʼ",
-      "o̍",
-      "o՚"
-    ],
+    "confusableChar": ["o＇", "o'", "o̓", "o̕", "o̒", "o̔", "oʼ", "o̍", "o՚"],
     "confusableUnicode": [
       "\\u006f\\uff07",
       "\\u006f\\u0027",
@@ -5592,14 +4172,7 @@
   {
     "label": "oˈo",
     "id": "\\u006f\\u02c8\\u006f",
-    "confusableChar": [
-      "o＇o",
-      "o’o",
-      "o̕o",
-      "oʼo",
-      "o'o",
-      "o՚o"
-    ],
+    "confusableChar": ["o＇o", "o’o", "o̕o", "oʼo", "o'o", "o՚o"],
     "confusableUnicode": [
       "\\u006f\\uff07\\u006f",
       "\\u006f\\u2019\\u006f",
@@ -5624,12 +4197,8 @@
   {
     "label": "óo",
     "id": "\\u00f3\\u006f",
-    "confusableChar": [
-      "óo"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0301\\u006f"
-    ]
+    "confusableChar": ["óo"],
+    "confusableUnicode": ["\\u006f\\u0301\\u006f"]
   },
   {
     "label": "òò",
@@ -5640,32 +4209,19 @@
   {
     "label": "ǫǫ",
     "id": "\\u01eb\\u01eb",
-    "confusableChar": [
-      "ǫǫ"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0328\\u006f\\u0328"
-    ]
+    "confusableChar": ["ǫǫ"],
+    "confusableUnicode": ["\\u006f\\u0328\\u006f\\u0328"]
   },
   {
     "label": "ǫ̀ǫ̀",
     "id": "\\u01eb\\u0300\\u01eb\\u0300",
-    "confusableChar": [
-      "ǫ̀ǫ̀"
-    ],
-    "confusableUnicode": [
-      "\\u006f\\u0328\\u0300\\u006f\\u0328\\u0300"
-    ]
+    "confusableChar": ["ǫ̀ǫ̀"],
+    "confusableUnicode": ["\\u006f\\u0328\\u0300\\u006f\\u0328\\u0300"]
   },
   {
     "label": "ōo",
     "id": "\\u014d\\u006f",
-    "confusableChar": [
-      "ōo",
-      "o̅o",
-      "o︤o",
-      "o︥o"
-    ],
+    "confusableChar": ["ōo", "o̅o", "o︤o", "o︥o"],
     "confusableUnicode": [
       "\\u006f\\u0304\\u006f",
       "\\u006f\\u0305\\u006f",
@@ -5676,16 +4232,7 @@
   {
     "label": "o̱o̱",
     "id": "\\u006f\\u0331\\u006f\\u0331",
-    "confusableChar": [
-      "o̲o̲",
-      "o̠o̲",
-      "o̲o̠",
-      "o̠o̠",
-      "o̱o̠",
-      "o̠o̱",
-      "o̱o̲",
-      "o̲o̱"
-    ],
+    "confusableChar": ["o̲o̲", "o̠o̲", "o̲o̠", "o̠o̠", "o̱o̠", "o̠o̱", "o̱o̲", "o̲o̱"],
     "confusableUnicode": [
       "\\u006f\\u0332\\u006f\\u0332",
       "\\u006f\\u0320\\u006f\\u0332",
@@ -5700,15 +4247,7 @@
   {
     "label": "oo’",
     "id": "\\u006f\\u006f\\u2019",
-    "confusableChar": [
-      "oo̓",
-      "oo̕",
-      "ooʼ",
-      "ooˈ",
-      "oo՚",
-      "oo＇",
-      "oo'"
-    ],
+    "confusableChar": ["oo̓", "oo̕", "ooʼ", "ooˈ", "oo՚", "oo＇", "oo'"],
     "confusableUnicode": [
       "\\u006f\\u006f\\u0313",
       "\\u006f\\u006f\\u0315",
@@ -5740,14 +4279,7 @@
   {
     "label": "ōw",
     "id": "\\u014d\\u0077",
-    "confusableChar": [
-      "ōw",
-      "o̅w",
-      "o︤w",
-      "o︥w",
-      "o¯w",
-      "o‾w"
-    ],
+    "confusableChar": ["ōw", "o̅w", "o︤w", "o︥w", "o¯w", "o‾w"],
     "confusableUnicode": [
       "\\u006f\\u0304\\u0077",
       "\\u006f\\u0305\\u0077",
@@ -5766,14 +4298,7 @@
   {
     "label": "ōy",
     "id": "\\u014d\\u0079",
-    "confusableChar": [
-      "ōy",
-      "o̅y",
-      "o︤y",
-      "o︥y",
-      "o¯y",
-      "o‾y"
-    ],
+    "confusableChar": ["ōy", "o̅y", "o︤y", "o︥y", "o¯y", "o‾y"],
     "confusableUnicode": [
       "\\u006f\\u0304\\u0079",
       "\\u006f\\u0305\\u0079",
@@ -5786,34 +4311,20 @@
   {
     "label": "ɔ",
     "id": "\\u0254",
-    "confusableChar": [
-      "ᴐ"
-    ],
-    "confusableUnicode": [
-      "\\u1d10"
-    ]
+    "confusableChar": ["ᴐ"],
+    "confusableUnicode": ["\\u1d10"]
   },
   {
     "label": "ɔy",
     "id": "\\u0254\\u0079",
-    "confusableChar": [
-      "ᴐy"
-    ],
-    "confusableUnicode": [
-      "\\u1d10\\u0079"
-    ]
+    "confusableChar": ["ᴐy"],
+    "confusableUnicode": ["\\u1d10\\u0079"]
   },
   {
     "label": "Ɵ",
     "id": "\\u019f",
-    "confusableChar": [
-      "O̵",
-      "O̶"
-    ],
-    "confusableUnicode": [
-      "\\u004f\\u0335",
-      "\\u004f\\u0336"
-    ]
+    "confusableChar": ["O̵", "O̶"],
+    "confusableUnicode": ["\\u004f\\u0335", "\\u004f\\u0336"]
   },
   {
     "label": "p",
@@ -5830,12 +4341,7 @@
   {
     "label": "p̓",
     "id": "\\u0070\\u0313",
-    "confusableChar": [
-      "p̒",
-      "p̔",
-      "p̕",
-      "p̍"
-    ],
+    "confusableChar": ["p̒", "p̔", "p̕", "p̍"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0314",
@@ -5852,12 +4358,7 @@
   {
     "label": "p̕",
     "id": "\\u0070\\u0315",
-    "confusableChar": [
-      "p̒",
-      "p̔",
-      "p̓",
-      "p̍"
-    ],
+    "confusableChar": ["p̒", "p̔", "p̓", "p̍"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0314",
@@ -5868,17 +4369,7 @@
   {
     "label": "p'",
     "id": "\\u0070\\u0027",
-    "confusableChar": [
-      "p̒",
-      "p̓",
-      "p̔",
-      "p̕",
-      "p＇",
-      "p’",
-      "p՚",
-      "pʼ",
-      "p̍"
-    ],
+    "confusableChar": ["p̒", "p̓", "p̔", "p̕", "p＇", "p’", "p՚", "pʼ", "p̍"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0313",
@@ -5894,14 +4385,7 @@
   {
     "label": "p’",
     "id": "\\u0070\\u2019",
-    "confusableChar": [
-      "p̒",
-      "p̓",
-      "p̔",
-      "p̕",
-      "p'",
-      "p̍"
-    ],
+    "confusableChar": ["p̒", "p̓", "p̔", "p̕", "p'", "p̍"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0313",
@@ -5914,15 +4398,7 @@
   {
     "label": "pˈ",
     "id": "\\u0070\\u02c8",
-    "confusableChar": [
-      "p̒",
-      "p̔",
-      "p̓",
-      "p̕",
-      "p̍",
-      "p'",
-      "p’"
-    ],
+    "confusableChar": ["p̒", "p̔", "p̓", "p̕", "p̍", "p'", "p’"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0314",
@@ -5936,15 +4412,7 @@
   {
     "label": "pʼ",
     "id": "\\u0070\\u02bc",
-    "confusableChar": [
-      "p̒",
-      "p̓",
-      "p̔",
-      "p̕",
-      "p'",
-      "p’",
-      "p̍"
-    ],
+    "confusableChar": ["p̒", "p̓", "p̔", "p̕", "p'", "p’", "p̍"],
     "confusableUnicode": [
       "\\u0070\\u0312",
       "\\u0070\\u0313",
@@ -5970,12 +4438,7 @@
   {
     "label": "q̓",
     "id": "\\u0071\\u0313",
-    "confusableChar": [
-      "q̒",
-      "q̔",
-      "q̕",
-      "q̍"
-    ],
+    "confusableChar": ["q̒", "q̔", "q̕", "q̍"],
     "confusableUnicode": [
       "\\u0071\\u0312",
       "\\u0071\\u0314",
@@ -5986,12 +4449,7 @@
   {
     "label": "q̕",
     "id": "\\u0071\\u0315",
-    "confusableChar": [
-      "q̒",
-      "q̔",
-      "q̓",
-      "q̍"
-    ],
+    "confusableChar": ["q̒", "q̔", "q̓", "q̍"],
     "confusableUnicode": [
       "\\u0071\\u0312",
       "\\u0071\\u0314",
@@ -6002,12 +4460,7 @@
   {
     "label": "q'",
     "id": "\\u0071\\u0027",
-    "confusableChar": [
-      "q＇",
-      "q’",
-      "q՚",
-      "qʼ"
-    ],
+    "confusableChar": ["q＇", "q’", "q՚", "qʼ"],
     "confusableUnicode": [
       "\\u0071\\uff07",
       "\\u0071\\u2019",
@@ -6018,12 +4471,7 @@
   {
     "label": "q’",
     "id": "\\u0071\\u2019",
-    "confusableChar": [
-      "q'",
-      "q＇",
-      "q՚",
-      "qʼ"
-    ],
+    "confusableChar": ["q'", "q＇", "q՚", "qʼ"],
     "confusableUnicode": [
       "\\u0071\\u0027",
       "\\u0071\\uff07",
@@ -6052,12 +4500,7 @@
   {
     "label": "q̓v",
     "id": "\\u0071\\u0313\\u0076",
-    "confusableChar": [
-      "q̒v",
-      "q̔v",
-      "q̕v",
-      "q̍v"
-    ],
+    "confusableChar": ["q̒v", "q̔v", "q̕v", "q̍v"],
     "confusableUnicode": [
       "\\u0071\\u0312\\u0076",
       "\\u0071\\u0314\\u0076",
@@ -6080,12 +4523,7 @@
   {
     "label": "q̓ʷ",
     "id": "\\u0071\\u0313\\u02b7",
-    "confusableChar": [
-      "q̕ʷ",
-      "q̒ʷ",
-      "q̔ʷ",
-      "q̍ʷ"
-    ],
+    "confusableChar": ["q̕ʷ", "q̒ʷ", "q̔ʷ", "q̍ʷ"],
     "confusableUnicode": [
       "\\u0071\\u0315\\u02b7",
       "\\u0071\\u0312\\u02b7",
@@ -6096,12 +4534,7 @@
   {
     "label": "q̓w",
     "id": "\\u0071\\u0313\\u0077",
-    "confusableChar": [
-      "q̕w",
-      "q̒w",
-      "q̔w",
-      "q̍w"
-    ],
+    "confusableChar": ["q̕w", "q̒w", "q̔w", "q̍w"],
     "confusableUnicode": [
       "\\u0071\\u0315\\u0077",
       "\\u0071\\u0312\\u0077",
@@ -6112,12 +4545,7 @@
   {
     "label": "q̕ʷ",
     "id": "\\u0071\\u0315\\u02b7",
-    "confusableChar": [
-      "q̒ʷ",
-      "q̔ʷ",
-      "q̓ʷ",
-      "q̍ʷ"
-    ],
+    "confusableChar": ["q̒ʷ", "q̔ʷ", "q̓ʷ", "q̍ʷ"],
     "confusableUnicode": [
       "\\u0071\\u0312\\u02b7",
       "\\u0071\\u0314\\u02b7",
@@ -6128,12 +4556,7 @@
   {
     "label": "qw'",
     "id": "\\u0071\\u0077\\u0027",
-    "confusableChar": [
-      "qw’",
-      "qw＇",
-      "qw՚",
-      "qwʼ"
-    ],
+    "confusableChar": ["qw’", "qw＇", "qw՚", "qwʼ"],
     "confusableUnicode": [
       "\\u0071\\u0077\\u2019",
       "\\u0071\\u0077\\uff07",
@@ -6144,12 +4567,7 @@
   {
     "label": "qw’",
     "id": "\\u0071\\u0077\\u2019",
-    "confusableChar": [
-      "qw'",
-      "qw＇",
-      "qw՚",
-      "qwʼ"
-    ],
+    "confusableChar": ["qw'", "qw＇", "qw՚", "qwʼ"],
     "confusableUnicode": [
       "\\u0071\\u0077\\u0027",
       "\\u0071\\u0077\\uff07",
@@ -6160,15 +4578,7 @@
   {
     "label": "qʼ",
     "id": "\\u0071\\u02bc",
-    "confusableChar": [
-      "q̓",
-      "q̕",
-      "q'",
-      "qˈ",
-      "q＇",
-      "q’",
-      "q՚"
-    ],
+    "confusableChar": ["q̓", "q̕", "q'", "qˈ", "q＇", "q’", "q՚"],
     "confusableUnicode": [
       "\\u0071\\u0313",
       "\\u0071\\u0315",
@@ -6182,15 +4592,7 @@
   {
     "label": "qʼʷ",
     "id": "\\u0071\\u02bc\\u02b7",
-    "confusableChar": [
-      "q'ʷ",
-      "q̕ʷ",
-      "q＇ʷ",
-      "qˈʷ",
-      "q̓ʷ",
-      "q’ʷ",
-      "q՚ʷ"
-    ],
+    "confusableChar": ["q'ʷ", "q̕ʷ", "q＇ʷ", "qˈʷ", "q̓ʷ", "q’ʷ", "q՚ʷ"],
     "confusableUnicode": [
       "\\u0071\\u0027\\u02b7",
       "\\u0071\\u0315\\u02b7",
@@ -6210,26 +4612,14 @@
   {
     "label": "r̓",
     "id": "\\u0072\\u0313",
-    "confusableChar": [
-      "r̕",
-      "rʼ"
-    ],
-    "confusableUnicode": [
-      "\\u0072\\u0315",
-      "\\u0072\\u02bc"
-    ]
+    "confusableChar": ["r̕", "rʼ"],
+    "confusableUnicode": ["\\u0072\\u0315", "\\u0072\\u02bc"]
   },
   {
     "label": "r̕",
     "id": "\\u0072\\u0315",
-    "confusableChar": [
-      "r̓",
-      "rʼ"
-    ],
-    "confusableUnicode": [
-      "\\u0072\\u0313",
-      "\\u0072\\u02bc"
-    ]
+    "confusableChar": ["r̓", "rʼ"],
+    "confusableUnicode": ["\\u0072\\u0313", "\\u0072\\u02bc"]
   },
   {
     "label": "rh",
@@ -6252,14 +4642,8 @@
   {
     "label": "rʼ",
     "id": "\\u0072\\u02bc",
-    "confusableChar": [
-      "r̓",
-      "r̕"
-    ],
-    "confusableUnicode": [
-      "\\u0072\\u0313",
-      "\\u0072\\u0315"
-    ]
+    "confusableChar": ["r̓", "r̕"],
+    "confusableUnicode": ["\\u0072\\u0313", "\\u0072\\u0315"]
   },
   {
     "label": "s",
@@ -6276,44 +4660,26 @@
   {
     "label": "s̲",
     "id": "\\u0073\\u0332",
-    "confusableChar": [
-      "s̠",
-      "s̱"
-    ],
-    "confusableUnicode": [
-      "\\u0073\\u0320",
-      "\\u0073\\u0331"
-    ]
+    "confusableChar": ["s̠", "s̱"],
+    "confusableUnicode": ["\\u0073\\u0320", "\\u0073\\u0331"]
   },
   {
     "label": "Ś",
     "id": "\\u015a",
-    "confusableChar": [
-      "Ś"
-    ],
-    "confusableUnicode": [
-      "\\u0053\\u0301"
-    ]
+    "confusableChar": ["Ś"],
+    "confusableUnicode": ["\\u0053\\u0301"]
   },
   {
     "label": "ŝ",
     "id": "\\u015d",
-    "confusableChar": [
-      "ŝ"
-    ],
-    "confusableUnicode": [
-      "\\u0073\\u0302"
-    ]
+    "confusableChar": ["ŝ"],
+    "confusableUnicode": ["\\u0073\\u0302"]
   },
   {
     "label": "š",
     "id": "\\u0161",
-    "confusableChar": [
-      "š"
-    ],
-    "confusableUnicode": [
-      "\\u0073\\u030c"
-    ]
+    "confusableChar": ["š"],
+    "confusableUnicode": ["\\u0073\\u030c"]
   },
   {
     "label": "š",
@@ -6330,16 +4696,8 @@
   {
     "label": "s̱",
     "id": "\\u0073\\u0331",
-    "confusableChar": [
-      "s̲",
-      "s̠",
-      "s_"
-    ],
-    "confusableUnicode": [
-      "\\u0073\\u0332",
-      "\\u0073\\u0320",
-      "\\u0073\\u005f"
-    ]
+    "confusableChar": ["s̲", "s̠", "s_"],
+    "confusableUnicode": ["\\u0073\\u0332", "\\u0073\\u0320", "\\u0073\\u005f"]
   },
   {
     "label": "sh",
@@ -6350,12 +4708,8 @@
   {
     "label": "s̷h",
     "id": "\\u0073\\u0337\\u0068",
-    "confusableChar": [
-      "s̸h"
-    ],
-    "confusableUnicode": [
-      "\\u0073\\u0338\\u0068"
-    ]
+    "confusableChar": ["s̸h"],
+    "confusableUnicode": ["\\u0073\\u0338\\u0068"]
   },
   {
     "label": "shxw",
@@ -6384,12 +4738,7 @@
   {
     "label": "t̓",
     "id": "\\u0074\\u0313",
-    "confusableChar": [
-      "t̔",
-      "t̕",
-      "t̍",
-      "t̒"
-    ],
+    "confusableChar": ["t̔", "t̕", "t̍", "t̒"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u0315",
@@ -6406,25 +4755,13 @@
   {
     "label": "T̸",
     "id": "\\u0054\\u0338",
-    "confusableChar": [
-      "T̷"
-    ],
-    "confusableUnicode": [
-      "\\u0054\\u0337"
-    ]
+    "confusableChar": ["T̷"],
+    "confusableUnicode": ["\\u0054\\u0337"]
   },
   {
     "label": "t̕",
     "id": "\\u0074\\u0315",
-    "confusableChar": [
-      "t̔",
-      "t’",
-      "t՚",
-      "tʼ",
-      "t̍",
-      "t̒",
-      "t̓"
-    ],
+    "confusableChar": ["t̔", "t’", "t՚", "tʼ", "t̍", "t̒", "t̓"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u2019",
@@ -6438,12 +4775,7 @@
   {
     "label": "Ṯ",
     "id": "\\u1e6e",
-    "confusableChar": [
-      "T̲",
-      "T̠",
-      "T_",
-      "Ṯ"
-    ],
+    "confusableChar": ["T̲", "T̠", "T_", "Ṯ"],
     "confusableUnicode": [
       "\\u0054\\u0332",
       "\\u0054\\u0320",
@@ -6454,17 +4786,7 @@
   {
     "label": "t'",
     "id": "\\u0074\\u0027",
-    "confusableChar": [
-      "t̔",
-      "t̕",
-      "t＇",
-      "tˈ",
-      "t’",
-      "t՚",
-      "tʼ",
-      "t̒",
-      "t̓"
-    ],
+    "confusableChar": ["t̔", "t̕", "t＇", "tˈ", "t’", "t՚", "tʼ", "t̒", "t̓"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u0315",
@@ -6480,17 +4802,7 @@
   {
     "label": "t’",
     "id": "\\u0074\\u2019",
-    "confusableChar": [
-      "t̔",
-      "t̕",
-      "t＇",
-      "t'",
-      "tˈ",
-      "t՚",
-      "tʼ",
-      "t̒",
-      "t̓"
-    ],
+    "confusableChar": ["t̔", "t̕", "t＇", "t'", "tˈ", "t՚", "tʼ", "t̒", "t̓"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u0315",
@@ -6506,16 +4818,7 @@
   {
     "label": "tˈ",
     "id": "\\u0074\\u02c8",
-    "confusableChar": [
-      "t̔",
-      "t̕",
-      "t＇",
-      "t'",
-      "t՚",
-      "tʼ",
-      "t̒",
-      "t̓"
-    ],
+    "confusableChar": ["t̔", "t̕", "t＇", "t'", "t՚", "tʼ", "t̒", "t̓"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u0315",
@@ -6542,12 +4845,7 @@
   {
     "label": "th'",
     "id": "\\u0074\\u0068\\u0027",
-    "confusableChar": [
-      "th＇",
-      "th’",
-      "thʼ",
-      "th՚"
-    ],
+    "confusableChar": ["th＇", "th’", "thʼ", "th՚"],
     "confusableUnicode": [
       "\\u0074\\u0068\\uff07",
       "\\u0074\\u0068\\u2019",
@@ -6570,15 +4868,7 @@
   {
     "label": "tl̕",
     "id": "\\u0074\\u006c\\u0315",
-    "confusableChar": [
-      "tlˈ",
-      "tl̓",
-      "tl̒",
-      "tl̔",
-      "tlʼ",
-      "tl’",
-      "tl՚"
-    ],
+    "confusableChar": ["tlˈ", "tl̓", "tl̒", "tl̔", "tlʼ", "tl’", "tl՚"],
     "confusableUnicode": [
       "\\u0074\\u006c\\u02c8",
       "\\u0074\\u006c\\u0313",
@@ -6592,14 +4882,8 @@
   {
     "label": "tł",
     "id": "\\u0074\\u0142",
-    "confusableChar": [
-      "tl̸",
-      "tl̷"
-    ],
-    "confusableUnicode": [
-      "\\u0074\\u006c\\u0338",
-      "\\u0074\\u006c\\u0337"
-    ]
+    "confusableChar": ["tl̸", "tl̷"],
+    "confusableUnicode": ["\\u0074\\u006c\\u0338", "\\u0074\\u006c\\u0337"]
   },
   {
     "label": "t́ł",
@@ -6672,16 +4956,7 @@
   {
     "label": "tł'",
     "id": "\\u0074\\u0142\\u0027",
-    "confusableChar": [
-      "tł＇",
-      "tł’",
-      "tł̕",
-      "tł̒",
-      "tł̔",
-      "tłʼ",
-      "tłˈ",
-      "tł՚"
-    ],
+    "confusableChar": ["tł＇", "tł’", "tł̕", "tł̒", "tł̔", "tłʼ", "tłˈ", "tł՚"],
     "confusableUnicode": [
       "\\u0074\\u0142\\uff07",
       "\\u0074\\u0142\\u2019",
@@ -6722,16 +4997,7 @@
   {
     "label": "tł’",
     "id": "\\u0074\\u0142\\u2019",
-    "confusableChar": [
-      "tł＇",
-      "tł'",
-      "tł̕",
-      "tł̒",
-      "tł̔",
-      "tłʼ",
-      "tłˈ",
-      "tł՚"
-    ],
+    "confusableChar": ["tł＇", "tł'", "tł̕", "tł̒", "tł̔", "tłʼ", "tłˈ", "tł՚"],
     "confusableUnicode": [
       "\\u0074\\u0142\\uff07",
       "\\u0074\\u0142\\u0027",
@@ -6784,14 +5050,8 @@
   {
     "label": "trʼ",
     "id": "\\u0074\\u0072\\u02bc",
-    "confusableChar": [
-      "tr̓",
-      "tr̕"
-    ],
-    "confusableUnicode": [
-      "\\u0074\\u0072\\u0313",
-      "\\u0074\\u0072\\u0315"
-    ]
+    "confusableChar": ["tr̓", "tr̕"],
+    "confusableUnicode": ["\\u0074\\u0072\\u0313", "\\u0074\\u0072\\u0315"]
   },
   {
     "label": "ts",
@@ -6802,25 +5062,13 @@
   {
     "label": "ʦ",
     "id": "\\u02a6",
-    "confusableChar": [
-      "ts"
-    ],
-    "confusableUnicode": [
-      "\\u0074\\u0073"
-    ]
+    "confusableChar": ["ts"],
+    "confusableUnicode": ["\\u0074\\u0073"]
   },
   {
     "label": "ts̓",
     "id": "\\u0074\\u0073\\u0313",
-    "confusableChar": [
-      "ts̒",
-      "ts̔",
-      "ts̕",
-      "tsˈ",
-      "ts՚",
-      "ts’",
-      "tsʼ"
-    ],
+    "confusableChar": ["ts̒", "ts̔", "ts̕", "tsˈ", "ts՚", "ts’", "tsʼ"],
     "confusableUnicode": [
       "\\u0074\\u0073\\u0312",
       "\\u0074\\u0073\\u0314",
@@ -6834,25 +5082,13 @@
   {
     "label": "tŝ",
     "id": "\\u0074\\u015d",
-    "confusableChar": [
-      "tŝ"
-    ],
-    "confusableUnicode": [
-      "\\u0074\\u0073\\u0302"
-    ]
+    "confusableChar": ["tŝ"],
+    "confusableUnicode": ["\\u0074\\u0073\\u0302"]
   },
   {
     "label": "ts̕",
     "id": "\\u0074\\u0073\\u0315",
-    "confusableChar": [
-      "tsˈ",
-      "ts̓",
-      "ts̒",
-      "ts̔",
-      "tsʼ",
-      "ts’",
-      "ts՚"
-    ],
+    "confusableChar": ["tsˈ", "ts̓", "ts̒", "ts̔", "tsʼ", "ts’", "ts՚"],
     "confusableUnicode": [
       "\\u0074\\u0073\\u02c8",
       "\\u0074\\u0073\\u0313",
@@ -6866,11 +5102,7 @@
   {
     "label": "ts̱",
     "id": "\\u0074\\u0073\\u0331",
-    "confusableChar": [
-      "ts̲",
-      "ts̠",
-      "ts_"
-    ],
+    "confusableChar": ["ts̲", "ts̠", "ts_"],
     "confusableUnicode": [
       "\\u0074\\u0073\\u0332",
       "\\u0074\\u0073\\u0320",
@@ -6880,12 +5112,7 @@
   {
     "label": "t̲s̲",
     "id": "\\u0074\\u0332\\u0073\\u0332",
-    "confusableChar": [
-      "t̠s̠",
-      "ṯs̠",
-      "t̠s̱",
-      "ṯs̱"
-    ],
+    "confusableChar": ["t̠s̠", "ṯs̠", "t̠s̱", "ṯs̱"],
     "confusableUnicode": [
       "\\u0074\\u0320\\u0073\\u0320",
       "\\u0074\\u0331\\u0073\\u0320",
@@ -6902,12 +5129,7 @@
   {
     "label": "t̕s",
     "id": "\\u0074\\u0315\\u0073",
-    "confusableChar": [
-      "t̔s",
-      "tʼs",
-      "t’s",
-      "t՚s"
-    ],
+    "confusableChar": ["t̔s", "tʼs", "t’s", "t՚s"],
     "confusableUnicode": [
       "\\u0074\\u0314\\u0073",
       "\\u0074\\u02bc\\u0073",
@@ -6918,10 +5140,7 @@
   {
     "label": "ṯs̲",
     "id": "\\u1e6f\\u0073\\u0332",
-    "confusableChar": [
-      "t̲s̲",
-      "ṯs̠"
-    ],
+    "confusableChar": ["t̲s̲", "ṯs̠"],
     "confusableUnicode": [
       "\\u0074\\u0332\\u0073\\u0332",
       "\\u0074\\u0331\\u0073\\u0320"
@@ -7142,15 +5361,7 @@
   {
     "label": "tsˈ",
     "id": "\\u0074\\u0073\\u02c8",
-    "confusableChar": [
-      "ts̒",
-      "ts̔",
-      "ts̓",
-      "ts̕",
-      "ts՚",
-      "ts’",
-      "tsʼ"
-    ],
+    "confusableChar": ["ts̒", "ts̔", "ts̓", "ts̕", "ts՚", "ts’", "tsʼ"],
     "confusableUnicode": [
       "\\u0074\\u0073\\u0312",
       "\\u0074\\u0073\\u0314",
@@ -7164,15 +5375,7 @@
   {
     "label": "tsʼ",
     "id": "\\u0074\\u0073\\u02bc",
-    "confusableChar": [
-      "ts̒",
-      "ts̔",
-      "ts̓",
-      "ts̕",
-      "tsˈ",
-      "ts՚",
-      "ts’"
-    ],
+    "confusableChar": ["ts̒", "ts̔", "ts̓", "ts̕", "tsˈ", "ts՚", "ts’"],
     "confusableUnicode": [
       "\\u0074\\u0073\\u0312",
       "\\u0074\\u0073\\u0314",
@@ -7276,17 +5479,7 @@
   {
     "label": "tʼ",
     "id": "\\u0074\\u02bc",
-    "confusableChar": [
-      "t̔",
-      "t̕",
-      "t＇",
-      "t'",
-      "tˈ",
-      "t’",
-      "t՚",
-      "t̒",
-      "t̓"
-    ],
+    "confusableChar": ["t̔", "t̕", "t＇", "t'", "tˈ", "t’", "t՚", "t̒", "t̓"],
     "confusableUnicode": [
       "\\u0074\\u0314",
       "\\u0074\\u0315",
@@ -7308,12 +5501,7 @@
   {
     "label": "t̓ᶿ",
     "id": "\\u0074\\u0313\\u1dbf",
-    "confusableChar": [
-      "t̒ᶿ",
-      "t̍ᶿ",
-      "t̕ᶿ",
-      "t̔ᶿ"
-    ],
+    "confusableChar": ["t̒ᶿ", "t̍ᶿ", "t̕ᶿ", "t̔ᶿ"],
     "confusableUnicode": [
       "\\u0074\\u0312\\u1dbf",
       "\\u0074\\u030d\\u1dbf",
@@ -7324,12 +5512,7 @@
   {
     "label": "t̕ᶿ",
     "id": "\\u0074\\u0315\\u1dbf",
-    "confusableChar": [
-      "t̓ᶿ",
-      "t̔ᶿ",
-      "t̒ᶿ",
-      "t̍ᶿ"
-    ],
+    "confusableChar": ["t̓ᶿ", "t̔ᶿ", "t̒ᶿ", "t̍ᶿ"],
     "confusableUnicode": [
       "\\u0074\\u0313\\u1dbf",
       "\\u0074\\u0314\\u1dbf",
@@ -7340,14 +5523,8 @@
   {
     "label": "Ŧ",
     "id": "\\u0166",
-    "confusableChar": [
-      "T̵",
-      "T̶"
-    ],
-    "confusableUnicode": [
-      "\\u0054\\u0335",
-      "\\u0054\\u0336"
-    ]
+    "confusableChar": ["T̵", "T̶"],
+    "confusableUnicode": ["\\u0054\\u0335", "\\u0054\\u0336"]
   },
   {
     "label": "u",
@@ -7364,27 +5541,13 @@
   {
     "label": "u̲",
     "id": "\\u0075\\u0332",
-    "confusableChar": [
-      "u̠",
-      "u̱"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0320",
-      "\\u0075\\u0331"
-    ]
+    "confusableChar": ["u̠", "u̱"],
+    "confusableUnicode": ["\\u0075\\u0320", "\\u0075\\u0331"]
   },
   {
     "label": "u̓",
     "id": "\\u0075\\u0313",
-    "confusableChar": [
-      "uˈ",
-      "u̕",
-      "u̒",
-      "u̔",
-      "uʼ",
-      "u’",
-      "u՚"
-    ],
+    "confusableChar": ["uˈ", "u̕", "u̒", "u̔", "uʼ", "u’", "u՚"],
     "confusableUnicode": [
       "\\u0075\\u02c8",
       "\\u0075\\u0315",
@@ -7398,22 +5561,14 @@
   {
     "label": "ú",
     "id": "\\u00fa",
-    "confusableChar": [
-      "ú"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0301"
-    ]
+    "confusableChar": ["ú"],
+    "confusableUnicode": ["\\u0075\\u0301"]
   },
   {
     "label": "Ú",
     "id": "\\u00da",
-    "confusableChar": [
-      "Ú"
-    ],
-    "confusableUnicode": [
-      "\\u0055\\u0301"
-    ]
+    "confusableChar": ["Ú"],
+    "confusableUnicode": ["\\u0055\\u0301"]
   },
   {
     "label": "ú",
@@ -7424,176 +5579,103 @@
   {
     "label": "ù",
     "id": "\\u00f9",
-    "confusableChar": [
-      "ù"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0300"
-    ]
+    "confusableChar": ["ù"],
+    "confusableUnicode": ["\\u0075\\u0300"]
   },
   {
     "label": "ŭ",
     "id": "\\u016d",
-    "confusableChar": [
-      "ǔ",
-      "ǔ"
-    ],
-    "confusableUnicode": [
-      "\\u01d4",
-      "\\u0075\\u030c"
-    ]
+    "confusableChar": ["ǔ", "ǔ"],
+    "confusableUnicode": ["\\u01d4", "\\u0075\\u030c"]
   },
   {
     "label": "û",
     "id": "\\u00fb",
-    "confusableChar": [
-      "û"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0302"
-    ]
+    "confusableChar": ["û"],
+    "confusableUnicode": ["\\u0075\\u0302"]
   },
   {
     "label": "ǔ",
     "id": "\\u01d4",
-    "confusableChar": [
-      "ǔ"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u030c"
-    ]
+    "confusableChar": ["ǔ"],
+    "confusableUnicode": ["\\u0075\\u030c"]
   },
   {
     "label": "ü",
     "id": "\\u00fc",
-    "confusableChar": [
-      "ü"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0308"
-    ]
+    "confusableChar": ["ü"],
+    "confusableUnicode": ["\\u0075\\u0308"]
   },
   {
     "label": "ų",
     "id": "\\u0173",
-    "confusableChar": [
-      "ų"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328"
-    ]
+    "confusableChar": ["ų"],
+    "confusableUnicode": ["\\u0075\\u0328"]
   },
   {
     "label": "Ų",
     "id": "\\u0172",
-    "confusableChar": [
-      "Ų"
-    ],
-    "confusableUnicode": [
-      "\\u0055\\u0328"
-    ]
+    "confusableChar": ["Ų"],
+    "confusableUnicode": ["\\u0055\\u0328"]
   },
   {
     "label": "ų́",
     "id": "\\u0173\\u0301",
-    "confusableChar": [
-      "ų́"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0301"
-    ]
+    "confusableChar": ["ų́"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0301"]
   },
   {
     "label": "Ų́",
     "id": "\\u0172\\u0301",
-    "confusableChar": [
-      "Ų́"
-    ],
-    "confusableUnicode": [
-      "\\u0055\\u0328\\u0301"
-    ]
+    "confusableChar": ["Ų́"],
+    "confusableUnicode": ["\\u0055\\u0328\\u0301"]
   },
   {
     "label": "ų̀",
     "id": "\\u0173\\u0300",
-    "confusableChar": [
-      "ų̀"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0300"
-    ]
+    "confusableChar": ["ų̀"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0300"]
   },
   {
     "label": "ų̂",
     "id": "\\u0173\\u0302",
-    "confusableChar": [
-      "ų̂"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0302"
-    ]
+    "confusableChar": ["ų̂"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0302"]
   },
   {
     "label": "ų̌",
     "id": "\\u0173\\u030c",
-    "confusableChar": [
-      "ų̌"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u030c"
-    ]
+    "confusableChar": ["ų̌"],
+    "confusableUnicode": ["\\u0075\\u0328\\u030c"]
   },
   {
     "label": "ų̈",
     "id": "\\u0173\\u0308",
-    "confusableChar": [
-      "ų̈"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0308"
-    ]
+    "confusableChar": ["ų̈"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0308"]
   },
   {
     "label": "ų̄",
     "id": "\\u0173\\u0304",
-    "confusableChar": [
-      "ų̄"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0304"
-    ]
+    "confusableChar": ["ų̄"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0304"]
   },
   {
     "label": "ų̄́",
     "id": "\\u0173\\u0304\\u0301",
-    "confusableChar": [
-      "ų̄́"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0304\\u0301"
-    ]
+    "confusableChar": ["ų̄́"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0304\\u0301"]
   },
   {
     "label": "ų̄̀",
     "id": "\\u0173\\u0304\\u0300",
-    "confusableChar": [
-      "ų̄̀"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0328\\u0304\\u0300"
-    ]
+    "confusableChar": ["ų̄̀"],
+    "confusableUnicode": ["\\u0075\\u0328\\u0304\\u0300"]
   },
   {
     "label": "ū",
     "id": "\\u016b",
-    "confusableChar": [
-      "ū",
-      "u̅",
-      "u︤",
-      "u︥",
-      "u¯",
-      "u‾"
-    ],
+    "confusableChar": ["ū", "u̅", "u︤", "u︥", "u¯", "u‾"],
     "confusableUnicode": [
       "\\u0075\\u0304",
       "\\u0075\\u0305",
@@ -7606,50 +5688,26 @@
   {
     "label": "ū́",
     "id": "\\u016b\\u0301",
-    "confusableChar": [
-      "ū́"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0304\\u0301"
-    ]
+    "confusableChar": ["ū́"],
+    "confusableUnicode": ["\\u0075\\u0304\\u0301"]
   },
   {
     "label": "ū̀",
     "id": "\\u016b\\u0300",
-    "confusableChar": [
-      "ū̀"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0304\\u0300"
-    ]
+    "confusableChar": ["ū̀"],
+    "confusableUnicode": ["\\u0075\\u0304\\u0300"]
   },
   {
     "label": "u̱",
     "id": "\\u0075\\u0331",
-    "confusableChar": [
-      "u̲",
-      "u̠",
-      "u_"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0332",
-      "\\u0075\\u0320",
-      "\\u0075\\u005f"
-    ]
+    "confusableChar": ["u̲", "u̠", "u_"],
+    "confusableUnicode": ["\\u0075\\u0332", "\\u0075\\u0320", "\\u0075\\u005f"]
   },
   {
     "label": "u:",
     "id": "\\u0075\\u003a",
-    "confusableChar": [
-      "u：",
-      "u꞉",
-      "u˸"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\uff1a",
-      "\\u0075\\ua789",
-      "\\u0075\\u02f8"
-    ]
+    "confusableChar": ["u：", "u꞉", "u˸"],
+    "confusableUnicode": ["\\u0075\\uff1a", "\\u0075\\ua789", "\\u0075\\u02f8"]
   },
   {
     "label": "u·",
@@ -7660,17 +5718,7 @@
   {
     "label": "u'",
     "id": "\\u0075\\u0027",
-    "confusableChar": [
-      "u＇",
-      "u’",
-      "u̓",
-      "u̕",
-      "u̒",
-      "u̔",
-      "uʼ",
-      "uˈ",
-      "u՚"
-    ],
+    "confusableChar": ["u＇", "u’", "u̓", "u̕", "u̒", "u̔", "uʼ", "uˈ", "u՚"],
     "confusableUnicode": [
       "\\u0075\\uff07",
       "\\u0075\\u2019",
@@ -7686,17 +5734,7 @@
   {
     "label": "u’",
     "id": "\\u0075\\u2019",
-    "confusableChar": [
-      "u＇",
-      "u'",
-      "u̓",
-      "u̕",
-      "u̒",
-      "u̔",
-      "uʼ",
-      "uˈ",
-      "u՚"
-    ],
+    "confusableChar": ["u＇", "u'", "u̓", "u̕", "u̒", "u̔", "uʼ", "uˈ", "u՚"],
     "confusableUnicode": [
       "\\u0075\\uff07",
       "\\u0075\\u0027",
@@ -7712,13 +5750,7 @@
   {
     "label": "uˈu",
     "id": "\\u0075\\u02c8\\u0075",
-    "confusableChar": [
-      "u＇u",
-      "u'u",
-      "u̕u",
-      "uʼu",
-      "u՚u"
-    ],
+    "confusableChar": ["u＇u", "u'u", "u̕u", "uʼu", "u՚u"],
     "confusableUnicode": [
       "\\u0075\\uff07\\u0075",
       "\\u0075\\u0027\\u0075",
@@ -7762,21 +5794,13 @@
   {
     "label": "úu",
     "id": "\\u00fa\\u0075",
-    "confusableChar": [
-      "úu"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0301\\u0075"
-    ]
+    "confusableChar": ["úu"],
+    "confusableUnicode": ["\\u0075\\u0301\\u0075"]
   },
   {
     "label": "üü",
     "id": "\\u00fc\\u00fc",
-    "confusableChar": [
-      "üü",
-      "üü",
-      "üü"
-    ],
+    "confusableChar": ["üü", "üü", "üü"],
     "confusableUnicode": [
       "\\u0075\\u0308\\u0075\\u0308",
       "\\u0075\\u0308\\u00fc",
@@ -7786,24 +5810,14 @@
   {
     "label": "ūu",
     "id": "\\u016b\\u0075",
-    "confusableChar": [
-      "ūu",
-      "u̅u"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0304\\u0075",
-      "\\u0075\\u0305\\u0075"
-    ]
+    "confusableChar": ["ūu", "u̅u"],
+    "confusableUnicode": ["\\u0075\\u0304\\u0075", "\\u0075\\u0305\\u0075"]
   },
   {
     "label": "úw",
     "id": "\\u00fa\\u0077",
-    "confusableChar": [
-      "úw"
-    ],
-    "confusableUnicode": [
-      "\\u0075\\u0301\\u0077"
-    ]
+    "confusableChar": ["úw"],
+    "confusableUnicode": ["\\u0075\\u0301\\u0077"]
   },
   {
     "label": "uy",
@@ -7826,14 +5840,8 @@
   {
     "label": "v́",
     "id": "\\u0076\\u0301",
-    "confusableChar": [
-      "v̍",
-      "v̓"
-    ],
-    "confusableUnicode": [
-      "\\u0076\\u030d",
-      "\\u0076\\u0313"
-    ]
+    "confusableChar": ["v̍", "v̓"],
+    "confusableUnicode": ["\\u0076\\u030d", "\\u0076\\u0313"]
   },
   {
     "label": "w",
@@ -7850,12 +5858,7 @@
   {
     "label": "w̓",
     "id": "\\u0077\\u0313",
-    "confusableChar": [
-      "w̍",
-      "w̒",
-      "w̔",
-      "w̕"
-    ],
+    "confusableChar": ["w̍", "w̒", "w̔", "w̕"],
     "confusableUnicode": [
       "\\u0077\\u030d",
       "\\u0077\\u0312",
@@ -7866,35 +5869,19 @@
   {
     "label": "ŵ",
     "id": "\\u0175",
-    "confusableChar": [
-      "ŵ"
-    ],
-    "confusableUnicode": [
-      "\\u0077\\u0302"
-    ]
+    "confusableChar": ["ŵ"],
+    "confusableUnicode": ["\\u0077\\u0302"]
   },
   {
     "label": "ẅ",
     "id": "\\u1e85",
-    "confusableChar": [
-      "ẅ"
-    ],
-    "confusableUnicode": [
-      "\\u1e85"
-    ]
+    "confusableChar": ["ẅ"],
+    "confusableUnicode": ["\\u1e85"]
   },
   {
     "label": "w̕",
     "id": "\\u0077\\u0315",
-    "confusableChar": [
-      "wˈ",
-      "w̓",
-      "w̒",
-      "w̔",
-      "wʼ",
-      "w’",
-      "w՚"
-    ],
+    "confusableChar": ["wˈ", "w̓", "w̒", "w̔", "wʼ", "w’", "w՚"],
     "confusableUnicode": [
       "\\u0077\\u02c8",
       "\\u0077\\u0313",
@@ -7908,31 +5895,13 @@
   {
     "label": "W̱",
     "id": "\\u0057\\u0331",
-    "confusableChar": [
-      "W̲",
-      "W̠",
-      "W_"
-    ],
-    "confusableUnicode": [
-      "\\u0057\\u0332",
-      "\\u0057\\u0320",
-      "\\u0057\\u005f"
-    ]
+    "confusableChar": ["W̲", "W̠", "W_"],
+    "confusableUnicode": ["\\u0057\\u0332", "\\u0057\\u0320", "\\u0057\\u005f"]
   },
   {
     "label": "w'",
     "id": "\\u0077\\u0027",
-    "confusableChar": [
-      "w＇",
-      "w’",
-      "w̓",
-      "w̕",
-      "w̒",
-      "w̔",
-      "wʼ",
-      "wˈ",
-      "w՚"
-    ],
+    "confusableChar": ["w＇", "w’", "w̓", "w̕", "w̒", "w̔", "wʼ", "wˈ", "w՚"],
     "confusableUnicode": [
       "\\u0077\\uff07",
       "\\u0077\\u2019",
@@ -7948,12 +5917,8 @@
   {
     "label": "wą",
     "id": "\\u0077\\u0105",
-    "confusableChar": [
-      "wą"
-    ],
-    "confusableUnicode": [
-      "\\u0077\\u0061\\u0328"
-    ]
+    "confusableChar": ["wą"],
+    "confusableUnicode": ["\\u0077\\u0061\\u0328"]
   },
   {
     "label": "waa",
@@ -7964,11 +5929,7 @@
   {
     "label": "wąą",
     "id": "\\u0077\\u0105\\u0105",
-    "confusableChar": [
-      "wąą",
-      "waą̨",
-      "wąą"
-    ],
+    "confusableChar": ["wąą", "waą̨", "wąą"],
     "confusableUnicode": [
       "\\u0077\\u0061\\u0328\\u0061\\u0328",
       "\\u0077\\u0061\\u0105\\u0328",
@@ -7990,11 +5951,7 @@
   {
     "label": "węą",
     "id": "\\u0077\\u0119\\u0105",
-    "confusableChar": [
-      "węą",
-      "węą",
-      "węą"
-    ],
+    "confusableChar": ["węą", "węą", "węą"],
     "confusableUnicode": [
       "\\u0077\\u0065\\u0328\\u0061\\u0328",
       "\\u0077\\u0119\\u0061\\u0328",
@@ -8022,15 +5979,7 @@
   {
     "label": "wʼ",
     "id": "\\u0077\\u02bc",
-    "confusableChar": [
-      "wˈ",
-      "w̕",
-      "w̒",
-      "w̔",
-      "w̓",
-      "w’",
-      "w՚"
-    ],
+    "confusableChar": ["wˈ", "w̕", "w̒", "w̔", "w̓", "w’", "w՚"],
     "confusableUnicode": [
       "\\u0077\\u02c8",
       "\\u0077\\u0315",
@@ -8062,13 +6011,7 @@
   {
     "label": "x̄",
     "id": "\\u0078\\u0304",
-    "confusableChar": [
-      "x̅",
-      "x︤",
-      "x︥",
-      "x¯",
-      "x‾"
-    ],
+    "confusableChar": ["x̅", "x︤", "x︥", "x¯", "x‾"],
     "confusableUnicode": [
       "\\u0078\\u0305",
       "\\u0078\\ufe24",
@@ -8086,30 +6029,14 @@
   {
     "label": "x̱",
     "id": "\\u0078\\u0331",
-    "confusableChar": [
-      "x_",
-      "x̠",
-      "x̲"
-    ],
-    "confusableUnicode": [
-      "\\u0078\\u005f",
-      "\\u0078\\u0320",
-      "\\u0078\\u0332"
-    ]
+    "confusableChar": ["x_", "x̠", "x̲"],
+    "confusableUnicode": ["\\u0078\\u005f", "\\u0078\\u0320", "\\u0078\\u0332"]
   },
   {
     "label": "X̱",
     "id": "\\u0058\\u0331",
-    "confusableChar": [
-      "X̠",
-      "X̲",
-      "X_"
-    ],
-    "confusableUnicode": [
-      "\\u0058\\u0320",
-      "\\u0058\\u0332",
-      "\\u0058\\u005f"
-    ]
+    "confusableChar": ["X̠", "X̲", "X_"],
+    "confusableUnicode": ["\\u0058\\u0320", "\\u0058\\u0332", "\\u0058\\u005f"]
   },
   {
     "label": "x°",
@@ -8120,13 +6047,7 @@
   {
     "label": "x̄°",
     "id": "\\u0078\\u0304\\u00b0",
-    "confusableChar": [
-      "x̅°",
-      "x︤°",
-      "x︥°",
-      "x¯°",
-      "x‾°"
-    ],
+    "confusableChar": ["x̅°", "x︤°", "x︥°", "x¯°", "x‾°"],
     "confusableUnicode": [
       "\\u0078\\u0305\\u00b0",
       "\\u0078\\ufe24\\u00b0",
@@ -8162,15 +6083,7 @@
   {
     "label": "xw̕",
     "id": "\\u0078\\u0077\\u0315",
-    "confusableChar": [
-      "xwˈ",
-      "xw̓",
-      "xw̒",
-      "xw̔",
-      "xwʼ",
-      "xw’",
-      "xw՚"
-    ],
+    "confusableChar": ["xwˈ", "xw̓", "xw̒", "xw̔", "xwʼ", "xw’", "xw՚"],
     "confusableUnicode": [
       "\\u0078\\u0077\\u02c8",
       "\\u0078\\u0077\\u0313",
@@ -8196,11 +6109,7 @@
   {
     "label": "x̱w",
     "id": "\\u0078\\u0331\\u0077",
-    "confusableChar": [
-      "x_w",
-      "x̠w",
-      "x̲w"
-    ],
+    "confusableChar": ["x_w", "x̠w", "x̲w"],
     "confusableUnicode": [
       "\\u0078\\u005f\\u0077",
       "\\u0078\\u0320\\u0077",
@@ -8222,12 +6131,7 @@
   {
     "label": "y̓",
     "id": "\\u0079\\u0313",
-    "confusableChar": [
-      "y̍",
-      "y̒",
-      "y̔",
-      "y̕"
-    ],
+    "confusableChar": ["y̍", "y̒", "y̔", "y̕"],
     "confusableUnicode": [
       "\\u0079\\u030d",
       "\\u0079\\u0312",
@@ -8238,25 +6142,13 @@
   {
     "label": "ÿ",
     "id": "\\u00ff",
-    "confusableChar": [
-      "ÿ"
-    ],
-    "confusableUnicode": [
-      "\\u0079\\u0308"
-    ]
+    "confusableChar": ["ÿ"],
+    "confusableUnicode": ["\\u0079\\u0308"]
   },
   {
     "label": "y̕",
     "id": "\\u0079\\u0315",
-    "confusableChar": [
-      "yˈ",
-      "y̓",
-      "y̒",
-      "y̔",
-      "yʼ",
-      "y’",
-      "y՚"
-    ],
+    "confusableChar": ["yˈ", "y̓", "y̒", "y̔", "yʼ", "y’", "y՚"],
     "confusableUnicode": [
       "\\u0079\\u02c8",
       "\\u0079\\u0313",
@@ -8276,15 +6168,7 @@
   {
     "label": "yʼ",
     "id": "\\u0079\\u02bc",
-    "confusableChar": [
-      "yˈ",
-      "y̓",
-      "y̒",
-      "y̔",
-      "y̕",
-      "y’",
-      "y՚"
-    ],
+    "confusableChar": ["yˈ", "y̓", "y̒", "y̔", "y̕", "y’", "y՚"],
     "confusableUnicode": [
       "\\u0079\\u02c8",
       "\\u0079\\u0313",
@@ -8310,29 +6194,13 @@
   {
     "label": "z̲",
     "id": "\\u007a\\u0332",
-    "confusableChar": [
-      "z_",
-      "z̠",
-      "ẕ"
-    ],
-    "confusableUnicode": [
-      "\\u007a\\u005f",
-      "\\u007a\\u0320",
-      "\\u007a\\u0331"
-    ]
+    "confusableChar": ["z_", "z̠", "ẕ"],
+    "confusableUnicode": ["\\u007a\\u005f", "\\u007a\\u0320", "\\u007a\\u0331"]
   },
   {
     "label": "z̓",
     "id": "\\u007a\\u0313",
-    "confusableChar": [
-      "z՚",
-      "zʼ",
-      "z̒",
-      "z̔",
-      "z̕",
-      "zˈ",
-      "z’"
-    ],
+    "confusableChar": ["z՚", "zʼ", "z̒", "z̔", "z̕", "zˈ", "z’"],
     "confusableUnicode": [
       "\\u007a\\u055a",
       "\\u007a\\u02bc",
@@ -8346,22 +6214,13 @@
   {
     "label": "ẑ",
     "id": "\\u1e91",
-    "confusableChar": [
-      "ẑ"
-    ],
-    "confusableUnicode": [
-      "\\u007a\\u0302"
-    ]
+    "confusableChar": ["ẑ"],
+    "confusableUnicode": ["\\u007a\\u0302"]
   },
   {
     "label": "ẕ",
     "id": "\\u1e95",
-    "confusableChar": [
-      "z̲",
-      "z̠",
-      "z_",
-      "ẕ"
-    ],
+    "confusableChar": ["z̲", "z̠", "z_", "ẕ"],
     "confusableUnicode": [
       "\\u007a\\u0332",
       "\\u007a\\u0320",
@@ -8384,39 +6243,19 @@
   {
     "label": "ʔ",
     "id": "\\u0294",
-    "confusableChar": [
-      "ɂ",
-      "Ɂ",
-      "ॽ"
-    ],
-    "confusableUnicode": [
-      "\\u0242",
-      "\\u0241",
-      "\\u097d"
-    ]
+    "confusableChar": ["ɂ", "Ɂ", "ॽ"],
+    "confusableUnicode": ["\\u0242", "\\u0241", "\\u097d"]
   },
   {
     "label": "ʔa",
     "id": "\\u0294\\u0061",
-    "confusableChar": [
-      "Ɂa",
-      "ɂa",
-      "ॽa"
-    ],
-    "confusableUnicode": [
-      "\\u0241\\u0061",
-      "\\u0242\\u0061",
-      "\\u097d\\u0061"
-    ]
+    "confusableChar": ["Ɂa", "ɂa", "ॽa"],
+    "confusableUnicode": ["\\u0241\\u0061", "\\u0242\\u0061", "\\u097d\\u0061"]
   },
   {
     "label": "ʔaa",
     "id": "\\u0294\\u0061\\u0061",
-    "confusableChar": [
-      "Ɂaa",
-      "ɂaa",
-      "ॽaa"
-    ],
+    "confusableChar": ["Ɂaa", "ɂaa", "ॽaa"],
     "confusableUnicode": [
       "\\u0241\\u0061\\u0061",
       "\\u0242\\u0061\\u0061",
@@ -8426,25 +6265,13 @@
   {
     "label": "ʔe",
     "id": "\\u0294\\u0065",
-    "confusableChar": [
-      "Ɂe",
-      "ɂe",
-      "ॽe"
-    ],
-    "confusableUnicode": [
-      "\\u0241\\u0065",
-      "\\u0242\\u0065",
-      "\\u097d\\u0065"
-    ]
+    "confusableChar": ["Ɂe", "ɂe", "ॽe"],
+    "confusableUnicode": ["\\u0241\\u0065", "\\u0242\\u0065", "\\u097d\\u0065"]
   },
   {
     "label": "ʔee",
     "id": "\\u0294\\u0065\\u0065",
-    "confusableChar": [
-      "Ɂee",
-      "ɂee",
-      "ॽee"
-    ],
+    "confusableChar": ["Ɂee", "ɂee", "ॽee"],
     "confusableUnicode": [
       "\\u0241\\u0065\\u0065",
       "\\u0242\\u0065\\u0065",
@@ -8454,25 +6281,13 @@
   {
     "label": "ʔi",
     "id": "\\u0294\\u0069",
-    "confusableChar": [
-      "Ɂi",
-      "ɂi",
-      "ॽi"
-    ],
-    "confusableUnicode": [
-      "\\u0241\\u0069",
-      "\\u0242\\u0069",
-      "\\u097d\\u0069"
-    ]
+    "confusableChar": ["Ɂi", "ɂi", "ॽi"],
+    "confusableUnicode": ["\\u0241\\u0069", "\\u0242\\u0069", "\\u097d\\u0069"]
   },
   {
     "label": "ʔii",
     "id": "\\u0294\\u0069\\u0069",
-    "confusableChar": [
-      "Ɂii",
-      "ɂii",
-      "ॽii"
-    ],
+    "confusableChar": ["Ɂii", "ɂii", "ॽii"],
     "confusableUnicode": [
       "\\u0241\\u0069\\u0069",
       "\\u0242\\u0069\\u0069",
@@ -8482,25 +6297,13 @@
   {
     "label": "ʔu",
     "id": "\\u0294\\u0075",
-    "confusableChar": [
-      "Ɂu",
-      "ɂu",
-      "ॽu"
-    ],
-    "confusableUnicode": [
-      "\\u0241\\u0075",
-      "\\u0242\\u0075",
-      "\\u097d\\u0075"
-    ]
+    "confusableChar": ["Ɂu", "ɂu", "ॽu"],
+    "confusableUnicode": ["\\u0241\\u0075", "\\u0242\\u0075", "\\u097d\\u0075"]
   },
   {
     "label": "ʔuu",
     "id": "\\u0294\\u0075\\u0075",
-    "confusableChar": [
-      "Ɂuu",
-      "ɂuu",
-      "ॽuu"
-    ],
+    "confusableChar": ["Ɂuu", "ɂuu", "ॽuu"],
     "confusableUnicode": [
       "\\u0241\\u0075\\u0075",
       "\\u0242\\u0075\\u0075",
@@ -8510,14 +6313,8 @@
   {
     "label": "ɂ",
     "id": "\\u0242",
-    "confusableChar": [
-      "ˀ",
-      "ॽ"
-    ],
-    "confusableUnicode": [
-      "\\u02c0",
-      "\\u097d"
-    ]
+    "confusableChar": ["ˀ", "ॽ"],
+    "confusableUnicode": ["\\u02c0", "\\u097d"]
   },
   {
     "label": "ˀ",
@@ -8528,15 +6325,7 @@
   {
     "label": "ʼ",
     "id": "\\u02bc",
-    "confusableChar": [
-      " ̒",
-      " ̓",
-      " ̔",
-      " ̕",
-      "ˈ",
-      "’",
-      "՚"
-    ],
+    "confusableChar": [" ̒", " ̓", " ̔", " ̕", "ˈ", "’", "՚"],
     "confusableUnicode": [
       "\\u0312",
       "\\u0313",
@@ -8556,15 +6345,7 @@
   {
     "label": "ʕ̓",
     "id": "\\u0295\\u0313",
-    "confusableChar": [
-      "ʕˈ",
-      "ʕ̕",
-      "ʕ̒",
-      "ʕ̔",
-      "ʕʼ",
-      "ʕ’",
-      "ʕ՚"
-    ],
+    "confusableChar": ["ʕˈ", "ʕ̕", "ʕ̒", "ʕ̔", "ʕʼ", "ʕ’", "ʕ՚"],
     "confusableUnicode": [
       "\\u0295\\u02c8",
       "\\u0295\\u0315",
@@ -8578,15 +6359,7 @@
   {
     "label": "ʕ̕",
     "id": "\\u0295\\u0315",
-    "confusableChar": [
-      "ʕˈ",
-      "ʕ̓",
-      "ʕ̒",
-      "ʕ̔",
-      "ʕʼ",
-      "ʕ’",
-      "ʕ՚"
-    ],
+    "confusableChar": ["ʕˈ", "ʕ̓", "ʕ̒", "ʕ̔", "ʕʼ", "ʕ’", "ʕ՚"],
     "confusableUnicode": [
       "\\u0295\\u02c8",
       "\\u0295\\u0313",
@@ -8654,15 +6427,7 @@
   {
     "label": "ʕ̓ʷ",
     "id": "\\u0295\\u0313\\u02b7",
-    "confusableChar": [
-      "ʕˈʷ",
-      "ʕ̕ʷ",
-      "ʕ̒ʷ",
-      "ʕ̔ʷ",
-      "ʕʼʷ",
-      "ʕ’ʷ",
-      "ʕ՚ʷ"
-    ],
+    "confusableChar": ["ʕˈʷ", "ʕ̕ʷ", "ʕ̒ʷ", "ʕ̔ʷ", "ʕʼʷ", "ʕ’ʷ", "ʕ՚ʷ"],
     "confusableUnicode": [
       "\\u0295\\u02c8\\u02b7",
       "\\u0295\\u0315\\u02b7",
@@ -8676,15 +6441,7 @@
   {
     "label": "ʕʼ",
     "id": "\\u0295\\u02bc",
-    "confusableChar": [
-      "ʕ̓",
-      "ʕ̕",
-      "ʕ̒",
-      "ʕ̔",
-      "ʕˈ",
-      "ʕ’",
-      "ʕ՚"
-    ],
+    "confusableChar": ["ʕ̓", "ʕ̕", "ʕ̒", "ʕ̔", "ʕˈ", "ʕ’", "ʕ՚"],
     "confusableUnicode": [
       "\\u0295\\u0313",
       "\\u0295\\u0315",
@@ -8698,15 +6455,7 @@
   {
     "label": "ʕʼʷ",
     "id": "\\u0295\\u02bc\\u02b7",
-    "confusableChar": [
-      "ʕ̓ʷ",
-      "ʕ̕ʷ",
-      "ʕ̒ʷ",
-      "ʕ̔ʷ",
-      "ʕˈʷ",
-      "ʕ’ʷ",
-      "ʕ՚ʷ"
-    ],
+    "confusableChar": ["ʕ̓ʷ", "ʕ̕ʷ", "ʕ̒ʷ", "ʕ̔ʷ", "ʕˈʷ", "ʕ’ʷ", "ʕ՚ʷ"],
     "confusableUnicode": [
       "\\u0295\\u0313\\u02b7",
       "\\u0295\\u0315\\u02b7",
@@ -8720,54 +6469,32 @@
   {
     "label": "ǂ",
     "id": "\\u01c2",
-    "confusableChar": [
-      "ⱡ"
-    ],
-    "confusableUnicode": [
-      "\\u2c61"
-    ]
+    "confusableChar": ["ⱡ"],
+    "confusableUnicode": ["\\u2c61"]
   },
   {
     "label": "θ",
     "id": "\\u03b8",
-    "confusableChar": [
-      "Θ",
-      "ϴ"
-    ],
-    "confusableUnicode": [
-      "\\u0398",
-      "\\u03f4"
-    ]
+    "confusableChar": ["Θ", "ϴ"],
+    "confusableUnicode": ["\\u0398", "\\u03f4"]
   },
   {
     "label": "λ",
     "id": "\\u03bb",
-    "confusableChar": [
-      "ᵬC"
-    ],
-    "confusableUnicode": [
-      "\\u1d6c\\u0043"
-    ]
+    "confusableChar": ["ᵬC"],
+    "confusableUnicode": ["\\u1d6c\\u0043"]
   },
   {
     "label": "χ",
     "id": "\\u03c7",
-    "confusableChar": [
-      "Χ"
-    ],
-    "confusableUnicode": [
-      "\\u03a7"
-    ]
+    "confusableChar": ["Χ"],
+    "confusableUnicode": ["\\u03a7"]
   },
   {
     "label": "χʷ",
     "id": "\\u03c7\\u02b7",
-    "confusableChar": [
-      "Χʷ"
-    ],
-    "confusableUnicode": [
-      "\\u03a7\\u02b7"
-    ]
+    "confusableChar": ["Χʷ"],
+    "confusableUnicode": ["\\u03a7\\u02b7"]
   },
   {
     "label": "א",
@@ -8982,12 +6709,8 @@
   {
     "label": "ᒼ",
     "id": "\\u14bc",
-    "confusableChar": [
-      "ᑦ"
-    ],
-    "confusableUnicode": [
-      "\\u1466"
-    ]
+    "confusableChar": ["ᑦ"],
+    "confusableUnicode": ["\\u1466"]
   },
   {
     "label": "ᓀ",
@@ -9064,14 +6787,7 @@
   {
     "label": "’A",
     "id": "\\u2019\\u0041",
-    "confusableChar": [
-      "ˈA",
-      "̕A",
-      "̒A",
-      "̔A",
-      "ʼA",
-      "՚A"
-    ],
+    "confusableChar": ["ˈA", "̕A", "̒A", "̔A", "ʼA", "՚A"],
     "confusableUnicode": [
       "\\u02c8\\u0041",
       "\\u0315\\u0041",
@@ -9084,14 +6800,7 @@
   {
     "label": "’C",
     "id": "\\u2019\\u0043",
-    "confusableChar": [
-      "ˈC",
-      "̕C",
-      "̒C",
-      "̔C",
-      "ʼC",
-      "՚C"
-    ],
+    "confusableChar": ["ˈC", "̕C", "̒C", "̔C", "ʼC", "՚C"],
     "confusableUnicode": [
       "\\u02c8\\u0043",
       "\\u0315\\u0043",
@@ -9104,14 +6813,7 @@
   {
     "label": "’K",
     "id": "\\u2019\\u004b",
-    "confusableChar": [
-      "ˈK",
-      "̕K",
-      "̒K",
-      "̔K",
-      "ʼK",
-      "՚K"
-    ],
+    "confusableChar": ["ˈK", "̕K", "̒K", "̔K", "ʼK", "՚K"],
     "confusableUnicode": [
       "\\u02c8\\u004b",
       "\\u0315\\u004b",
@@ -9124,14 +6826,7 @@
   {
     "label": "’Kv",
     "id": "\\u2019\\u004b\\u0076",
-    "confusableChar": [
-      "ˈKv",
-      "̕Kv",
-      "̒Kv",
-      "̔Kv",
-      "ʼKv",
-      "՚Kv"
-    ],
+    "confusableChar": ["ˈKv", "̕Kv", "̒Kv", "̔Kv", "ʼKv", "՚Kv"],
     "confusableUnicode": [
       "\\u02c8\\u004b\\u0076",
       "\\u0315\\u004b\\u0076",
@@ -9144,14 +6839,7 @@
   {
     "label": "’L",
     "id": "\\u2019\\u004c",
-    "confusableChar": [
-      "ˈL",
-      "̕L",
-      "̒L",
-      "̔L",
-      "ʼL",
-      "՚L"
-    ],
+    "confusableChar": ["ˈL", "̕L", "̒L", "̔L", "ʼL", "՚L"],
     "confusableUnicode": [
       "\\u02c8\\u004c",
       "\\u0315\\u004c",
@@ -9164,15 +6852,7 @@
   {
     "label": "’M",
     "id": "\\u2019\\u004d",
-    "confusableChar": [
-      "ˈM",
-      "̕M",
-      "̒M",
-      "̔M",
-      "ʼM",
-      "’M",
-      "՚M"
-    ],
+    "confusableChar": ["ˈM", "̕M", "̒M", "̔M", "ʼM", "’M", "՚M"],
     "confusableUnicode": [
       "\\u02c8\\u004d",
       "\\u0315\\u004d",
@@ -9186,14 +6866,7 @@
   {
     "label": "’N",
     "id": "\\u2019\\u004e",
-    "confusableChar": [
-      "ˈN",
-      "̕N",
-      "̒N",
-      "̔N",
-      "ʼN",
-      "՚N"
-    ],
+    "confusableChar": ["ˈN", "̕N", "̒N", "̔N", "ʼN", "՚N"],
     "confusableUnicode": [
       "\\u02c8\\u004e",
       "\\u0315\\u004e",
@@ -9206,14 +6879,7 @@
   {
     "label": "’P",
     "id": "\\u2019\\u0050",
-    "confusableChar": [
-      "ˈP",
-      "̕P",
-      "̒P",
-      "̔P",
-      "ʼP",
-      "՚P"
-    ],
+    "confusableChar": ["ˈP", "̕P", "̒P", "̔P", "ʼP", "՚P"],
     "confusableUnicode": [
       "\\u02c8\\u0050",
       "\\u0315\\u0050",
@@ -9226,14 +6892,7 @@
   {
     "label": "’Q",
     "id": "\\u2019\\u0051",
-    "confusableChar": [
-      "ˈQ",
-      "̕Q",
-      "̒Q",
-      "̔Q",
-      "ʼQ",
-      "՚Q"
-    ],
+    "confusableChar": ["ˈQ", "̕Q", "̒Q", "̔Q", "ʼQ", "՚Q"],
     "confusableUnicode": [
       "\\u02c8\\u0051",
       "\\u0315\\u0051",
@@ -9246,14 +6905,7 @@
   {
     "label": "’Qv",
     "id": "\\u2019\\u0051\\u0076",
-    "confusableChar": [
-      "ˈQv",
-      "̕Qv",
-      "̒Qv",
-      "̔Qv",
-      "ʼQv",
-      "՚Qv"
-    ],
+    "confusableChar": ["ˈQv", "̕Qv", "̒Qv", "̔Qv", "ʼQv", "՚Qv"],
     "confusableUnicode": [
       "\\u02c8\\u0051\\u0076",
       "\\u0315\\u0051\\u0076",
@@ -9266,14 +6918,7 @@
   {
     "label": "’T",
     "id": "\\u2019\\u0054",
-    "confusableChar": [
-      "ˈT",
-      "̕T",
-      "̒T",
-      "̔T",
-      "ʼT",
-      "՚T"
-    ],
+    "confusableChar": ["ˈT", "̕T", "̒T", "̔T", "ʼT", "՚T"],
     "confusableUnicode": [
       "\\u02c8\\u0054",
       "\\u0315\\u0054",
@@ -9286,14 +6931,7 @@
   {
     "label": "’Th",
     "id": "\\u2019\\u0054\\u0068",
-    "confusableChar": [
-      "ˈTh",
-      "̕Th",
-      "̒Th",
-      "̔Th",
-      "ʼTh",
-      "՚Th"
-    ],
+    "confusableChar": ["ˈTh", "̕Th", "̒Th", "̔Th", "ʼTh", "՚Th"],
     "confusableUnicode": [
       "\\u02c8\\u0054\\u0068",
       "\\u0315\\u0054\\u0068",
@@ -9306,14 +6944,7 @@
   {
     "label": "’W",
     "id": "\\u2019\\u0057",
-    "confusableChar": [
-      "ˈW",
-      "̕W",
-      "̒W",
-      "̔W",
-      "ʼW",
-      "՚W"
-    ],
+    "confusableChar": ["ˈW", "̕W", "̒W", "̔W", "ʼW", "՚W"],
     "confusableUnicode": [
       "\\u02c8\\u0057",
       "\\u0315\\u0057",
@@ -9326,14 +6957,7 @@
   {
     "label": "’Y",
     "id": "\\u2019\\u0059",
-    "confusableChar": [
-      "ˈY",
-      "̕Y",
-      "̒Y",
-      "̔Y",
-      "ʼY",
-      "՚Y"
-    ],
+    "confusableChar": ["ˈY", "̕Y", "̒Y", "̔Y", "ʼY", "՚Y"],
     "confusableUnicode": [
       "\\u02c8\\u0059",
       "\\u0315\\u0059",
@@ -9346,42 +6970,26 @@
   {
     "label": "ˇG",
     "id": "\\u02c7\\u0047",
-    "confusableChar": [
-      " ̌G"
-    ],
-    "confusableUnicode": [
-      " \\u030c\\u0047"
-    ]
+    "confusableChar": [" ̌G"],
+    "confusableUnicode": [" \\u030c\\u0047"]
   },
   {
     "label": "ˇGv",
     "id": "\\u02c7\\u0047\\u0076",
-    "confusableChar": [
-      " ̌Gv"
-    ],
-    "confusableUnicode": [
-      " \\u030c\\u0047\\u0076"
-    ]
+    "confusableChar": [" ̌Gv"],
+    "confusableUnicode": [" \\u030c\\u0047\\u0076"]
   },
   {
     "label": "ˇX",
     "id": "\\u02c7\\u0058",
-    "confusableChar": [
-      " ̌X"
-    ],
-    "confusableUnicode": [
-      " \\u030c\\u0058"
-    ]
+    "confusableChar": [" ̌X"],
+    "confusableUnicode": [" \\u030c\\u0058"]
   },
   {
     "label": "ˇXv",
     "id": "\\u02c7\\u0058\\u0076",
-    "confusableChar": [
-      " ̌Xv"
-    ],
-    "confusableUnicode": [
-      " \\u030c\\u0058\\u0076"
-    ]
+    "confusableChar": [" ̌Xv"],
+    "confusableUnicode": [" \\u030c\\u0058\\u0076"]
   },
   {
     "label": "⅄",
@@ -9392,15 +7000,7 @@
   {
     "label": "A̓",
     "id": "\\u0041\\u0313",
-    "confusableChar": [
-      "Aˈ",
-      "A̕",
-      "A̒",
-      "A̔",
-      "Aʼ",
-      "A’",
-      "A՚"
-    ],
+    "confusableChar": ["Aˈ", "A̕", "A̒", "A̔", "Aʼ", "A’", "A՚"],
     "confusableUnicode": [
       "\\u0041\\u02c8",
       "\\u0041\\u0315",
@@ -9414,26 +7014,14 @@
   {
     "label": "Ā",
     "id": "\\u0100",
-    "confusableChar": [
-      "Ā"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0304"
-    ]
+    "confusableChar": ["Ā"],
+    "confusableUnicode": ["\\u0041\\u0304"]
   },
   {
     "label": "A̱",
     "id": "\\u0041\\u0331",
-    "confusableChar": [
-      "A̲",
-      "A̠",
-      "A_"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0332",
-      "\\u0041\\u0320",
-      "\\u0041\\u005f"
-    ]
+    "confusableChar": ["A̲", "A̠", "A_"],
+    "confusableUnicode": ["\\u0041\\u0332", "\\u0041\\u0320", "\\u0041\\u005f"]
   },
   {
     "label": "AA",
@@ -9456,35 +7044,19 @@
   {
     "label": "AÓ",
     "id": "\\u0041\\u00d3",
-    "confusableChar": [
-      "AÓ"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u004f\\u0301"
-    ]
+    "confusableChar": ["AÓ"],
+    "confusableUnicode": ["\\u0041\\u004f\\u0301"]
   },
   {
     "label": "ÁO",
     "id": "\\u00c1\\u004f",
-    "confusableChar": [
-      "ÁO"
-    ],
-    "confusableUnicode": [
-      "\\u0041\\u0301\\u004f"
-    ]
+    "confusableChar": ["ÁO"],
+    "confusableUnicode": ["\\u0041\\u0301\\u004f"]
   },
   {
     "label": "C̓",
     "id": "\\u0043\\u0313",
-    "confusableChar": [
-      "Cˈ",
-      "C̕",
-      "C̒",
-      "C̔",
-      "Cʼ",
-      "C’",
-      "C՚"
-    ],
+    "confusableChar": ["Cˈ", "C̕", "C̒", "C̔", "Cʼ", "C’", "C՚"],
     "confusableUnicode": [
       "\\u0043\\u02c8",
       "\\u0043\\u0315",
@@ -9498,12 +7070,8 @@
   {
     "label": "Ĉ",
     "id": "\\u0108",
-    "confusableChar": [
-      "Ĉ"
-    ],
-    "confusableUnicode": [
-      "\\u0043\\u0302"
-    ]
+    "confusableChar": ["Ĉ"],
+    "confusableUnicode": ["\\u0043\\u0302"]
   },
   {
     "label": "C̣",
@@ -9628,14 +7196,8 @@
   {
     "label": "DŁ",
     "id": "\\u0044\\u0141",
-    "confusableChar": [
-      "DL̸",
-      "DL̷"
-    ],
-    "confusableUnicode": [
-      "\\u0044\\u004c\\u0338",
-      "\\u0044\\u004c\\u0337"
-    ]
+    "confusableChar": ["DL̸", "DL̷"],
+    "confusableUnicode": ["\\u0044\\u004c\\u0338", "\\u0044\\u004c\\u0337"]
   },
   {
     "label": "Dᶻ",
@@ -9658,12 +7220,7 @@
   {
     "label": "DẔ",
     "id": "\\u0044\\u1e94",
-    "confusableChar": [
-      "DZ̲",
-      "DZ̠",
-      "DZ_",
-      "DẔ"
-    ],
+    "confusableChar": ["DZ̲", "DZ̠", "DZ_", "DẔ"],
     "confusableUnicode": [
       "\\u0044\\u005a\\u0332",
       "\\u0044\\u005a\\u0320",
@@ -9680,14 +7237,7 @@
   {
     "label": "Ē",
     "id": "\\u0112",
-    "confusableChar": [
-      "Ē",
-      "E̅",
-      "E︤",
-      "E︥",
-      "E¯",
-      "E‾"
-    ],
+    "confusableChar": ["Ē", "E̅", "E︤", "E︥", "E¯", "E‾"],
     "confusableUnicode": [
       "\\u0045\\u0304",
       "\\u0045\\u0305",
@@ -9736,15 +7286,7 @@
   {
     "label": "G̓",
     "id": "\\u0047\\u0313",
-    "confusableChar": [
-      "Gˈ",
-      "G̕",
-      "G̒",
-      "G̔",
-      "Gʼ",
-      "G’",
-      "G՚"
-    ],
+    "confusableChar": ["Gˈ", "G̕", "G̒", "G̔", "Gʼ", "G’", "G՚"],
     "confusableUnicode": [
       "\\u0047\\u02c8",
       "\\u0047\\u0315",
@@ -9758,36 +7300,20 @@
   {
     "label": "Ĝ",
     "id": "\\u011c",
-    "confusableChar": [
-      "Ĝ"
-    ],
-    "confusableUnicode": [
-      "\\u0047\\u0302"
-    ]
+    "confusableChar": ["Ĝ"],
+    "confusableUnicode": ["\\u0047\\u0302"]
   },
   {
     "label": "Ǧ",
     "id": "\\u01e6",
-    "confusableChar": [
-      "Ǧ"
-    ],
-    "confusableUnicode": [
-      "\\u0047\\u030c"
-    ]
+    "confusableChar": ["Ǧ"],
+    "confusableUnicode": ["\\u0047\\u030c"]
   },
   {
     "label": "G̱",
     "id": "\\u0047\\u0331",
-    "confusableChar": [
-      "G̲",
-      "G̠",
-      "G_"
-    ],
-    "confusableUnicode": [
-      "\\u0047\\u0332",
-      "\\u0047\\u0320",
-      "\\u0047\\u005f"
-    ]
+    "confusableChar": ["G̲", "G̠", "G_"],
+    "confusableUnicode": ["\\u0047\\u0332", "\\u0047\\u0320", "\\u0047\\u005f"]
   },
   {
     "label": "GH",
@@ -9816,12 +7342,8 @@
   {
     "label": "ǦV",
     "id": "\\u01e6\\u0056",
-    "confusableChar": [
-      "ǦV"
-    ],
-    "confusableUnicode": [
-      "\\u0047\\u030c\\u0056"
-    ]
+    "confusableChar": ["ǦV"],
+    "confusableUnicode": ["\\u0047\\u030c\\u0056"]
   },
   {
     "label": "GW",
@@ -9844,15 +7366,7 @@
   {
     "label": "G̓W",
     "id": "\\u0047\\u0313\\u0057",
-    "confusableChar": [
-      "GˈW",
-      "G̕W",
-      "G̒W",
-      "G̔W",
-      "GʼW",
-      "G’W",
-      "G՚W"
-    ],
+    "confusableChar": ["GˈW", "G̕W", "G̒W", "G̔W", "GʼW", "G’W", "G՚W"],
     "confusableUnicode": [
       "\\u0047\\u02c8\\u0057",
       "\\u0047\\u0315\\u0057",
@@ -9866,12 +7380,8 @@
   {
     "label": "Ǧʷ",
     "id": "\\u01e6\\u02b7",
-    "confusableChar": [
-      "Ǧʷ"
-    ],
-    "confusableUnicode": [
-      "\\u0047\\u030c\\u02b7"
-    ]
+    "confusableChar": ["Ǧʷ"],
+    "confusableUnicode": ["\\u0047\\u030c\\u02b7"]
   },
   {
     "label": "Ǥ",
@@ -9894,15 +7404,7 @@
   {
     "label": "Ɣ̓",
     "id": "\\u0194\\u0313",
-    "confusableChar": [
-      "Ɣˈ",
-      "Ɣ̕",
-      "Ɣ̒",
-      "Ɣ̔",
-      "Ɣʼ",
-      "Ɣ’",
-      "Ɣ՚"
-    ],
+    "confusableChar": ["Ɣˈ", "Ɣ̕", "Ɣ̒", "Ɣ̔", "Ɣʼ", "Ɣ’", "Ɣ՚"],
     "confusableUnicode": [
       "\\u0194\\u02c8",
       "\\u0194\\u0315",
@@ -9916,15 +7418,7 @@
   {
     "label": "H̓",
     "id": "\\u0048\\u0313",
-    "confusableChar": [
-      "Hˈ",
-      "H̕",
-      "H̒",
-      "H̔",
-      "Hʼ",
-      "H’",
-      "H՚"
-    ],
+    "confusableChar": ["Hˈ", "H̕", "H̒", "H̔", "Hʼ", "H’", "H՚"],
     "confusableUnicode": [
       "\\u0048\\u02c8",
       "\\u0048\\u0315",
@@ -9938,12 +7432,8 @@
   {
     "label": "Ĥ",
     "id": "\\u0124",
-    "confusableChar": [
-      "Ĥ"
-    ],
-    "confusableUnicode": [
-      "\\u0048\\u0302"
-    ]
+    "confusableChar": ["Ĥ"],
+    "confusableUnicode": ["\\u0048\\u0302"]
   },
   {
     "label": "Ħ",
@@ -9966,15 +7456,7 @@
   {
     "label": "I̓",
     "id": "\\u0049\\u0313",
-    "confusableChar": [
-      "Iˈ",
-      "I̕",
-      "I̒",
-      "I̔",
-      "Iʼ",
-      "I’",
-      "I՚"
-    ],
+    "confusableChar": ["Iˈ", "I̕", "I̒", "I̔", "Iʼ", "I’", "I՚"],
     "confusableUnicode": [
       "\\u0049\\u02c8",
       "\\u0049\\u0315",
@@ -9988,13 +7470,7 @@
   {
     "label": "Ī",
     "id": "\\u012a",
-    "confusableChar": [
-      "I̅",
-      "I︤",
-      "I︥",
-      "I¯",
-      "I‾"
-    ],
+    "confusableChar": ["I̅", "I︤", "I︥", "I¯", "I‾"],
     "confusableUnicode": [
       "\\u0049\\u0305",
       "\\u0049\\ufe24",
@@ -10024,26 +7500,13 @@
   {
     "label": "Ĵ",
     "id": "\\u0134",
-    "confusableChar": [
-      "Ĵ"
-    ],
-    "confusableUnicode": [
-      "\\u004a\\u0302"
-    ]
+    "confusableChar": ["Ĵ"],
+    "confusableUnicode": ["\\u004a\\u0302"]
   },
   {
     "label": "K̓",
     "id": "\\u004b\\u0313",
-    "confusableChar": [
-      "Kˈ",
-      "K̕",
-      "K̒",
-      "K̔",
-      "Kʼ",
-      "Ќ",
-      "K’",
-      "K՚"
-    ],
+    "confusableChar": ["Kˈ", "K̕", "K̒", "K̔", "Kʼ", "Ќ", "K’", "K՚"],
     "confusableUnicode": [
       "\\u004b\\u02c8",
       "\\u004b\\u0315",
@@ -10058,11 +7521,7 @@
   {
     "label": "Ḵ̓",
     "id": "\\u1e34\\u0313",
-    "confusableChar": [
-      "K̲̓",
-      "Ḵ̓",
-      "K_̓"
-    ],
+    "confusableChar": ["K̲̓", "Ḵ̓", "K_̓"],
     "confusableUnicode": [
       "\\u004b\\u0332\\u0313",
       "\\u004b\\u0331\\u0313",
@@ -10072,18 +7531,7 @@
   {
     "label": "K'",
     "id": "\\u004b\\u0027",
-    "confusableChar": [
-      "K＇",
-      "K’",
-      "K̓",
-      "K̕",
-      "K̒",
-      "K̔",
-      "Kʼ",
-      "Ќ",
-      "Kˈ",
-      "K՚"
-    ],
+    "confusableChar": ["K＇", "K’", "K̓", "K̕", "K̒", "K̔", "Kʼ", "Ќ", "Kˈ", "K՚"],
     "confusableUnicode": [
       "\\u004b\\uff07",
       "\\u004b\\u2019",
@@ -10166,18 +7614,7 @@
   {
     "label": "K’",
     "id": "\\u004b\\u2019",
-    "confusableChar": [
-      "K̓",
-      "K̕",
-      "K̒",
-      "K̔",
-      "Kʼ",
-      "Ќ",
-      "Kˈ",
-      "K՚",
-      "K＇",
-      "K'"
-    ],
+    "confusableChar": ["K̓", "K̕", "K̒", "K̔", "Kʼ", "Ќ", "Kˈ", "K՚", "K＇", "K'"],
     "confusableUnicode": [
       "\\u004b\\u0313",
       "\\u004b\\u0315",
@@ -10212,16 +7649,7 @@
   {
     "label": "K̓V",
     "id": "\\u004b\\u0313\\u0056",
-    "confusableChar": [
-      "KˈV",
-      "K̕V",
-      "K̒V",
-      "K̔V",
-      "KʼV",
-      "ЌV",
-      "K’V",
-      "K՚V"
-    ],
+    "confusableChar": ["KˈV", "K̕V", "K̒V", "K̔V", "KʼV", "ЌV", "K’V", "K՚V"],
     "confusableUnicode": [
       "\\u004b\\u02c8\\u0056",
       "\\u004b\\u0315\\u0056",
@@ -10248,16 +7676,7 @@
   {
     "label": "K̓ʷ",
     "id": "\\u004b\\u0313\\u02b7",
-    "confusableChar": [
-      "Kˈʷ",
-      "K̕ʷ",
-      "K̒ʷ",
-      "K̔ʷ",
-      "Kʼʷ",
-      "Ќʷ",
-      "K’ʷ",
-      "K՚ʷ"
-    ],
+    "confusableChar": ["Kˈʷ", "K̕ʷ", "K̒ʷ", "K̔ʷ", "Kʼʷ", "Ќʷ", "K’ʷ", "K՚ʷ"],
     "confusableUnicode": [
       "\\u004b\\u02c8\\u02b7",
       "\\u004b\\u0315\\u02b7",
@@ -10272,16 +7691,7 @@
   {
     "label": "K̓W",
     "id": "\\u004b\\u0313\\u0057",
-    "confusableChar": [
-      "KˈW",
-      "K̕W",
-      "K̒W",
-      "K̔W",
-      "KʼW",
-      "ЌW",
-      "K’W",
-      "K՚W"
-    ],
+    "confusableChar": ["KˈW", "K̕W", "K̒W", "K̔W", "KʼW", "ЌW", "K’W", "K՚W"],
     "confusableUnicode": [
       "\\u004b\\u02c8\\u0057",
       "\\u004b\\u0315\\u0057",
@@ -10296,16 +7706,7 @@
   {
     "label": "K̕W",
     "id": "\\u004b\\u0315\\u0057",
-    "confusableChar": [
-      "KˈW",
-      "K̓W",
-      "K̒W",
-      "K̔W",
-      "KʼW",
-      "ЌW",
-      "K’W",
-      "K՚W"
-    ],
+    "confusableChar": ["KˈW", "K̓W", "K̒W", "K̔W", "KʼW", "ЌW", "K’W", "K՚W"],
     "confusableUnicode": [
       "\\u004b\\u02c8\\u0057",
       "\\u004b\\u0313\\u0057",
@@ -10320,11 +7721,7 @@
   {
     "label": "ḴW",
     "id": "\\u004b\\u0331\\u0057",
-    "confusableChar": [
-      "K̲W",
-      "K̠W",
-      "K_W"
-    ],
+    "confusableChar": ["K̲W", "K̠W", "K_W"],
     "confusableUnicode": [
       "\\u004b\\u0332\\u0057",
       "\\u004b\\u0320\\u0057",
@@ -10454,29 +7851,13 @@
   {
     "label": "L̲",
     "id": "\\u004c\\u0332",
-    "confusableChar": [
-      "Ḻ",
-      "L̠",
-      "L_"
-    ],
-    "confusableUnicode": [
-      "\\u004c\\u0331",
-      "\\u004c\\u0320",
-      "\\u004c\\u005f"
-    ]
+    "confusableChar": ["Ḻ", "L̠", "L_"],
+    "confusableUnicode": ["\\u004c\\u0331", "\\u004c\\u0320", "\\u004c\\u005f"]
   },
   {
     "label": "L̓",
     "id": "\\u004c\\u0313",
-    "confusableChar": [
-      "Lˈ",
-      "L̕",
-      "L̒",
-      "L̔",
-      "Lʼ",
-      "L’",
-      "L՚"
-    ],
+    "confusableChar": ["Lˈ", "L̕", "L̒", "L̔", "Lʼ", "L’", "L՚"],
     "confusableUnicode": [
       "\\u004c\\u02c8",
       "\\u004c\\u0315",
@@ -10496,22 +7877,14 @@
   {
     "label": "Ľ",
     "id": "\\u013d",
-    "confusableChar": [
-      "Ľ"
-    ],
-    "confusableUnicode": [
-      "\\u004c\\u030c"
-    ]
+    "confusableChar": ["Ľ"],
+    "confusableUnicode": ["\\u004c\\u030c"]
   },
   {
     "label": "Ḷ",
     "id": "\\u1e36",
-    "confusableChar": [
-      "Ḷ"
-    ],
-    "confusableUnicode": [
-      "\\u004c\\u0323"
-    ]
+    "confusableChar": ["Ḷ"],
+    "confusableUnicode": ["\\u004c\\u0323"]
   },
   {
     "label": "Ḷ̓",
@@ -10582,15 +7955,7 @@
   {
     "label": "M̓",
     "id": "\\u004d\\u0313",
-    "confusableChar": [
-      "Mˈ",
-      "M̕",
-      "M̒",
-      "M̔",
-      "Mʼ",
-      "M’",
-      "M՚"
-    ],
+    "confusableChar": ["Mˈ", "M̕", "M̒", "M̔", "Mʼ", "M’", "M՚"],
     "confusableUnicode": [
       "\\u004d\\u02c8",
       "\\u004d\\u0315",
@@ -10604,12 +7969,8 @@
   {
     "label": "Ṃ",
     "id": "\\u1e42",
-    "confusableChar": [
-      "Ṃ"
-    ],
-    "confusableUnicode": [
-      "\\u004d\\u0323"
-    ]
+    "confusableChar": ["Ṃ"],
+    "confusableUnicode": ["\\u004d\\u0323"]
   },
   {
     "label": "Ṃ̓",
@@ -10652,25 +8013,13 @@
   {
     "label": "Ṃ́",
     "id": "\\u1e42\\u0301",
-    "confusableChar": [
-      "Ṃ́"
-    ],
-    "confusableUnicode": [
-      "\\u004d\\u0323\\u0301"
-    ]
+    "confusableChar": ["Ṃ́"],
+    "confusableUnicode": ["\\u004d\\u0323\\u0301"]
   },
   {
     "label": "N̓",
     "id": "\\u004e\\u0313",
-    "confusableChar": [
-      "Nˈ",
-      "N̕",
-      "N̒",
-      "N̔",
-      "Nʼ",
-      "N’",
-      "N՚"
-    ],
+    "confusableChar": ["Nˈ", "N̕", "N̒", "N̔", "Nʼ", "N’", "N՚"],
     "confusableUnicode": [
       "\\u004e\\u02c8",
       "\\u004e\\u0315",
@@ -10684,12 +8033,8 @@
   {
     "label": "Ṇ",
     "id": "\\u1e46",
-    "confusableChar": [
-      "Ṇ"
-    ],
-    "confusableUnicode": [
-      "\\u004e\\u0323"
-    ]
+    "confusableChar": ["Ṇ"],
+    "confusableUnicode": ["\\u004e\\u0323"]
   },
   {
     "label": "Ṇ̓",
@@ -10732,12 +8077,8 @@
   {
     "label": "Ṇ́",
     "id": "\\u1e46\\u0301",
-    "confusableChar": [
-      "Ṇ́"
-    ],
-    "confusableUnicode": [
-      "\\u004e\\u0323\\u0301"
-    ]
+    "confusableChar": ["Ṇ́"],
+    "confusableUnicode": ["\\u004e\\u0323\\u0301"]
   },
   {
     "label": "NH",
@@ -10748,14 +8089,7 @@
   {
     "label": "Ō",
     "id": "\\u014c",
-    "confusableChar": [
-      "Ō",
-      "O̅",
-      "O︤",
-      "O︥",
-      "O¯",
-      "O‾"
-    ],
+    "confusableChar": ["Ō", "O̅", "O︤", "O︥", "O¯", "O‾"],
     "confusableUnicode": [
       "\\u004f\\u0304",
       "\\u004f\\u0305",
@@ -10780,15 +8114,7 @@
   {
     "label": "P̓",
     "id": "\\u0050\\u0313",
-    "confusableChar": [
-      "Pˈ",
-      "P̕",
-      "P̒",
-      "P̔",
-      "Pʼ",
-      "P’",
-      "P՚"
-    ],
+    "confusableChar": ["Pˈ", "P̕", "P̒", "P̔", "Pʼ", "P’", "P՚"],
     "confusableUnicode": [
       "\\u0050\\u02c8",
       "\\u0050\\u0315",
@@ -10802,17 +8128,7 @@
   {
     "label": "P'",
     "id": "\\u0050\\u0027",
-    "confusableChar": [
-      "P＇",
-      "P’",
-      "P̓",
-      "P̕",
-      "P̒",
-      "P̔",
-      "Pʼ",
-      "Pˈ",
-      "P՚"
-    ],
+    "confusableChar": ["P＇", "P’", "P̓", "P̕", "P̒", "P̔", "Pʼ", "Pˈ", "P՚"],
     "confusableUnicode": [
       "\\u0050\\uff07",
       "\\u0050\\u2019",
@@ -10828,17 +8144,7 @@
   {
     "label": "P’",
     "id": "\\u0050\\u2019",
-    "confusableChar": [
-      "P̓",
-      "P̕",
-      "P̒",
-      "P̔",
-      "Pʼ",
-      "Pˈ",
-      "P՚",
-      "P＇",
-      "P'"
-    ],
+    "confusableChar": ["P̓", "P̕", "P̒", "P̔", "Pʼ", "Pˈ", "P՚", "P＇", "P'"],
     "confusableUnicode": [
       "\\u0050\\u0313",
       "\\u0050\\u0315",
@@ -10854,15 +8160,7 @@
   {
     "label": "Q̓",
     "id": "\\u0051\\u0313",
-    "confusableChar": [
-      "Qˈ",
-      "Q̕",
-      "Q̒",
-      "Q̔",
-      "Qʼ",
-      "Q’",
-      "Q՚"
-    ],
+    "confusableChar": ["Qˈ", "Q̕", "Q̒", "Q̔", "Qʼ", "Q’", "Q՚"],
     "confusableUnicode": [
       "\\u0051\\u02c8",
       "\\u0051\\u0315",
@@ -10876,17 +8174,7 @@
   {
     "label": "Q'",
     "id": "\\u0051\\u0027",
-    "confusableChar": [
-      "Q＇",
-      "Q’",
-      "Q̓",
-      "Q̕",
-      "Q̒",
-      "Q̔",
-      "Qʼ",
-      "Qˈ",
-      "Q՚"
-    ],
+    "confusableChar": ["Q＇", "Q’", "Q̓", "Q̕", "Q̒", "Q̔", "Qʼ", "Qˈ", "Q՚"],
     "confusableUnicode": [
       "\\u0051\\uff07",
       "\\u0051\\u2019",
@@ -10902,17 +8190,7 @@
   {
     "label": "Q’",
     "id": "\\u0051\\u2019",
-    "confusableChar": [
-      "Q̓",
-      "Q̕",
-      "Q̒",
-      "Q̔",
-      "Qʼ",
-      "Qˈ",
-      "Q՚",
-      "Q＇",
-      "Q'"
-    ],
+    "confusableChar": ["Q̓", "Q̕", "Q̒", "Q̔", "Qʼ", "Qˈ", "Q՚", "Q＇", "Q'"],
     "confusableUnicode": [
       "\\u0051\\u0313",
       "\\u0051\\u0315",
@@ -10940,15 +8218,7 @@
   {
     "label": "Q̓V",
     "id": "\\u0051\\u0313\\u0056",
-    "confusableChar": [
-      "QˈV",
-      "Q̕V",
-      "Q̒V",
-      "Q̔V",
-      "QʼV",
-      "Q’V",
-      "Q՚V"
-    ],
+    "confusableChar": ["QˈV", "Q̕V", "Q̒V", "Q̔V", "QʼV", "Q’V", "Q՚V"],
     "confusableUnicode": [
       "\\u0051\\u02c8\\u0056",
       "\\u0051\\u0315\\u0056",
@@ -10974,15 +8244,7 @@
   {
     "label": "Q̓ʷ",
     "id": "\\u0051\\u0313\\u02b7",
-    "confusableChar": [
-      "Qˈʷ",
-      "Q̕ʷ",
-      "Q̒ʷ",
-      "Q̔ʷ",
-      "Qʼʷ",
-      "Q’ʷ",
-      "Q՚ʷ"
-    ],
+    "confusableChar": ["Qˈʷ", "Q̕ʷ", "Q̒ʷ", "Q̔ʷ", "Qʼʷ", "Q’ʷ", "Q՚ʷ"],
     "confusableUnicode": [
       "\\u0051\\u02c8\\u02b7",
       "\\u0051\\u0315\\u02b7",
@@ -10996,15 +8258,7 @@
   {
     "label": "Q̓W",
     "id": "\\u0051\\u0313\\u0057",
-    "confusableChar": [
-      "QˈW",
-      "Q̕W",
-      "Q̒W",
-      "Q̔W",
-      "QʼW",
-      "Q’W",
-      "Q՚W"
-    ],
+    "confusableChar": ["QˈW", "Q̕W", "Q̒W", "Q̔W", "QʼW", "Q’W", "Q՚W"],
     "confusableUnicode": [
       "\\u0051\\u02c8\\u0057",
       "\\u0051\\u0315\\u0057",
@@ -11076,15 +8330,7 @@
   {
     "label": "R̓",
     "id": "\\u0052\\u0313",
-    "confusableChar": [
-      "Rˈ",
-      "R̕",
-      "R̒",
-      "R̔",
-      "Rʼ",
-      "R’",
-      "R՚"
-    ],
+    "confusableChar": ["Rˈ", "R̕", "R̒", "R̔", "Rʼ", "R’", "R՚"],
     "confusableUnicode": [
       "\\u0052\\u02c8",
       "\\u0052\\u0315",
@@ -11098,40 +8344,20 @@
   {
     "label": "S̲",
     "id": "\\u0053\\u0332",
-    "confusableChar": [
-      "S̱",
-      "S̠",
-      "S_"
-    ],
-    "confusableUnicode": [
-      "\\u0053\\u0331",
-      "\\u0053\\u0320",
-      "\\u0053\\u005f"
-    ]
+    "confusableChar": ["S̱", "S̠", "S_"],
+    "confusableUnicode": ["\\u0053\\u0331", "\\u0053\\u0320", "\\u0053\\u005f"]
   },
   {
     "label": "Ŝ",
     "id": "\\u015c",
-    "confusableChar": [
-      "Ŝ"
-    ],
-    "confusableUnicode": [
-      "\\u0053\\u0302"
-    ]
+    "confusableChar": ["Ŝ"],
+    "confusableUnicode": ["\\u0053\\u0302"]
   },
   {
     "label": "S̱",
     "id": "\\u0053\\u0331",
-    "confusableChar": [
-      "S̲",
-      "S̠",
-      "S_"
-    ],
-    "confusableUnicode": [
-      "\\u0053\\u0332",
-      "\\u0053\\u0320",
-      "\\u0053\\u005f"
-    ]
+    "confusableChar": ["S̲", "S̠", "S_"],
+    "confusableUnicode": ["\\u0053\\u0332", "\\u0053\\u0320", "\\u0053\\u005f"]
   },
   {
     "label": "SH",
@@ -11148,15 +8374,7 @@
   {
     "label": "T̓",
     "id": "\\u0054\\u0313",
-    "confusableChar": [
-      "Tˈ",
-      "T̕",
-      "T̒",
-      "T̔",
-      "Tʼ",
-      "T’",
-      "T՚"
-    ],
+    "confusableChar": ["Tˈ", "T̕", "T̒", "T̔", "Tʼ", "T’", "T՚"],
     "confusableUnicode": [
       "\\u0054\\u02c8",
       "\\u0054\\u0315",
@@ -11170,15 +8388,7 @@
   {
     "label": "T̕",
     "id": "\\u0054\\u0315",
-    "confusableChar": [
-      "Tˈ",
-      "T̓",
-      "T̒",
-      "T̔",
-      "Tʼ",
-      "T’",
-      "T՚"
-    ],
+    "confusableChar": ["Tˈ", "T̓", "T̒", "T̔", "Tʼ", "T’", "T՚"],
     "confusableUnicode": [
       "\\u0054\\u02c8",
       "\\u0054\\u0313",
@@ -11192,17 +8402,7 @@
   {
     "label": "T'",
     "id": "\\u0054\\u0027",
-    "confusableChar": [
-      "T＇",
-      "T’",
-      "T̓",
-      "T̕",
-      "T̒",
-      "T̔",
-      "Tʼ",
-      "Tˈ",
-      "T՚"
-    ],
+    "confusableChar": ["T＇", "T’", "T̓", "T̕", "T̒", "T̔", "Tʼ", "Tˈ", "T՚"],
     "confusableUnicode": [
       "\\u0054\\uff07",
       "\\u0054\\u2019",
@@ -11218,17 +8418,7 @@
   {
     "label": "T’",
     "id": "\\u0054\\u2019",
-    "confusableChar": [
-      "T̓",
-      "T̕",
-      "T̒",
-      "T̔",
-      "Tʼ",
-      "Tˈ",
-      "T՚",
-      "T＇",
-      "T'"
-    ],
+    "confusableChar": ["T̓", "T̕", "T̒", "T̔", "Tʼ", "Tˈ", "T՚", "T＇", "T'"],
     "confusableUnicode": [
       "\\u0054\\u0313",
       "\\u0054\\u0315",
@@ -11262,14 +8452,8 @@
   {
     "label": "TŁ",
     "id": "\\u0054\\u0141",
-    "confusableChar": [
-      "TL̸",
-      "TL̷"
-    ],
-    "confusableUnicode": [
-      "\\u0054\\u004c\\u0338",
-      "\\u0054\\u004c\\u0337"
-    ]
+    "confusableChar": ["TL̸", "TL̷"],
+    "confusableUnicode": ["\\u0054\\u004c\\u0338", "\\u0054\\u004c\\u0337"]
   },
   {
     "label": "T̕Ł",
@@ -11452,15 +8636,7 @@
   {
     "label": "TS̓",
     "id": "\\u0054\\u0053\\u0313",
-    "confusableChar": [
-      "TSˈ",
-      "TS̕",
-      "TS̒",
-      "TS̔",
-      "TSʼ",
-      "TS’",
-      "TS՚"
-    ],
+    "confusableChar": ["TSˈ", "TS̕", "TS̒", "TS̔", "TSʼ", "TS’", "TS՚"],
     "confusableUnicode": [
       "\\u0054\\u0053\\u02c8",
       "\\u0054\\u0053\\u0315",
@@ -11474,11 +8650,7 @@
   {
     "label": "TS̱",
     "id": "\\u0054\\u0053\\u0331",
-    "confusableChar": [
-      "TS̲",
-      "TS̠",
-      "TS_"
-    ],
+    "confusableChar": ["TS̲", "TS̠", "TS_"],
     "confusableUnicode": [
       "\\u0054\\u0053\\u0332",
       "\\u0054\\u0053\\u0320",
@@ -11488,15 +8660,7 @@
   {
     "label": "T̕S",
     "id": "\\u0054\\u0315\\u0053",
-    "confusableChar": [
-      "TˈS",
-      "T̓S",
-      "T̒S",
-      "T̔S",
-      "TʼS",
-      "T’S",
-      "T՚S"
-    ],
+    "confusableChar": ["TˈS", "T̓S", "T̒S", "T̔S", "TʼS", "T’S", "T՚S"],
     "confusableUnicode": [
       "\\u0054\\u02c8\\u0053",
       "\\u0054\\u0313\\u0053",
@@ -11666,15 +8830,7 @@
   {
     "label": "U̓",
     "id": "\\u0055\\u0313",
-    "confusableChar": [
-      "Uˈ",
-      "U̕",
-      "U̒",
-      "U̔",
-      "Uʼ",
-      "U’",
-      "U՚"
-    ],
+    "confusableChar": ["Uˈ", "U̕", "U̒", "U̔", "Uʼ", "U’", "U՚"],
     "confusableUnicode": [
       "\\u0055\\u02c8",
       "\\u0055\\u0315",
@@ -11694,14 +8850,7 @@
   {
     "label": "Ū",
     "id": "\\u016a",
-    "confusableChar": [
-      "Ū",
-      "U̅",
-      "Ū",
-      "Ū",
-      "U¯",
-      "U‾"
-    ],
+    "confusableChar": ["Ū", "U̅", "Ū", "Ū", "U¯", "U‾"],
     "confusableUnicode": [
       "\\u0055\\u0304",
       "\\u0055\\u0305",
@@ -11732,15 +8881,7 @@
   {
     "label": "W̓",
     "id": "\\u0057\\u0313",
-    "confusableChar": [
-      "Wˈ",
-      "W̕",
-      "W̒",
-      "W̔",
-      "Wʼ",
-      "W’",
-      "W՚"
-    ],
+    "confusableChar": ["Wˈ", "W̕", "W̒", "W̔", "Wʼ", "W’", "W՚"],
     "confusableUnicode": [
       "\\u0057\\u02c8",
       "\\u0057\\u0315",
@@ -11754,17 +8895,7 @@
   {
     "label": "W'",
     "id": "\\u0057\\u0027",
-    "confusableChar": [
-      "W＇",
-      "W’",
-      "W̓",
-      "W̕",
-      "W̒",
-      "W̔",
-      "Wʼ",
-      "Wˈ",
-      "W՚"
-    ],
+    "confusableChar": ["W＇", "W’", "W̓", "W̕", "W̒", "W̔", "Wʼ", "Wˈ", "W՚"],
     "confusableUnicode": [
       "\\u0057\\uff07",
       "\\u0057\\u2019",
@@ -11840,15 +8971,7 @@
   {
     "label": "Y̓",
     "id": "\\u0059\\u0313",
-    "confusableChar": [
-      "Yˈ",
-      "Y̕",
-      "Y̒",
-      "Y̔",
-      "Yʼ",
-      "Y’",
-      "Y՚"
-    ],
+    "confusableChar": ["Yˈ", "Y̕", "Y̒", "Y̔", "Yʼ", "Y’", "Y՚"],
     "confusableUnicode": [
       "\\u0059\\u02c8",
       "\\u0059\\u0315",
@@ -11868,15 +8991,7 @@
   {
     "label": "Z̓",
     "id": "\\u005a\\u0313",
-    "confusableChar": [
-      "Zˈ",
-      "Z̕",
-      "Z̒",
-      "Z̔",
-      "Zʼ",
-      "Z’",
-      "Z՚"
-    ],
+    "confusableChar": ["Zˈ", "Z̕", "Z̒", "Z̔", "Zʼ", "Z’", "Z՚"],
     "confusableUnicode": [
       "\\u005a\\u02c8",
       "\\u005a\\u0315",
@@ -11890,12 +9005,7 @@
   {
     "label": "Ẕ",
     "id": "\\u1e94",
-    "confusableChar": [
-      "Z̲",
-      "Z̠",
-      "Z_",
-      "Ẕ"
-    ],
+    "confusableChar": ["Z̲", "Z̠", "Z_", "Ẕ"],
     "confusableUnicode": [
       "\\u005a\\u0332",
       "\\u005a\\u0320",
@@ -11912,14 +9022,8 @@
   {
     "label": "Ɂ",
     "id": "\\u0241",
-    "confusableChar": [
-      "ɂ",
-      "ॽ"
-    ],
-    "confusableUnicode": [
-      "\\u0242",
-      "\\u097d"
-    ]
+    "confusableChar": ["ɂ", "ॽ"],
+    "confusableUnicode": ["\\u0242", "\\u097d"]
   },
   {
     "label": "Λ",
