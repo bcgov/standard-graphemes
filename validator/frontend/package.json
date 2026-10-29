@@ -13,14 +13,14 @@
     "test": "npx vitest"
   },
   "dependencies": {
-    "@bcgov/bc-sans": "2.1.0",
-    "@bcgov/design-system-react-components": "0.7.0",
-    "@bcgov/design-tokens": "4.0.0",
-    "@tanstack/react-query": "5.100.10",
-    "@tanstack/react-router": "1.169.2",
-    "react": "19.2.6",
-    "react-aria-components": "1.17.0",
-    "react-dom": "19.2.6"
+    "@bcgov/bc-sans": "2.1.2",
+    "@bcgov/design-system-react-components": "0.9.1",
+    "@bcgov/design-tokens": "5.1.0",
+    "@tanstack/react-query": "5.105.0",
+    "@tanstack/react-router": "1.170.46",
+    "react": "19.3.1",
+    "react-aria-components": "1.22.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
