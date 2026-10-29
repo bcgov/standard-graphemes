@@ -1,60 +1,60 @@
 import fs from "node:fs";
-import { Octokit } from "@octokit/rest";
 import anyAscii from "any-ascii";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import { escapeCsvValue } from "./utils/escapeCsvValue.js";
+import { getGithubSourceConfig } from "./utils/getGithubSourceConfig.js";
+import { getLocalSourceConfig } from "./utils/getLocalSourceConfig.js";
 import { fetchCharacters } from "./utils/fetchCharacters.js";
+import { fetchCharacterVariants } from "./utils/fetchCharacterVariants.js";
 import { fetchConfusableCharacters } from "./utils/fetchConfusableCharacters.js";
 import { fetchLanguageMappings } from "./utils/fetchLanguageMappings.js";
+import { getCompactAlphabetRows } from "./utils/getCompactAlphabetRows.js";
 import { getSubdirectories } from "./utils/getSubdirectories.js";
+import { getUniqueCharacterRows } from "./utils/getUniqueCharacterRows.js";
 import { getUnicodeCodePoints } from "./utils/getUnicodeCodePoints.js";
 import { getUnicodeEscapes } from "./utils/getUnicodeEscapes.js";
 
-/** @typedef {import("./types.js").GithubSourceConfig} GithubSourceConfig */
-
-const argv = yargs(hideBin(process.argv)).parse();
+const argv = yargs(hideBin(process.argv))
+  .option("source", {
+    choices: ["live-github", "local-copy"],
+    default: "live-github",
+    describe: "Where to read the FirstVoices dataset from",
+    type: "string",
+  })
+  .parse();
 const format = argv.format ?? "full";
 const isCompact = format === "compact";
-const OUTPUT_DIR = "output";
+const isUnique = format === "unique";
+const sourceConfig =
+  argv.source === "local-copy"
+    ? getLocalSourceConfig()
+    : getGithubSourceConfig();
+const OUTPUT_DIR = `output/${sourceConfig.source}`;
 const ALPHABET_OUTPUT_FILE = isCompact
   ? "alphabet-output-compact.csv"
-  : "alphabet-output-full.csv";
+  : isUnique
+    ? "unique-characters-output.csv"
+    : "alphabet-output-full.csv";
 const ALPHABET_OUTPUT_PATH = `${OUTPUT_DIR}/${ALPHABET_OUTPUT_FILE}`;
 const CONFUSABLES_OUTPUT_FILE = "confusables-output.csv";
 const CONFUSABLES_OUTPUT_PATH = `${OUTPUT_DIR}/${CONFUSABLES_OUTPUT_FILE}`;
-const githubToken = process.env.GITHUB_TOKEN?.trim();
-
-/** @type {GithubSourceConfig} */
-const githubSourceConfig = {
-  githubToken,
-  octokit: new Octokit(
-    githubToken
-      ? {
-          auth: githubToken,
-        }
-      : undefined,
-  ),
-  repo: {
-    owner: "First-Peoples-Cultural-Council",
-    name: "unicode-resources",
-    basePath: "orthography-resources",
-    languagesMetadataFile: "firstvoices_sites_metadata_2025.csv",
-  },
-};
+const githubToken = sourceConfig.githubToken;
 
 async function main() {
-  if (!githubToken) {
+  if (sourceConfig.source === "live-github" && !githubToken) {
     console.warn(
       "No GITHUB_TOKEN found. Requests are unauthenticated and more likely to hit rate limits.",
     );
   }
 
-  const subdirs = await getSubdirectories(githubSourceConfig);
-  const languageMappings = await fetchLanguageMappings(githubSourceConfig);
+  const subdirs = await getSubdirectories(sourceConfig);
+  const languageMappings = await fetchLanguageMappings(sourceConfig);
   const characterMap = new Map();
   const confusableMap = new Map();
+  const compactAlphabetRows = [];
+  const compactRowKeys = new Set();
 
   // Compare two strings by lexicographic order of their Unicode code points.
   const compareByUnicodeOrder = (a, b) => {
@@ -71,13 +71,22 @@ async function main() {
     return aPoints.length - bPoints.length;
   };
 
-  for (const subdir of subdirs) {
-    const languageName = languageMappings[subdir] || subdir;
-    const characters = await fetchCharacters(subdir, githubSourceConfig);
-    const confusableCharacters = await fetchConfusableCharacters(
+  const languageDirectories = subdirs
+    .map((subdir) => ({
       subdir,
-      githubSourceConfig,
+      languageName: languageMappings[subdir] || subdir,
+    }))
+    .sort(
+      (a, b) =>
+        a.languageName.localeCompare(b.languageName) ||
+        a.subdir.localeCompare(b.subdir),
     );
+
+  for (const { subdir, languageName } of languageDirectories) {
+    const characters = await fetchCharacters(subdir, sourceConfig);
+    const confusableCharacters = isUnique
+      ? []
+      : await fetchConfusableCharacters(subdir, sourceConfig);
 
     characters.forEach((char) => {
       /**
@@ -133,21 +142,51 @@ async function main() {
 
       confusableMap.get(key).Languages.add(languageName);
     });
+
+    if (isCompact) {
+      const variantsByCharacter = await fetchCharacterVariants(
+        subdir,
+        sourceConfig,
+      );
+      const rows = getCompactAlphabetRows(
+        languageName,
+        characters,
+        variantsByCharacter,
+      );
+
+      rows.forEach((values) => {
+        const key = JSON.stringify(values);
+        if (compactRowKeys.has(key)) return;
+
+        compactRowKeys.add(key);
+        compactAlphabetRows.push(values.map(escapeCsvValue));
+      });
+
+      continue;
+    }
   }
 
   const alphabetColumns = isCompact
-    ? ["Character", "NFD Code Points", "NFC Code Points"]
-    : [
+    ? [
+        "Language Name",
         "Character",
-        "NFD",
-        "NFC",
-        "NFD Escaped",
-        "NFC Escaped",
-        "NFD Code Points",
-        "NFC Code Points",
-        "AnyAscii",
-        "Languages",
-      ];
+        "Unicode Hex",
+        "Character Variant",
+        "Character Variant Unicode Hex",
+      ]
+    : isUnique
+        ? ["Character", "Unicode hex"]
+      : [
+          "Character",
+          "NFD",
+          "NFC",
+          "NFD Escaped",
+          "NFC Escaped",
+          "NFD Code Points",
+          "NFC Code Points",
+          "AnyAscii",
+          "Languages",
+        ];
 
   const sortedCharacters = Array.from(characterMap.values()).sort((a, b) =>
     compareByUnicodeOrder(a.Character, b.Character),
@@ -156,44 +195,44 @@ async function main() {
   // This is the header row for the alphabet CSV.
   const alphabetResults = [alphabetColumns];
 
-  // For each character in the map, we will add a row to the CSV, and each
-  // column will be escaped by `escapeCsvValue()`.
-  sortedCharacters.forEach(
-    ({
-      Character,
-      NFD,
-      NFC,
-      "NFD Escaped": NFDUnicode,
-      "NFC Escaped": NFCUnicode,
-      "NFD Code Points": NFDCodePoints,
-      "NFC Code Points": NFCCodePoints,
-      Languages,
-    }) => {
-      const sortedLanguages = Array.from(Languages).sort((a, b) =>
-        a.localeCompare(b),
-      );
+  if (isCompact) {
+    alphabetResults.push(...compactAlphabetRows);
+  } else if (isUnique) {
+    alphabetResults.push(...getUniqueCharacterRows(sortedCharacters));
+  } else {
+    // For each character in the map, we will add a row to the CSV, and each
+    // column will be escaped by `escapeCsvValue()`.
+    sortedCharacters.forEach(
+      ({
+        Character,
+        NFD,
+        NFC,
+        "NFD Escaped": NFDUnicode,
+        "NFC Escaped": NFCUnicode,
+        "NFD Code Points": NFDCodePoints,
+        "NFC Code Points": NFCCodePoints,
+        Languages,
+      }) => {
+        const sortedLanguages = Array.from(Languages).sort((a, b) =>
+          a.localeCompare(b),
+        );
 
-      const row = isCompact
-        ? [
-            escapeCsvValue(Character),
-            escapeCsvValue(NFDCodePoints),
-            escapeCsvValue(NFCCodePoints),
-          ]
-        : [
-            escapeCsvValue(Character),
-            escapeCsvValue(NFD),
-            escapeCsvValue(NFC),
-            escapeCsvValue(NFDUnicode),
-            escapeCsvValue(NFCUnicode),
-            escapeCsvValue(NFDCodePoints),
-            escapeCsvValue(NFCCodePoints),
-            escapeCsvValue(anyAscii(Character)),
-            escapeCsvValue(sortedLanguages.join(",")),
-          ];
+        const row = [
+          escapeCsvValue(Character),
+          escapeCsvValue(NFD),
+          escapeCsvValue(NFC),
+          escapeCsvValue(NFDUnicode),
+          escapeCsvValue(NFCUnicode),
+          escapeCsvValue(NFDCodePoints),
+          escapeCsvValue(NFCCodePoints),
+          escapeCsvValue(anyAscii(Character)),
+          escapeCsvValue(sortedLanguages.join(",")),
+        ];
 
-      alphabetResults.push(row);
-    },
-  );
+        alphabetResults.push(row);
+      },
+    );
+  }
 
   const confusablesColumns = ["Confusable", "Canonical Character", "Languages"];
   const sortedConfusables = Array.from(confusableMap.values()).sort((a, b) => {
@@ -231,15 +270,24 @@ async function main() {
 
   fs.writeFileSync(
     ALPHABET_OUTPUT_PATH,
-    alphabetResults.map((row) => row.join(",")).join("\n"),
+    `${alphabetResults.map((row) => row.join(",")).join("\n")}\n`,
   );
-  fs.writeFileSync(
-    CONFUSABLES_OUTPUT_PATH,
-    confusablesResults.map((row) => row.join(",")).join("\n"),
-  );
+  if (!isUnique) {
+    fs.writeFileSync(
+      CONFUSABLES_OUTPUT_PATH,
+      `${confusablesResults.map((row) => row.join(",")).join("\n")}\n`,
+    );
+  }
 
-  console.log(`Alphabet CSV output written to ${ALPHABET_OUTPUT_PATH}`);
-  console.log(`Confusables CSV output written to ${CONFUSABLES_OUTPUT_PATH}`);
+  console.log(
+    `${isUnique ? "Unique character" : "Alphabet"} CSV output written to ${ALPHABET_OUTPUT_PATH}`,
+  );
+  if (!isUnique) {
+    console.log(`Confusables CSV output written to ${CONFUSABLES_OUTPUT_PATH}`);
+  }
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

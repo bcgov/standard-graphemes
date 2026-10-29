@@ -4,15 +4,23 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start:full": "node --env-file=.env main.js --format=full",
-    "start:compact": "node --env-file=.env main.js --format=compact"
+    "start:full": "node --env-file=.env main.js --source=live-github --format=full",
+    "start:compact": "node --env-file=.env main.js --source=live-github --format=compact",
+    "start:unique": "node --env-file=.env main.js --source=live-github --format=unique",
+    "start:full:local-copy": "node main.js --source=local-copy --format=full",
+    "start:compact:local-copy": "node main.js --source=local-copy --format=compact",
+    "start:unique:local-copy": "node main.js --source=local-copy --format=unique",
+    "test": "npm run test:local",
+    "test:local": "node --test __tests__/local-source.test.js utils/*.test.js",
+    "test:local-copy": "node --test __tests__/local-copy/unique-characters.test.js",
+    "test:live-github": "node --env-file-if-exists=.env --test __tests__/live-github/unique-characters.test.js"
   },
   "license": "Apache-2.0",
-  "description": "This script fetches the latest graphemes sets by language from the First-Peoples-Cultural-Council/unicode-resources repository and formats them into a single CSV file.",
+  "description": "Formats FirstVoices grapheme data from GitHub or a local copy into CSV files.",
   "dependencies": {
     "@octokit/rest": "22.0.1",
     "any-ascii": "0.3.3",
-    "csv-parse": "7.0.2",
-    "yargs": "18.1.0"
+    "csv-parse": "7.0.3",
+    "yargs": "18.2.0"
   }
 }
